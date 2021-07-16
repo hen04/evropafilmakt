@@ -1,0 +1,230 @@
+{
+	"menu": [
+		{
+			"url": "news.html",
+			"title": "Actualités",
+			"submenu": false
+		},
+		{
+			"url": "festival.html",
+			"title": "Festival",
+			"submenu": [
+				{
+					"url": "",
+					"title": "Qui sommes-nous"
+				},
+				{
+					"url": "",
+					"title": "L’éditorial"
+				},
+				{
+					"url": "",
+					"title": "Partenaires"
+				},
+				{
+					"url": "",
+					"title": "Festivals précédents"
+				}
+			]
+		},
+		{
+			"url": "program.html",
+			"title": "Programme",
+			"submenu": [
+				{
+					"url": "",
+					"title": "Les invités du festival"
+				}
+			]
+		},
+		{
+			"url": "jury.html",
+			"title": "Jury",
+			"submenu": [
+				{
+					"url": "",
+					"title": "Jury Prix Présent"
+				},
+				{
+					"url": "",
+					"title": "Jury Prix Sauvage"
+				},
+				{
+					"url": "",
+					"title": "Jury Prix Sauvage CORTO"
+				}
+			]
+		},
+		{
+			"url": "press.html",
+			"title": "Pro / Presse",
+			"submenu": [
+				{
+					"url": "",
+					"title": "Accréditation"
+				}
+			]
+		},
+		{
+			"url": "gallery.html",
+			"title": "Galeries",
+			"submenu": [
+				{
+					"url": "",
+					"title": "Photos"
+				},
+				{
+					"url": "",
+					"title": "Vidéo"
+				}
+			]
+		},
+		{
+			"url": "info.html",
+			"title": "Infos pratiques",
+			"submenu": [
+				{
+					"url": "",
+					"title": "Lieux"
+				},
+				{
+					"url": "",
+					"title": "Le Pass du festival"
+				},
+				{
+					"url": "",
+					"title": "Contacts"
+				}
+			]
+		}
+	],
+	"programChapter": [
+		{
+			"title": "Compétition Prix Sauvage",
+			"quantity": "10 films"
+		},
+		{
+			"title": "Compétition Present",
+			"quantity": "10 films"
+		},
+		{
+			"title": "Compétition Prix Sauvage Corto",
+			"quantity": "22 films"
+		},
+		{
+			"title": "THEMA: Animaux, hommes, machines, robots",
+			"quantity": "4 films"
+		},
+		{
+			"title": "Années 1960 en Italie: pour un nouveau cinéma",
+			"quantity": "6 films"
+		},
+		{
+			"title": "Hommage aux maîtres",
+			"quantity": "Anja Breien, Jean-Claude Carrière, Peter Handke"
+		}
+	],
+	"program": [
+		{
+			"date": "7 JUIN",
+			"weekday": "Lundi",
+			"film": [
+				{
+					"time": "19:00",
+					"img": "../images/content/img-2.jpg",
+					"title": "Surdine / Surdina",
+					"director": "de Rodrigo Areias",
+					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+					"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre",
+					"cinema": "Cinéma le Saint-André-des-Arts",
+					"address": "30 Rue Saint-André des Arts, 75006 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "19:05",
+					"img": "../images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				},
+				{
+					"time": "20:30",
+					"img": "../images/content/img-4.jpg",
+					"title": "Die Kinder der Toten",
+					"director": "de Kelly Copper et Pavol Liška",
+					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+					"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+					"cinema": "Cinéma l’Entrepôt",
+					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				}
+			]
+		}
+	],
+	"jury": [
+		{
+			"img": "../images/content/jury-1.jpg",
+			"title": "Prix Sauvage",
+			"name": "Gaëlle Jones ",
+			"text": "Présidente du Jury Prix Sauvage",
+			"link": "Jury Prix Sauvage"
+		},
+		{
+			"img": "../images/content/jury-2.jpg",
+			"title": "Prix Present",
+			"name": "Florent Marcie",
+			"text": "Président du Jury Prix Présent",
+			"link": "Jury Prix Présent"
+		},
+		{
+			"img": "../images/content/jury-3.jpg",
+			"title": "Prix Sauvage Corto",
+			"name": "Antoine Jouve",
+			"text": "Président du Jury Prix Sauvage Corto",
+			"link": "Jury Prix Sauvage Corto"
+		}
+	],
+	"videotheque": [
+		{
+			"img": "images/content/video-1.jpg",
+			"text": "L'Europe autour de l'Europe — 2014. Le Vaste Monde Mouratova"
+		},
+		{
+			"img": "images/content/video-2.jpg",
+			"text": "EFA 2015. Istvan Szabo"
+		},
+		{
+			"img": "images/content/video-3.jpg",
+			"text": "Carlos Saura invité d'honneur"
+		},
+		{
+			"img": "images/content/video-1.jpg",
+			"text": "L'Europe autour de l'Europe — 2014. Le Vaste Monde Mouratova"
+		},
+		{
+			"img": "images/content/video-2.jpg",
+			"text": "EFA 2015. Istvan Szabo"
+		}
+	],
+	"gallery": [
+		{
+			"img": "images/content/gallery-1.jpg",
+			"text": "Soirée de (ré)ouverture 2020 / 2020 online (re)opening night"
+		},
+		{
+			"img": "images/content/gallery-2.jpg",
+			"text": "Projection de Ether de Krzysztof Zanussi"
+		},
+		{
+			"img": "images/content/gallery-3.jpg",
+			"text": "Robolove de Maria Arlamovsky au Centre Anim’Montparnasse"
+		}
+	]
+}

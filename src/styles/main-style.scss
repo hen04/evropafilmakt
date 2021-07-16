@@ -1,0 +1,1517 @@
+@import "normalize";
+@import "variables";
+@import "typography";
+@import "grid";
+@import "forms";
+@import "mixins";
+
+html {
+	&.desktop {
+		.main-menu li {
+			&:hover {
+				> a {
+					color: $active;
+				}
+				
+				.has-submenu__inner {
+					a {
+						color: $active;
+					}
+				}
+				
+				.sub-menu {
+					display: flex;
+				}
+			}
+
+			&.has-submenu {
+				&:hover {
+					svg {
+						transform: rotate(180deg) !important;
+						color: $active;
+					}
+				}
+			}
+		}
+	}
+	
+	&.mobile {
+		.has-submenu {
+			&.opened {
+				flex-flow: column;
+
+				.sub-menu {
+					display: flex;
+				}
+
+				.has-submenu__inner {
+					padding-bottom: 20px;
+					
+					a {
+						color: $active !important;
+					}
+
+					svg {
+						transform: rotate(0) !important;
+						color: $active !important;
+					}
+
+					&:after {
+						content: '';
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+body {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+	background-color: $white;
+	color: $gray-400;
+	font: 20px/150% 'GolosUIRegular', sans-serif;
+	
+	@include responsive(device) {
+		font-size: 16px;
+	}
+	
+	&.menu-opened {
+		.iconify--close {
+			display: block;
+		}
+		
+		.iconify--menu {
+			display: none;
+		}
+		main,
+		.footer {
+			display: none;
+		}
+	}
+}
+
+.header {
+	overflow: hidden;
+	
+	&__top {
+		padding: 16px 40px;
+		display: flex;
+		justify-content: space-between;
+		
+		@include responsive(device) {
+			padding: 16px 40px;
+		}
+		
+		@include responsive(mobile) {
+			padding: 16px 20px;
+		}
+	}
+	
+	&__title {
+		margin: 0 auto;
+		
+		@include responsive(mobile) {
+			display: none;
+		}
+	}
+	
+	&__logo {
+		//padding-top: 10px;
+
+		img {
+
+			@include responsive(device) {
+				max-height: 80px;
+			}
+
+			@include responsive(mobile) {
+				max-height: 50px;
+				display: block;
+			}
+		}
+	}
+
+	&__right {
+		width: 160px;
+		display: flex;
+		flex-wrap: wrap;
+		
+		@include responsive(mobile) {
+			justify-content: flex-end;
+		}
+	}
+	
+	&__lang {
+		display: flex;
+		align-items: center;
+		
+		@include responsive(tablet) {
+			margin: auto auto auto 0;
+		}
+		
+		@include responsive(tabletdesktop) {
+			padding-left: 4px;
+		}
+
+		a {
+			color: $gray-400;
+		}
+	}
+
+	&__search-btn {
+		display: flex;
+		align-items: center;
+		margin: auto 0 auto auto;
+
+		.iconify {
+			font-size: 28px;
+			margin: 0 4px;
+			cursor: pointer;
+			color: $gray-400;
+		}
+	}
+	
+	&__menu-btn {
+		margin: auto 0 auto auto;
+		
+		@include responsive(desktop) {
+			display: none;
+		}
+		
+		.iconify {
+			font-size: 24px;
+			color: $gray-400;
+			
+			&--close {
+				display: none;
+			}
+		}
+	}
+
+	&__social {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		margin-top: auto;
+		
+		@include responsive(mobile) {
+			display: none;
+		}
+		
+		.social {
+			width: 100%;
+
+			@include responsive(mobile) {
+				width: 75%;
+				margin-left: -.5rem;
+			}
+		}
+
+		.social .iconify {
+			font-size: 36px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+			
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	
+	&__menu {
+		display: none;
+
+		@include responsive(desktop) {
+			display: block;
+		}
+
+		&.opened {
+			display: flex;
+			position: absolute;
+			z-index: 9;
+			left: 0;
+			right: 0;
+			background-color: $white;
+			
+			@include responsive(mobile) {
+				top: 82px;
+			}
+			
+			@include responsive(smtablet) {
+				top: 128px;
+			}
+
+			.main-menu {
+				@include responsive(device) {
+					flex-flow: column;
+				}
+			}
+
+			nav {
+				width: 100%;
+			}
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	.main-menu {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		
+		@include responsive(device) {
+			/*padding: 20px 0;*/
+		}
+
+		@include responsive(landscapedesktop) {
+			padding: 0 40px;
+		}
+		
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 1px;
+			background-color: $gray-400;
+		}
+
+		li {
+			position: relative;
+
+			@include responsive(device) {
+				padding: 20px 0 20px 20px;
+				display: flex;
+				//flex-flow: wrap;
+				align-items: center;
+			}
+
+			@include responsive(landscapedesktop) {
+				padding: 20px 12px;
+				font-size: 18px;
+			}
+			
+			@include responsive(desktop) {
+				padding: 20px 28px;
+				font-size: 20px;
+			}
+
+			@include responsive(notebookdesktop) {
+				padding: 20px 32px;
+			}
+
+			&:after {
+				@include responsive(device) {
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					height: 1px;
+					background-color: $gray-400;
+				}
+			}
+
+			a {
+				@include responsive(device) {
+					font-size: 24px;
+					display: block;
+					padding-top: 4px;
+					width: calc(100% - 50px);
+				}
+			}
+
+		}
+	}
+
+	li {
+		list-style: none;
+	}
+	
+	.sub-menu {
+		display: none;
+		flex-flow: column;
+		min-width: 300px;
+		background-color: $white;
+		
+		@include responsive(device) {
+			width: 100%;
+			padding-left: 30px;
+			box-sizing: border-box;
+			margin-bottom: -20px;
+		}
+		
+		@include responsive(desktop) {
+			margin-top: 20px;
+			position: absolute;
+		}
+		
+		&:before {
+			
+			@include responsive(desktop) {
+				content: '';
+				position: absolute;
+				background-color: $white;
+				bottom: 0;
+				top: 0;
+				right: -1650px;
+				left: -1650px;
+				border-top: 1px solid $gray-400;
+			}
+		}
+		
+		li {
+			@include responsive(device) {
+				padding: 14px 0;
+			}
+
+			padding: 8px 0;
+
+			&:first-child {
+				padding-top: 20px;
+			}
+			
+			&:last-child {
+				padding-bottom: 20px;
+			}
+		}
+	}
+	
+	.subtitle {
+		position: absolute;
+		background-color: $white;
+		left: 0;
+		right: 0;
+	}
+
+	a {
+		color: $gray-700;
+		text-decoration: none;
+
+		@include responsive(largedesktop) {
+			font-size: 24px;
+		}
+	}
+	
+	&__banner {
+		border-top: 1px solid $gray-400;
+		border-bottom: 1px solid $gray-400;
+
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+	
+	&__request {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 16px 0;
+		border-bottom: 1px solid $gray-400;
+		
+		@include responsive(mobile) {
+			flex-flow: wrap;
+		}
+
+		p {
+			margin: 0;
+			font-family: 'GolosUIMedium';
+			
+			@include responsive(mobile) {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 12px;
+			}
+		}
+		
+		a {
+			display: block;
+			
+			@include responsive(mobile) {
+				margin: 0 12px;
+			}
+			
+			@include responsive(tabletdesktop) {
+				margin-left: 24px;
+			}
+		}
+
+		img {
+			display: block;
+		}
+	}
+}
+
+.has-submenu {
+	
+	&__inner {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: relative;
+		z-index: 9;
+
+		&:after {
+			position: absolute;
+			left: -20px;
+			right: 0;
+			bottom: 0;
+			height: 1px;
+			background-color: $gray-400;
+		}
+	}
+
+	svg {
+		transition: color .3s ease-in-out;
+		position: relative;
+		top: 2px;
+		margin-left: 4px;
+		font-size: 24px;
+		
+		@include responsive(device) {
+			font-size: 32px;
+			transform: rotate(-90deg) !important;
+		}
+	}
+}
+
+
+.header-title {
+	display: flex;
+	align-items: center;
+	padding-top: 10px;
+	
+	&__img {
+		margin-right: 12px;
+		
+		img {
+			@include responsive(device) {
+				max-height: 80px;
+			}
+		}
+	}
+	
+	.title {
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 10px;
+	}
+	
+	.date {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	
+	&__text {
+		display: none;
+		
+		@include responsive(desktop) {
+			display: flex;
+			flex-flow: column;
+		}
+	}
+}
+
+.footer {
+	padding: 0 0 32px;
+	margin-top: auto;
+	display: grid;
+	grid-template-areas: "subscribe subscribe"
+												"logo menu"
+												"social menu"
+												"copyright copyright"
+												"development development";
+
+	@include responsive(tablet) {
+		grid-template-columns: 370px 1fr 370px;
+		grid-template-areas: "subscribe subscribe subscribe"
+												"menu menu menu"
+												"logo social social"
+												"copyright development development";
+	}
+	
+	@include responsive(desktop) {
+		grid-template-columns: 300px 1fr 370px;
+		grid-template-areas: "subscribe subscribe subscribe"
+												"logo menu menu"
+												"logo social development"
+												"copyright social development";
+	}
+	
+	@include responsive(mobile) {
+		padding: 0 0 24px;
+	}
+
+	&__subscribe {
+		grid-area: subscribe;
+		position: relative;
+		padding: 40px 40px 48px;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		
+		@include responsive(mobile) {
+			padding: 20px 20px 24px;
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background-color: $gray-400;
+		}
+		
+		&:before {
+			top: 0;
+		}
+		
+		&:after {
+			bottom: 0;
+		}
+
+		p {
+			margin: 0 0 24px;
+			font-size: 28px;
+			line-height: 1.3;
+		}
+		
+		span {
+			font-size: 16px;
+			line-height: 1.4;
+			color: $gray-200;
+			margin-top: 8px;
+		}
+		
+		.inp-text {
+			display: inline-block;
+			
+			@include responsive(mobile) {
+				margin-bottom: 20px;
+			}
+			
+			@include responsive(tabletdesktop) {
+				margin-right: 20px;
+			}
+		}
+	}
+	
+	&__form {
+		display: flex;
+		
+		@include responsive(mobile) {
+			flex-flow: column;
+			width: 100%;
+		}
+	}
+	
+	&__logo {
+		grid-area: logo;
+		padding: 32px 0 32px 40px;
+		
+		@include responsive(mobile) {
+			padding: 24px 0 24px 20px;
+		}
+		
+		img {
+			@include responsive(device) {
+				max-width: 140px;
+			}
+		}
+	}
+	
+	&__menu {
+		grid-area: menu;
+		padding: 40px 40px 0 0;
+		
+		@include responsive(device) {
+			padding: 24px 20px 0 0;
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: flex-start;
+			
+			@include responsive(mobile) {
+				flex-flow: column;
+			}
+			
+			@include responsive(landscapedesktop) {
+				justify-content: flex-end;
+			}
+		}
+		
+		li {
+			margin-left: 40px;
+			
+			@include responsive(device) {
+				margin-left: 30px;
+			}
+			
+			@include responsive(mobile) {
+				margin: 0 0 20px;
+			}
+		}
+		
+		a {
+			text-decoration: none;
+			color: $gray-700;
+			
+			&:hover {
+				color: $active;
+			}
+		}
+	}
+
+	&__copyright {
+		grid-area: copyright;
+		color: $gray-400;
+		display: flex;
+		
+		@include responsive(mobile) {
+			padding-left: 20px;
+			align-items: flex-start;
+			margin-bottom: .25rem;
+			font-size: 16px;
+		}
+		
+		@include responsive(tabletdesktop) {
+			align-items: flex-end;
+			font-size: 17px;
+			padding-left: 40px;
+		}
+	}
+
+	&__social {
+		grid-area: social;
+		display: flex;
+		flex-flow: column;
+
+		@include responsive(tablet) {
+			align-items: flex-end;
+			padding-right: 40px;
+			justify-content: center;
+		}
+
+		@include responsive(mobile) {
+			padding-left: 20px;
+			margin-top: -40px;
+		}
+
+		@include responsive(desktop) {
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		p {
+			font-family: 'GolosUIMedium';
+			
+			@include responsive(mobile) {
+				margin: 0 0 .5rem;
+			}
+			
+			@include responsive(tabletdesktop) {
+				margin: 0 0 1rem;
+			}
+		}
+	}
+	
+	&__development {
+		grid-area: development;
+		color: $gray-400;
+		display: flex;
+		
+		@include responsive(tablet) {
+			margin-left: auto;
+		}
+		
+		@include responsive(mobile) {
+			padding-left: 20px;
+			align-items: flex-start;
+			font-size: 16px;
+		}
+		
+		@include responsive(tabletdesktop) {
+			font-size: 17px;
+			text-align: right;
+			align-items: flex-end;
+			padding-right: 40px;
+		}
+
+		a {
+			text-decoration: none;
+			color: $gray-400;
+		}
+	}
+}
+
+.social {
+	display: flex;
+	
+	@include responsive(mobile) {
+		max-width: 150px;
+	}
+	
+	@include responsive(tabletdesktop) {
+		justify-content: space-between;
+	}
+
+	@include responsive(device) {
+		flex-wrap: wrap;
+	}
+
+	@include responsive(desktop) {
+		justify-content: space-between;
+	}
+
+	.iconify {
+		font-size: 40px;
+		margin: 0 6px;
+		color: $gray-400;
+	}
+	
+	&__item {
+		@include responsive(mobile) {
+			margin-bottom: .5rem;
+		}
+
+		&:last-child {
+			.iconify {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.inp-text {
+	padding: 14px 16px;
+	border: 1px solid $gray-200;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 20px;
+	line-height: 1;
+	border-radius: 0;
+	
+	@include responsive(tabletdesktop) {
+		max-width: 290px;
+	}
+	
+	&:focus,
+	&:active {
+		border: 1px solid $gray-700;
+		outline: none;
+	}
+}
+
+.submit {
+	padding: 14px 32px;
+	font-size: 24px;
+	line-height: 1;
+	border-radius: 0;
+	background-color: $white;
+	border: 1px solid $gray-700;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+	
+	&:hover {
+		background-color: $gray-700;
+		color: $gray-50;
+	}
+	
+	&:active {
+		background-color: $gray-400;
+		color: $gray-50;
+	}
+}
+
+
+main {
+	padding: 64px 20px 120px;
+	
+	@include responsive(tabletnotebook) {
+		padding: 72px 40px 160px;
+	}
+	
+	@include responsive(notebookdesktop) {
+		padding: 80px 40px 200px;
+	}
+}
+
+.title-link {
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		padding-top: 24px;
+		text-decoration: none;
+	}
+}
+
+
+.news-sm {
+	display: flex;
+	margin: 0 -10px;
+	
+	@include responsive(mobile) {
+		flex-flow: wrap
+	}
+
+	&__img {
+		padding: 0 10px;
+		box-sizing: border-box;
+
+		@include responsive(tabletdesktop) {
+			width: 34%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+	
+	&__text {
+		padding: 0 10px;
+		box-sizing: border-box;
+
+		@include responsive(tabletnotebook) {
+			width: 66%;
+		}
+		
+		@include responsive(notebookdesktop) {
+			width: 46%;
+		}
+
+		h4 {
+			margin-bottom: .5rem;
+		}
+
+		a {
+			color: $gray-700;
+			transition: color .3s ease-in-out;
+			
+			&:hover {
+				color: $active;
+			}
+		}
+		
+		p {
+			line-height: 1.4;
+			margin-bottom: 1.4rem;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	&__title-date {
+		margin-bottom: 18px;
+	}
+}
+
+.festival-history {
+	@include paddingBlock();
+	
+	@include responsive(mobile) {
+		width: 100%;
+	}
+	
+	@include responsive(tabletdesktop) {
+		width: 66%;
+		display: flex;
+		flex-flow: column;
+		margin-left: 34%;
+		box-sizing: border-box;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	
+	@include responsive(notebookdesktop) {
+		width: 46%;
+	}
+
+	@include responsive(largedesktop) {
+		width: 36%;
+		display: flex;
+		flex-flow: column;
+		margin-left: 34%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.program-main {
+	display: flex;
+	margin: 0;
+	@include paddingBlock();
+	
+	@include responsive(mobile) {
+		flex-flow: column;
+	}
+	
+	@include responsive(tablet) {
+		flex-flow: column;
+	}
+	
+	@include responsive(landscapedesktop) {
+		flex-flow: wrap;
+	}
+	
+	@include responsive(largedesktop) {
+		margin: 0 -10px;
+	}
+	
+	&__short-info {
+		@include responsive(mobile) {
+			width: 100%;
+		}
+		
+		@include responsive(notebookdesktop) {
+			width: 50%;
+		}
+		
+		@include responsive(largedesktop) {
+			width: 50%;
+			padding: 0 10px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: space-between;
+		border-top: 2px solid $black;
+		text-decoration: none;
+		padding: 20px 0 16px;
+		
+		@include responsive(notebookdesktop) {
+			padding: 20px 0;
+		}
+		
+		&:last-child {
+			border-bottom: 2px solid $black;
+		}
+		
+		&:hover {
+			* {
+				color: $active;
+			}
+		}
+
+		h4 {
+			width: 100%;
+			color: $gray-700;
+			margin-bottom: 16px;
+			transition: color .3s ease-in-out;
+		}
+		
+		p {
+			color: $gray-700;
+			margin-bottom: 0;
+			transition: color .3s ease-in-out;
+		}
+		
+		svg {
+			font-size: 32px;
+			color: $gray-700;
+			transition: color .3s ease-in-out;
+			margin-left: auto;
+		}
+	}
+	
+	&__info {
+		display: flex;
+		flex-flow: column;
+		@include paddingBlock();
+		
+		.btn {
+			margin: 0 auto;
+		}
+	}
+}
+
+.festival-visitors {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	padding-top: 56px;
+	
+	@include responsive(notebookdesktop) {
+		width: 50%;
+		max-width: 415px;
+		margin-left: auto;
+		padding: 220px 10px 0;
+	}
+	
+	@include responsive(largedesktop) {
+		padding: 220px 10px 0;
+		max-width: 574px;
+		margin-left: auto;
+	}
+	
+	h4 {
+		margin-bottom: 32px;
+		width: 100%;
+	}
+	
+	&__list {
+		display: flex;
+		margin-bottom: 40px;
+		
+		@include responsive(notebookdesktop) {
+			margin-bottom: 56px;
+		}
+	}
+	
+	&__item {
+		text-decoration: none;
+
+		&:hover {
+			h6 {
+				color: $gray-700;
+			}
+			p {
+				color: $gray-400;
+			}
+		}
+
+		img {
+			width: 100%;
+			display: block;
+			margin-bottom: 20px;
+		}
+
+		&:last-child {
+			padding-top: 140px;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+		h6 {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.program-info {
+	@include responsive(mobile) {
+		display: flex;
+		flex-flow: column;
+	}
+
+	@include responsive(tabletdesktop) {
+		display: grid;
+		grid-template-areas: "day"
+												"films";
+	}
+
+	@include responsive(largedesktop) {
+		display: grid;
+		grid-template-columns: 315px 1fr;
+		grid-template-areas: "day films";
+	}
+	
+	
+	&__day {
+		@include responsive(largedevice) {
+			width: 100%;
+			display: flex;
+		}
+		
+		@include responsive(desktop) {
+			width: 100%;
+			display: flex;
+		}
+		
+		@include responsive(largedesktop) {
+			grid-area: day;
+			display: block;
+			width: auto;
+		}
+	}
+
+	&__films {
+		grid-area: films;
+		@include responsive(mobile) {
+			width: 100%;
+		}
+	}
+
+	&__time {
+		grid-area: time;
+		
+		@include responsive(mobile) {
+			order: 3;
+			margin-bottom: 1rem;
+		}
+		
+		@include responsive(tablet) {
+			padding-top: .5rem;
+		}
+	}
+	
+	&__img {
+		grid-area: img;
+
+		@include responsive(mobile) {
+			order: 0;
+		}
+
+		&:hover {
+			img {
+				@include responsive(desktop) {
+					box-shadow: 0 0 0 4px $active;
+				}
+			}
+		}
+
+		img {
+			width: 100%;
+			display: block;
+			
+			@include responsive(desktop) {
+				margin: 4px;
+				width: calc(100% - 8px);
+				transition: box-shadow .3s ease-in-out;
+			}
+		}
+	}
+	
+	&__content-name {
+		grid-area: name;
+		box-sizing: border-box;
+		
+		@include responsive(mobile) {
+			order: 2;
+		}
+		
+		@include responsive(tablet) {
+			padding-left: 10px;
+		}
+
+		@include responsive(desktop) {
+			padding-left: 16px;
+		}
+	}
+	
+	h4 {
+		margin-bottom: .25rem;
+
+		a {
+			color: $gray-700;
+			text-decoration: none;
+
+			&:hover {
+				color: $active;
+			}
+		}
+	}
+	
+	h6 {
+		margin-bottom: .25rem;
+		
+		@include responsive(largedevice) {
+			margin: auto 0 0 4px;
+			padding-bottom: 8px;
+		}
+		
+		@include responsive(desktop) {
+			margin: auto 0 0 4px;
+			padding-bottom: 8px;
+		}
+		
+		@include responsive(largedesktop) {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	
+	.program-link {
+		text-decoration: none;
+	}
+	
+	&__item {
+		display: grid;
+		margin-bottom: 40px;
+		
+		@include responsive(mobile) {
+			display: flex;
+			flex-flow: column;
+		}
+
+		@include responsive(tablet) {
+			grid-template-rows: 1fr 50px auto;
+			grid-template-columns: 50% 50%;
+			grid-template-areas: "img img"
+												"time name"
+												"cinema name";
+		}
+
+		@include responsive(desktop) {
+			grid-template-rows: auto 1fr;
+			grid-template-columns: 315px 1fr 1fr;
+			grid-template-areas: "time img name"
+														"time img cinema";
+		}
+
+		a {
+			color: $gray-400;
+			display: block;
+
+			@include responsive(largedevice) {
+				margin-top: .5rem;
+			}
+
+			&:hover {
+				color: $active;
+			}
+		}
+
+		p {
+			margin-bottom: 1rem;
+			color: $gray-400;
+			font-size: 20px;
+
+			&.title {
+				color: $gray-700;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+		}
+		
+		span {
+			display: block;
+			margin-top: 4px;
+		}
+	}
+	
+	&__content-cinema {
+		grid-area: cinema;
+
+		@include responsive(mobile) {
+			order: 3;
+		}
+
+		@include responsive(tablet) {
+			margin-bottom: auto;
+			padding-right: 10px;
+			box-sizing: border-box;
+		}
+
+		@include responsive(desktop) {
+			padding-right: 16px;
+		}
+		
+		@include responsive(desktop) {
+			padding-left: 16px;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.jury {
+	@include paddingBlock();
+
+	@include responsive(mobile) {
+		width: 100%;
+	}
+
+	&__list {
+		display: flex;
+
+		@include responsive(mobile) {
+			flex-flow: column;
+		}
+	}
+	
+	&__item {
+		margin-bottom: 32px;
+
+		@include responsive(tabletdesktop) {
+			padding-right: 20px;
+			width: 33%;
+		}
+
+		&:nth-child(even) {
+			@include responsive(tabletdesktop) {
+				padding-top: 140px;
+			}
+		}
+
+		&:last-child {
+			@include responsive(tabletdesktop) {
+				padding-right: 0;
+			}
+		}
+
+		img {
+			display: block;
+			margin-bottom: 12px;
+			
+			@include responsive(smtablet) {
+				width: 100%;
+			}
+		}
+
+		h6 {
+			margin-bottom: 20px;
+		}
+	}
+	
+	&__info {
+		margin-bottom: 1rem;
+
+		p {
+			margin-bottom: 0;
+			
+			&.name {
+				font-size: 24px;
+			}
+		}
+	}
+
+	a {
+		color: $gray-400;
+		font-size: 16px;
+	}
+}
+
+.video {
+	display: flex;
+	flex-flow: column;
+	@include paddingBlock();
+	
+	&__list {
+		margin-bottom: 40px;
+
+		@include responsive(largedesktop) {
+			margin-bottom: 56px;
+		}
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__arrows {
+		display: flex;
+		justify-content: space-between;
+		width: 100px;
+		padding-top: 5px;
+		
+		a {
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+		}
+		
+		svg {
+			font-size: 32px;
+		}
+	}
+
+	.btn {
+		margin: 0 auto;
+	}
+	
+	p {
+		margin-top: 1rem;
+		font-size: 24px;
+		line-height: 1.2;
+	}
+}
+
+.gallery {
+	display: flex;
+	flex-flow: column;
+	@include paddingBlock();
+	
+	img {
+		width: 100%;
+		display: block;
+	}
+
+	&__list {
+		display: flex;
+		margin-bottom: 40px;
+		
+		@include responsive(mobile) {
+			flex-flow: column;
+		}
+		
+		@include responsive(largedesktop) {
+			margin: 0 -10px 56px;
+		}
+	}
+	
+	&__item {
+		box-sizing: border-box;
+
+		@include responsive(mobile) {
+			width: 100%;
+			margin-bottom: 24px;
+		}
+		
+		&:last-child {
+			@include responsive(mobile) {
+				margin-bottom: 0;
+			}
+			
+			@include responsive(tabletdesktop) {
+				padding-right: 0;
+			}
+		}
+		
+		@include responsive(tabletdesktop) {
+			padding-right: 20px;
+		}
+
+		@include responsive(largedesktop) {
+			width: 33%;
+			padding: 0 10px;
+		}
+	}
+
+	.btn {
+		margin: 0 auto;
+	}
+	
+	p {
+		line-height: 1.4;
+		margin: .5rem 0 0 0;
+		font-size: 18px;
+
+		@include responsive(notebookdesktop) {
+			margin: 1rem 0 0 0
+		}
+
+		@include responsive(largedesktop) {
+			font-size: 24px;
+		}
+	}
+}

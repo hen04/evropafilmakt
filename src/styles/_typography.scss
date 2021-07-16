@@ -1,0 +1,79 @@
+@import "mixins";
+
+@font-face {
+	font-family: 'GolosUIRegular';
+	src: url('../fonts/Golos-UI_Regular.eot');
+	src: url('../fonts/Golos-UI_Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Golos-UI_Regular.woff') format('woff'),
+	url('../fonts/Golos-UI_Regular.ttf') format('truetype'),
+	url('../fonts/Golos-UI_Regular.svg#GolosUIRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GolosUIMedium';
+	src: url('../fonts/Golos-UI_Medium.eot');
+	src: url('../fonts/Golos-UI_Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Golos-UI_Medium.woff') format('woff'),
+	url('../fonts/Golos-UI_Medium.ttf') format('truetype'),
+	url('../fonts/Golos-UI_Medium.svg#GolosUIMedium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: 600;
+	line-height: 1;
+	color: $gray-700;
+}
+
+h2 {
+	@include heading(32px);
+	margin-bottom: 40px;
+}
+
+h3 {
+	@include heading(28px);
+	margin-bottom: 32px;
+}
+
+h4 {
+	@include heading(24px);
+	margin-bottom: 24px;
+	line-height: 1.25;
+}
+
+h5 {
+	@include heading(20px);
+	font-size: 32px;
+}
+
+h6 {
+	@include heading(18px);
+}
+
+p {
+	margin: 0 0 1rem;
+}
+
+a {
+	color: $gray-700;
+	transition: color .3s ease-in-out;
+	
+	&.btn {
+		&:hover {
+			color: $gray-700;
+		}
+	}
+
+	&:hover {
+		color: $active;
+	}
+}

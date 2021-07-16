@@ -1,0 +1,124 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		title Festival de films européens de Paris
+		meta(name="description" content="")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" href="css/libs/owl.carousel.min.css")
+		link(rel="stylesheet" href="css/main-style.css")
+
+	body
+		header.header
+			.header__top
+				.header__logo
+					a(href="")
+						img(src="../images/logo.svg" alt="")
+				.header__title
+					.header-title
+						.header-title__img
+							img(src="../images/wolf.png" alt="")
+						.header-title__text
+							.title Festival de films européens de Paris
+							.date Du 17 au 30 novembre Paris 2021
+				.header__right
+					.header__lang
+						a(href="#") En
+					.header__search-btn
+						span.iconify(data-icon="ph:magnifying-glass" data-inline="false")
+					.header__menu-btn.js-menu-mobile
+						span.iconify.iconify--menu(data-icon="heroicons-outline:menu" data-inline="false")
+						span.iconify.iconify--close(data-icon="heroicons-outline:x" data-inline="false")
+					.header__social
+						.social
+							.social__item
+								a(href="" target="_blank")
+									span.iconify(data-icon="typcn:social-instagram" data-inline="false")
+							.social__item
+								a(href="" target="_blank")
+									span.iconify(data-icon="foundation:social-twitter" data-inline="false")
+							.social__item
+								a(href="" target="_blank")
+									span.iconify(data-icon="foundation:social-facebook" data-inline="false")
+							.social__item
+								a(href="" target="_blank")
+									span.iconify(data-icon="foundation:social-youtube" data-inline="false")
+
+			.header__menu
+				nav
+					ul.main-menu
+						each item in menu
+							if item.submenu === false
+								li
+									a(href= item.url)= item.title
+							else
+								li.has-submenu
+									.has-submenu__inner
+										a(href= item.url)= item.title
+										span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
+									ul.sub-menu
+										each subitem in item.submenu
+											li
+												a(href="")= subitem.title
+
+			.header__banner
+				img(src="../images/main-banner.png" alt="")
+
+			.header__request
+				p Soumettre votre film via
+				a(href="" target="_blank")
+					img(src="../images/film-freeway.png" alt="")
+				a(href="" target="_blank")
+					img(src="../images/festhome.png" alt="")
+
+		main
+			block content
+
+		footer.footer
+			.footer__subscribe
+				p S'abonner à la newsletter
+				form.footer__form
+					input(type="text" class="inp-text" placeholder="Nom" value="")
+					input(type="text" class="inp-text" placeholder="E-mail" value="")
+					button(type="submit" class="submit") S'abonner
+				span En cliquant sur le bouton "S'abonner", vous acceptez les conditions de l'offre et la politique de confidentialité.
+
+			.footer__logo
+				a(href="")
+					img(src="../images/logo-footer.png" alt="")
+
+			.footer__menu
+				ul
+					each item in menu
+						li
+							a(href="")= item.title
+
+			.footer__copyright &copy; L'Europe autour de l'Europe
+
+			.footer__social
+				p Retrouvez nous sur
+				.social
+					.social__item
+						a(href="" target="_blank")
+							span.iconify(data-icon="typcn:social-instagram")
+					.social__item
+						a(href="" target="_blank")
+							span.iconify(data-icon="foundation:social-twitter")
+					.social__item
+						a(href="" target="_blank")
+							span.iconify(data-icon="foundation:social-facebook")
+					.social__item
+						a(href="" target="_blank")
+							span.iconify(data-icon="foundation:social-youtube")
+
+			.footer__development Design et développement&nbsp;&mdash;&nbsp;
+				a(href="https://shweb.pro/" target="_blank") Studio Shweb
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src="https://code.iconify.design/1/1.0.7/iconify.min.js")
+		script(src="js/jquery.fancybox-1.3.4.pack.js")
+		script(src="js/device.js")
+		script(src="js/owl.carousel.min.js")
+		script(src="js/main-script.js")

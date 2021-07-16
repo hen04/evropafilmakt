@@ -1,0 +1,108 @@
+$mobile: 375px;
+$portrait: 768px;
+$landscape: 1024px;
+$desktop: 1280px;
+$notebook: 1366px;
+$largedesktop: 1600px;
+
+@mixin responsive($media) {
+	@if $media == mobile {
+		@media only screen and (max-width: $portrait - 1) { /* < 767 */
+			@content;
+		}
+	}
+	@else if $media == tablet {
+		@media only screen and (min-width: $portrait) and (max-width: $desktop - 1) { /* 768 - 1279 */
+			@content;
+		}
+	}
+	@else if $media == smtablet {
+		@media only screen and (min-width: $portrait) and (max-width: $landscape - 1) { /* 768 - 1024 */
+			@content;
+		}
+	}
+	@else if $media == tabletdesktop {
+		@media only screen and (min-width: $portrait) { /* > 768 */
+			@content;
+		}
+	}
+	@else if $media == landscapedesktop {
+		@media only screen and (min-width: $landscape) { /* > 1024 */
+			@content;
+		}
+	}
+	@else if $media == device {
+		@media only screen and (max-width: $landscape - 1) { /* < 1023 */
+			@content;
+		}
+	}
+	@else if $media == largedevice {
+		@media only screen and (max-width: $desktop - 1) { /* < 1279 */
+			@content;
+		}
+	}
+	@else if $media == tabletnotebook {
+		@media only screen and (min-width: $portrait) and (max-width: $notebook - 1) { /* 768 - 1365 */
+			@content;
+		}
+	}
+	@else if $media == notebookdesktop {
+		@media only screen and (min-width: $notebook) { /* > 1366 */
+			@content;
+		}
+	}
+	@else if $media == desktop {
+		@media only screen and (min-width: $desktop) { /* > 1280 */
+			@content;
+		}
+	}
+	@else if $media == largedesktop {
+		@media only screen and (min-width: $largedesktop) { /* > 1600 */
+			@content;
+		}
+	}
+}
+
+
+@mixin paddingBlock() {
+	padding-top: 56px;
+
+	@include responsive(tablet) {
+		padding-top: 80px;
+	}
+
+	@include responsive(desktop) {
+		padding-top: 120px;
+	}
+}
+
+@mixin heading($heading) {
+	@include responsive(mobile) {
+		font-size: $heading;
+		margin-bottom: $heading;
+	}
+	
+	@include responsive(tabletnotebook) {
+		font-size: $heading + 4;
+		margin-bottom: $heading + 4;
+	}
+	
+	@include responsive(notebookdesktop) {
+		font-size: $heading + 8;
+		margin-bottom: $heading + 8;
+	}
+	
+	@include responsive(largedesktop) {
+		font-size: $heading + 16;
+		margin-bottom: $heading + 16;
+	}
+}
+
+@mixin btn() {
+	padding: 1rem 2rem;
+	font-size: 20px;
+	
+	@include responsive(notebookdesktop) {
+		font-size: 24px;
+	}
+}

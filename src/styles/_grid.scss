@@ -1,0 +1,45 @@
+.col-1 {
+	width: 16.5%;
+}
+
+.col-2 {
+	width: 33%;
+}
+
+.col-3 {
+	width: 49.5%;
+}
+
+.col-4 {
+	width: 66%;
+}
+
+.col-5 {
+	width: 82.5%;
+}
+
+.col-6 {
+	width: 100%;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6 {
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.rows {
+	margin: 0 -10px;
+}
+
+.ml-1 {
+	margin-left: 16.5%;
+}
+
+.ml-3 {
+	margin-left: 49.5%;
+}

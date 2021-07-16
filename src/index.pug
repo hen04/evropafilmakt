@@ -1,0 +1,119 @@
+extends templates/layout
+
+block content
+	.news
+		.title-link
+			h2
+				a(href="#") Actualités
+		.news-sm
+			.news-sm__img
+				a(href="")
+					img(src="images/content/img-1.jpg" alt="")
+			.news-sm__text
+				.news-sm__title-date
+					h4
+						a(href="") Those who feel the fire burning de Morgan Knibbe
+					span.date 20.05.2017
+				p Bienvenu en 2017! Le Festival vous souhaite une belle année et annonce avec plaisir la prochaine projection mensuelle le 31 janvier, le dernier mardi du mois au cinéma L’Entrepôt. Nous vous invitons à (re)découvrir Those Who Feel the Fire Burning, le documentaire réaliste et poétique du réalisateur néerlandais Morgan Knibbe qui a fait partie de programme de compétition Présent du Festival en 2016 et a avait reçu le Prix du Meilleur documentaire de long-métrage à Nederlands Film Festival 2015.
+
+		.festival-history
+			h4 L’histoire du festival
+			p Le festival “L’Europe Autour de l’Europe”, fondé par la cinéaste Irena Bilic, se déroule tous les ans au printemps à Paris. Pendant deux semaines il présente des films d’auteurs et d’art de la Grande Europe (47 pays européens, membres du Conseil de l’Europe). Environ 50 longs métrages et une sélection de documentaires, de films de court métrage, d’animation et expérimentaux sont montrés dans plusieurs salles à Paris, notamment Le Saint-André-des-Arts, L’Entrepôt, Le Grand Action et le Studio des Ursulines. Dans les cinémas d’art et d’essai, centres culturels étrangers et quelques autres lieux exceptionnels de Paris, le public découvre les chefs-d’œuvres cinématographiques européens de toutes les époques.
+			p Depuis 2012, une dizaine de long-métrages de fiction inédits de production récente concourent pour le Prix sauvage et une dizaine de documentaires pour le Prix Présent. Le Prix Sauvage Corto existe depuis 2019 et est déjà le nouveau grand rendez-vous des jeunes auteurs de toute l’Europe. Il récompense le meilleur court-métrage européen – fiction, documentaires et films expérimentaux confondus.
+			p Le festival accueille des réalisateurs, auteurs, acteurs, producteurs et critiques venus de toute l’Europe, avec pour objectif de faire connaître la culture européenne dans toute sa diversité et sa complexité et de réfléchir à son identité et sa singularité.
+			a(href="#") L’histoire du festival
+
+		.program-main
+			.program-main__short-info
+				h2 Programme 2021
+				.program-main__list
+					each item in programChapter
+						a(href="").program-main__item
+							h4= item.title
+							p= item.quantity
+							span.iconify(data-icon="bi:arrow-right" data-inline="false")
+
+			.festival-visitors
+				h4 Les invités du festival
+				.rows.festival-visitors__list
+					a(href="").col-3.festival-visitors__item
+						img(src="images/content/visitor-1.jpg" alt="")
+						h6 Rodrigo Areias
+						p directeur du film Surdine
+					a(href="").col-3.festival-visitors__item
+						img(src="images/content/visitor-1.jpg" alt="")
+						h6 Rodrigo Areias
+						p directeur du film Surdine du film Surdine directeur du film
+				a(href="" class="btn") Voir les invités
+
+		.program-main__info
+			.program-info
+				each item in program
+					.program-info__day
+						h4= item.date+ ", "
+						h6= item.weekday
+					.program-info__films
+						each subitem in item.film
+							.program-info__item
+								.program-info__time
+									h4= subitem.time
+								a(href="#").program-info__img
+									img(src= subitem.img alt= subitem.title)
+								.program-info__content-name
+									h4
+										a(href="#")= subitem.title
+									p.title= subitem.director
+									p= subitem.genre
+										span= subitem.actors
+								.program-info__content-cinema
+									p.title= subitem.cinema
+									p
+										a(href="")= subitem.address
+										if subitem.price2 === ''
+											span Entrée libre, dans la limite des places disponibles
+										else
+											span Plein tarif: !{' '}
+												strong=  subitem.price1
+											span Tarif réduit: !{' '}
+												strong=  subitem.price2
+			a(href="" class="btn") Voir le programme
+
+		.jury
+			h2 Jury
+			.jury__list
+				each item in jury
+					.jury__item
+						img(src= item.img alt= item.name)
+						.jury__info
+							p.name
+								strong= item.name
+							p= item.text
+						a(href="")= item.link
+
+		.video
+			.video__title
+				h2 Vidéothèque
+				.video__arrows
+					a(class="prev")
+						span.iconify(data-icon="bi:arrow-left" data-inline="false")
+					a(class="next")
+						span.iconify(data-icon="bi:arrow-right" data-inline="false")
+			.video__list
+				.video__slider.owl-carousel.js-video-carousel
+					each item in videotheque
+						.item
+							img(src= item.img alt="")
+							p= item.text
+
+			a(href="" class="btn") Voir les vidéos
+
+		.gallery
+			h2 Galeries
+			.gallery__list
+				each item in gallery
+					.gallery__item
+						a(class="fancybox-thumb" rel="fancybox-thumb" href= item.img title="Природа")
+							img(src= item.img alt="")
+							p= item.text
+
+			a(href="" class="btn") Voir les galeries
