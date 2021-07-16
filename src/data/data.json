@@ -131,7 +131,7 @@
 			"film": [
 				{
 					"time": "19:00",
-					"img": "../images/content/img-2.jpg",
+					"img": "images/content/img-2.jpg",
 					"title": "Surdine / Surdina",
 					"director": "de Rodrigo Areias",
 					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
@@ -143,7 +143,7 @@
 				},
 				{
 					"time": "19:05",
-					"img": "../images/content/img-3.jpg",
+					"img": "images/content/img-3.jpg",
 					"title": "A Picture with Yuki",
 					"director": "de Lachezar Avramov",
 					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
@@ -155,7 +155,7 @@
 				},
 				{
 					"time": "20:30",
-					"img": "../images/content/img-4.jpg",
+					"img": "images/content/img-4.jpg",
 					"title": "Die Kinder der Toten",
 					"director": "de Kelly Copper et Pavol Liška",
 					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
@@ -170,21 +170,21 @@
 	],
 	"jury": [
 		{
-			"img": "../images/content/jury-1.jpg",
+			"img": "images/content/jury-1.jpg",
 			"title": "Prix Sauvage",
 			"name": "Gaëlle Jones ",
 			"text": "Présidente du Jury Prix Sauvage",
 			"link": "Jury Prix Sauvage"
 		},
 		{
-			"img": "../images/content/jury-2.jpg",
+			"img": "images/content/jury-2.jpg",
 			"title": "Prix Present",
 			"name": "Florent Marcie",
 			"text": "Président du Jury Prix Présent",
 			"link": "Jury Prix Présent"
 		},
 		{
-			"img": "../images/content/jury-3.jpg",
+			"img": "images/content/jury-3.jpg",
 			"title": "Prix Sauvage Corto",
 			"name": "Antoine Jouve",
 			"text": "Président du Jury Prix Sauvage Corto",
