@@ -97,6 +97,13 @@ body {
 .header {
 	overflow: hidden;
 	
+	@include responsive(largedesktop) {
+		max-width: 1900px;
+		margin-left: auto;
+		margin-right: auto;
+		box-sizing: border-box;
+	}
+	
 	&__top {
 		padding: 16px 40px;
 		display: flex;
@@ -328,7 +335,8 @@ body {
 					font-size: 24px;
 					display: block;
 					padding-top: 4px;
-					width: calc(100% - 50px);
+					width: calc(100% - 40px);
+					line-height: 1.25;
 				}
 			}
 
@@ -450,6 +458,14 @@ body {
 
 		img {
 			display: block;
+			
+			@include responsive(mobile) {
+				max-width: 100px;
+			}
+			
+			@include responsive(tabletnotebook) {
+				max-width: 120px;
+			}
 		}
 	}
 }
@@ -549,6 +565,15 @@ body {
 												"logo social development"
 												"copyright social development";
 	}
+	
+	@include responsive(largedesktop) {
+		width: 100%;
+		max-width: 1900px;
+		margin-left: auto;
+		margin-right: auto;
+		box-sizing: border-box;
+	}
+	
 	
 	@include responsive(mobile) {
 		padding: 0 0 24px;
@@ -852,6 +877,15 @@ main {
 	@include responsive(notebookdesktop) {
 		padding: 80px 40px 200px;
 	}
+
+	@include responsive(largedesktop) {
+		width: 100%;
+		max-width: 1900px;
+		margin-left: auto;
+		margin-right: auto;
+		box-sizing: border-box;
+	}
+
 }
 
 .title-link {
@@ -1113,25 +1147,111 @@ main {
 }
 
 .program-info {
-	@include responsive(mobile) {
+	
+	&__section {
+		margin-bottom: 80px;
+		
+		@include responsive(tablet) {
+			margin-bottom: 64px;
+		}
+		
+		@include responsive(desktop) {
+			margin-bottom: 80px;
+		}
+		
+		@include responsive(largedesktop) {
+			margin-bottom: 120px;
+		}
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		h3 {
+			margin-bottom: 0;
+		}
+	}
+
+	&__section-inner {
+		display: flex;
+		flex-flow: wrap;
+		width: 100%;
+		margin: 32px 0 64px;
+
+		&:last-child {
+			@include responsive(tabletdesktop) {
+				margin-bottom: 0;
+			}
+		}
+		
+		h4 {
+			width: 100%;
+			margin-bottom: 0;
+
+			@include responsive(landscapedesktop) {
+					padding-left: 4px;
+			}
+
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-flow: wrap;
+		width: 100%;
+
+		@include responsive(mobile) {
+			flex-flow: column;
+		}
+
+		.program-info__content-name {
+			padding-left: 4px;
+			
+			h5 {
+				padding-left: 0;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	
+	&__film-sm {
 		display: flex;
 		flex-flow: column;
+		margin-top: 32px;
+		width: 100%;
+		
+		@include responsive(notebookdesktop) {
+			padding-left: 10px;
+			padding-right: 10px;
+			box-sizing: border-box;
+			width: 33%;
+		}
 	}
 
-	@include responsive(tabletdesktop) {
-		display: grid;
-		grid-template-areas: "day"
-												"films";
+	&__item {
+		@include responsive(mobile) {
+			display: flex;
+			flex-flow: column;
+		}
+		
+		@include responsive(tabletdesktop) {
+			display: grid;
+			grid-template-areas: "day"
+													"films";
+		}
+		
+		@include responsive(largedesktop) {
+			display: grid;
+			grid-template-columns: 315px 1fr;
+			grid-template-areas: "day films";
+		}
 	}
 
-	@include responsive(largedesktop) {
-		display: grid;
-		grid-template-columns: 315px 1fr;
-		grid-template-areas: "day films";
-	}
-	
-	
 	&__day {
+		@include responsive(tablet) {
+			margin-bottom: .5rem;
+		}
+
 		@include responsive(largedevice) {
 			width: 100%;
 			display: flex;
@@ -1147,6 +1267,10 @@ main {
 			display: block;
 			width: auto;
 		}
+		
+		h4 {
+			margin-bottom: 0;
+		}
 	}
 
 	&__films {
@@ -1160,8 +1284,7 @@ main {
 		grid-area: time;
 		
 		@include responsive(mobile) {
-			order: 3;
-			margin-bottom: 1rem;
+			order: 0;
 		}
 		
 		@include responsive(tablet) {
@@ -1171,6 +1294,7 @@ main {
 	
 	&__img {
 		grid-area: img;
+		margin-bottom: 10px;
 
 		@include responsive(mobile) {
 			order: 0;
@@ -1211,9 +1335,51 @@ main {
 		@include responsive(desktop) {
 			padding-left: 16px;
 		}
+		
+		h4 {
+			@include responsive(mobile) {
+				margin-bottom: 1rem;
+			}
+		}
+		
+		a {
+			color: $gray-400;
+			display: block;
+			
+			@include responsive(largedevice) {
+				margin-top: .5rem;
+			}
+			
+			&:hover {
+				color: $active;
+			}
+		}
+		
+		p {
+			margin-bottom: 1rem;
+			color: $gray-400;
+			font-size: 16px;
+			line-height: 125%;
+			
+			@include responsive(notebookdesktop) {
+				font-size: 20px;
+			}
+			
+			&.title {
+				color: $gray-700;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+		}
+		
+		.actors {
+			display: block;
+			margin-top: 4px;
+		}
+
 	}
 	
-	h4 {
+	h5 {
 		margin-bottom: .25rem;
 
 		a {
@@ -1249,61 +1415,82 @@ main {
 		text-decoration: none;
 	}
 	
-	&__item {
+	&__film-item {
 		display: grid;
 		margin-bottom: 40px;
+		
+		@include responsive(largedesktop) {
+			margin-bottom: 56px;
+		}
 		
 		@include responsive(mobile) {
 			display: flex;
 			flex-flow: column;
 		}
-
-		@include responsive(tablet) {
+		
+		@include responsive(smtablet) {
 			grid-template-rows: 1fr 50px auto;
 			grid-template-columns: 50% 50%;
 			grid-template-areas: "img img"
 												"time name"
 												"cinema name";
 		}
-
-		@include responsive(desktop) {
+		
+		@include responsive(landscapedesktop) {
 			grid-template-rows: auto 1fr;
-			grid-template-columns: 315px 1fr 1fr;
+			grid-template-columns: 200px 1fr 1fr;
 			grid-template-areas: "time img name"
 														"time img cinema";
 		}
-
-		a {
-			color: $gray-400;
-			display: block;
-
-			@include responsive(largedevice) {
-				margin-top: .5rem;
-			}
-
-			&:hover {
-				color: $active;
-			}
+		
+		@include responsive(notebookdesktop) {
+			grid-template-columns: 315px 1fr 1fr;
 		}
 
-		p {
-			margin-bottom: 1rem;
-			color: $gray-400;
-			font-size: 20px;
+		&--cinema {
 
-			&.title {
-				color: $gray-700;
-				font-weight: 600;
-				margin-bottom: 10px;
+			.program-info__content-cinema {
+
+				@include responsive(mobile) {
+					order: 1;
+				}
+
+				@include responsive(desktop) {
+					padding-left: 0;
+				}
+
+				h6 {
+					margin-bottom: 10px;
+				}
+
+				h4 {
+					margin-bottom: 0;
+				}
+			}
+
+			.program-info__time {
+				
+				@include responsive(mobile) {
+					order: 2;
+				}
+				
+				@include responsive(landscapedesktop) {
+					margin-top: 32px;
+				}
+
+				.title {
+					font-weight: 700;
+					color: $gray-700;
+					font-size: 24px;
+				}
 			}
 		}
 		
-		span {
-			display: block;
-			margin-top: 4px;
+		h6 {
+			margin: 0;
 		}
 	}
-	
+
 	&__content-cinema {
 		grid-area: cinema;
 
@@ -1311,23 +1498,247 @@ main {
 			order: 3;
 		}
 
-		@include responsive(tablet) {
+		@include responsive(smtablet) {
 			margin-bottom: auto;
 			padding-right: 10px;
 			box-sizing: border-box;
 		}
 
-		@include responsive(desktop) {
-			padding-right: 16px;
-		}
-		
-		@include responsive(desktop) {
+		@include responsive(landscapedesktop) {
 			padding-left: 16px;
 		}
 
 		p {
 			margin-bottom: 0;
+			
+			&.title {
+				font-weight: 600;
+			}
+			
+			&.link {
+				@include responsive(landscapedesktop) {
+					font-size: 18px;
+				}
+				
+				span {
+					display: block;
+				}
+			}
+			
+			&.tarif {
+				@include responsive(landscapedesktop) {
+					font-size: 18px;
+				}
+			}
 		}
+		
+	}
+	
+	&__cinema-item {
+		display: flex;
+		flex-flow: column;
+		
+		@include responsive(mobile) {
+			margin-bottom: 40px;
+		}
+		
+		@include responsive(tablet) {
+			margin-bottom: 64px;
+		}
+		
+		@include responsive(desktop) {
+			margin-bottom: 80px;
+		}
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.program-info__film-item {
+			@include responsive(mobile) {
+				margin-bottom: 40px;
+				grid-template-areas: "img"
+												"name"
+												"time";
+			}
+
+			@include responsive(tablet) {
+				margin-bottom: 40px;
+				grid-template-columns: 50% 50%;
+				grid-template-areas: "img img"
+												"cinema name"
+												"cinema name";
+			}
+
+			@include responsive(desktop) {
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-areas: "time img name"
+															"cinema img name";
+			}
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+			
+			.program-info__img {
+				margin-bottom: 0;
+			}
+		}
+		
+		.program-info__time {
+			@include responsive(mobile) {
+				order: 0;
+				margin-bottom: 0;
+			}
+			
+			@include responsive(tablet) {
+				padding-top: 1rem;
+			}
+		}
+		
+		.program-info__content-name {
+			h4 {
+				@include responsive(mobile) {
+					margin-bottom: .5rem;
+				}
+				
+				@include responsive(tabletdesktop) {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+		
+		.program-info__cinema-detail {
+			@include responsive(mobile) {
+				order: 1;
+				margin-top: 1rem;
+			}
+		}
+		
+		.tarif {
+			@include responsive(mobile) {
+				margin-bottom: .5rem;
+			}
+		}
+		
+		.program-info__content-name {
+			p {
+				@include responsive(mobile) {
+					font-size: 16px;
+					line-height: 20px;
+				}
+			}
+			span {
+				display: block;
+			}
+		}
+	}
+	
+	&__cinema-title {
+		margin-bottom: 24px;
+
+		h4 {
+			margin-bottom: 0;
+		}
+	}
+	
+	&__cinema-detail {
+		
+		@include responsive(tablet) {
+			grid-area: cinema;
+		}
+		
+		.program-info__time {
+			margin-bottom: .5rem;
+		}
+	}
+}
+
+.films-list {
+	position: relative;
+
+	@include responsive(landscapedesktop) {
+		display: flex;
+		flex-flow: wrap;
+		width: 100%;
+	}
+	
+	.program-info__film-sm {
+		@media screen and (min-width: 1024px) and (max-width: 1365px) {
+			width: auto;
+		}
+	}
+}
+
+.owl-nav {
+	position: absolute;
+	right: 0;
+	height: 40px;
+	width: 100px;
+	display: flex;
+	justify-content: space-between;
+	
+	button {
+		display: block;
+		
+		&.owl-next {
+			span {
+				background: url(../images/arrow-right.svg) 50% 50% no-repeat;
+			}
+			
+			&.disabled {
+				opacity: .1;
+			}
+		}
+		&.owl-prev {
+			span {
+				background: url(../images/arrow-left.svg) 50% 50% no-repeat;
+			}
+			
+			&.disabled {
+				opacity: .1;
+			}
+		}
+	}
+	
+	span {
+		display: block;
+		width: 40px;
+		height: 40px;
+		font-size: 0;
+	}
+}
+
+
+.films-title {
+	@include responsive(device) {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	
+	&__arrows {
+		@include responsive(device) {
+			display: flex;
+			width: 80px;
+			justify-content: space-between;
+		}
+		
+		@include responsive(landscapedesktop) {
+			display: none;
+		}
+	}
+
+	a {
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+	}
+	
+	svg {
+		font-size: 32px;
 	}
 }
 
@@ -1410,28 +1821,13 @@ main {
 			margin-bottom: 56px;
 		}
 	}
-
-	&__title {
-		display: flex;
-		justify-content: space-between;
-	}
 	
-	&__arrows {
-		display: flex;
-		justify-content: space-between;
-		width: 100px;
-		padding-top: 5px;
+	.owl-nav {
 		
-		a {
-			width: 40px;
-			height: 40px;
-			cursor: pointer;
-			display: flex;
-			align-items: center;
-		}
+		top: -64px;
 		
-		svg {
-			font-size: 32px;
+		@include responsive(largedesktop) {
+			top: -72px;
 		}
 	}
 
@@ -1514,4 +1910,233 @@ main {
 			font-size: 24px;
 		}
 	}
+}
+
+
+.test {
+	border: 1px solid #000;
+
+	.item {
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+
+.program-page {
+	
+	&__text {
+		max-width: 720px;
+	}
+	
+	&__content {
+		@include paddingBlock();
+	}
+}
+
+.program-links {
+	display: flex;
+	margin-bottom: 56px;
+	justify-content: space-between;
+
+	&__item {
+		a,
+		span {
+			background-color: $black;
+			color: $white;
+			text-decoration: none;
+			padding: 4px 16px 8px;
+			font-size: 20px;
+
+			@include responsive(notebookdesktop) {
+				font-size: 24px;
+			}
+
+			@include responsive(largedesktop) {
+				font-size: 32px;
+			}
+		}
+		
+		&.active {
+			a,
+			span {
+				background-color: $active;
+			}
+		}
+	}
+}
+
+
+.program-calendar {
+	display: flex;
+	margin-bottom: 24px;
+	
+	@include responsive(desktop) {
+		margin-bottom: 48px;
+	}
+	
+	@include responsive(largedesktop) {
+		margin-bottom: 64px;
+	}
+
+	@include responsive(mobile) {
+		flex-flow: wrap;
+	}
+
+	&__all {
+		line-height: 125%;
+		font-size: 20px;
+		white-space: nowrap;
+
+		@include responsive(device) {
+			margin-bottom: 1rem;
+		}
+
+		@include responsive(notebookdesktop) {
+			margin-right: 0;
+		}
+
+		@include responsive(largedesktop) {
+			font-size: 28px;
+		}
+	}
+	
+	&__list {
+		display: flex;
+		flex-flow: wrap;
+		
+		@include responsive(mobile) {
+			margin-left: -24px;
+		}
+	}
+	
+	&__item {
+		margin-left: 24px;
+		
+		@include responsive(desktop) {
+			margin-left: 40px;
+		}
+		
+		a {
+			display: flex;
+			flex-flow: column;
+			text-decoration: none;
+			align-items: center;
+			color: $gray-700;
+			font-size: 20px;
+			line-height: 125%;
+			margin-bottom: 1rem;
+
+			&:hover {
+				color: $active;
+			}
+
+			@include responsive(largedesktop) {
+				font-size: 28px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.date {
+			font-size: 36px;
+			line-height: 1;
+		}
+
+		.day {
+			font-size: 20px;
+			line-height: 1;
+			text-transform: uppercase;
+		}
+	}
+	
+	.active {
+		color: $active;
+	}
+}
+
+.sticky {
+	position: sticky;
+	top: 0;
+}
+
+.tarif {
+	span {
+		display: block;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.box-modal {
+	background-color: #fff;
+	width: 100%;
+	border-radius: 2px;
+	
+	&__maps {
+		iframe {
+			height: 600px;
+		}
+	}
+	
+	&__video {
+		iframe {
+			@include responsive(mobile) {
+				height: 300px;
+			}
+			
+			@include responsive(tablet) {
+				height: 480px;
+			}
+
+			@include responsive(desktop) {
+				height: 640px;
+			}
+		}
+	}
+
+	iframe {
+		width: 100%;
+		border: 0;
+		min-width: 332px;
+		display: block;
+		
+		@include responsive(smtablet) {
+			min-width: 690px;
+		}
+		
+		@include responsive(landscapedesktop) {
+			min-width: 940px;
+		}
+		
+		@include responsive(desktop) {
+			min-width: 1200px;
+		}
+	}
+	
+	img {
+		display: block;
+		border-radius: 2px;
+	}
+}
+
+.arcticmodal-container_i2 {
+	padding: 16px;
+}
+
+.arcticmodal-close {
+	position: absolute;
+	right: 24px;
+	top: 24px;
+	width: 24px;
+	height: 24px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.arcticmodal-overlay {
+	background-color: $white !important;
+	opacity: .9 !important;
 }

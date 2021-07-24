@@ -94,7 +94,7 @@ $largedesktop: 1600px;
 	
 	@include responsive(largedesktop) {
 		font-size: $heading + 16;
-		margin-bottom: $heading + 16;
+		//margin-bottom: $heading + 16;
 	}
 }
 
@@ -106,3 +106,4 @@ $largedesktop: 1600px;
 		font-size: 24px;
 	}
 }
+
