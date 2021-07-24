@@ -1,0 +1,62 @@
+extends templates/layout
+include templates/_mixins
+
+block content
+	.program-page
+		h1 Programme 2021
+		.program-page__text
+			p Chers amis du festival,<br>
+				| Après une troisième reprogramation, nous sommes heureux de vous présenter le programme de cette 15ème édition, exclusivement EN LIGNE. Ce programme “essentiel” est fidèle à la vocation du festival dès ses débuts – la joie de retrouver les chefs d’oeuvres du passé, les maîtres du cinéma européens, et la joie de découvrir, d’identifier, d’affirmer les nouveaux talents du cinéma de notre continent. En attendant de vous retrouver dans nos merveilleuses salles parisiennes nous vous souhaitons de belles projections et rencontres virtuels.
+			p
+				strong Irena Bilic et l’équipe du festival L’Europe autour de l’Europe
+
+
+		.program-page__content
+
+			.program-page__links
+				-var current = "films.html"
+				+filmsMenu(current)
+
+			.program-page__calendar
+				.program-calendar
+					.program-calendar__all
+						span.active Tous les films
+					.program-calendar__list
+						each item in filmsSection
+							.program-calendar__item
+								a(href="")= item.title
+
+			.program-info
+				each item in program
+					.program-info__section
+						h3= item.section
+						if item.hasSubsection !== true
+							.program-info__list.owl-carousel.js-films-carousel
+								each subitem in item.films
+									.program-info__film-sm
+										a(href="#").program-info__img
+											img(src= subitem.img alt= subitem.title)
+										.program-info__content-name
+											h5
+												a(href="#")= subitem.title
+											p.title= subitem.director
+											p= subitem.genre
+												span.actors= subitem.actors
+
+						else
+							each subitem in item.films
+								.program-info__section-inner
+									if subitem.subsection !== ""
+										h4= subitem.subsection
+									.program-info__list.owl-carousel.js-films-carousel
+										each film in subitem.subfilms
+											.item.program-info__film-sm
+												if film.img !== ""
+													a(href="#").program-info__img
+														img(src= film.img alt= film.title)
+												.program-info__content-name
+													h5
+														a(href="#")= film.title
+													p.title= film.director
+													p= film.genre
+														span.actors= film.actors

@@ -128,7 +128,9 @@
 		{
 			"date": "7 JUIN",
 			"weekday": "Lundi",
-			"film": [
+			"section": "Compétition Prix Sauvage",
+			"hasSubsection": false,
+			"films": [
 				{
 					"time": "19:00",
 					"img": "images/content/img-2.jpg",
@@ -164,6 +166,325 @@
 					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
 					"price1": "8 €",
 					"price2": "6.5 €"
+				},
+				{
+					"time": "21:05",
+					"img": "images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				}
+			]
+		},
+		{
+			"date": "8 JUIN",
+			"weekday": "Mardi",
+			"section": "Compétition Present",
+			"hasSubsection": false,
+			"films": [
+				{
+					"time": "19:00",
+					"img": "images/content/img-2.jpg",
+					"title": "Surdine / Surdina",
+					"director": "de Rodrigo Areias",
+					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+					"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre",
+					"cinema": "Cinéma le Saint-André-des-Arts",
+					"address": "30 Rue Saint-André des Arts, 75006 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "19:05",
+					"img": "images/content/img-4.jpg",
+					"title": "Die Kinder der Toten",
+					"director": "de Kelly Copper et Pavol Liška",
+					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+					"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+					"cinema": "Cinéma l’Entrepôt",
+					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "20:30",
+					"img": "images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				}
+			]
+		},
+		{
+			"date": "9 JUIN",
+			"weekday": "Mercredi",
+			"section": "Compétition Prix Sauvage Corto",
+			"hasSubsection": false,
+			"films": [
+				{
+					"time": "19:00",
+					"img": "images/content/img-4.jpg",
+					"title": "Die Kinder der Toten",
+					"director": "de Kelly Copper et Pavol Liška",
+					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+					"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+					"cinema": "Cinéma l’Entrepôt",
+					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "19:05",
+					"img": "images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				},
+				{
+					"time": "20:30",
+					"img": "images/content/img-2.jpg",
+					"title": "Surdine / Surdina",
+					"director": "de Rodrigo Areias",
+					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+					"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre",
+					"cinema": "Cinéma le Saint-André-des-Arts",
+					"address": "30 Rue Saint-André des Arts, 75006 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				}
+			]
+		},
+		{
+			"date": "10 JUIN",
+			"weekday": "Jeudi",
+			"section": "THEMA: Animaux, hommes, machines, robots",
+			"hasSubsection": false,
+			"films": [
+				{
+					"time": "19:00",
+					"img": "images/content/img-4.jpg",
+					"title": "Die Kinder der Toten",
+					"director": "de Kelly Copper et Pavol Liška",
+					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+					"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+					"cinema": "Cinéma l’Entrepôt",
+					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "19:05",
+					"img": "images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				},
+				{
+					"time": "20:30",
+					"img": "images/content/img-2.jpg",
+					"title": "Surdine / Surdina",
+					"director": "de Rodrigo Areias",
+					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+					"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre",
+					"cinema": "Cinéma le Saint-André-des-Arts",
+					"address": "30 Rue Saint-André des Arts, 75006 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				}
+			]
+		},
+		{
+			"date": "11 JUIN",
+			"weekday": "Vendredi",
+			"section": "Années 1960 en Italie: pour un nouveau cinéma",
+			"hasSubsection": false,
+			"films": [
+				{
+					"time": "19:00",
+					"img": "images/content/img-4.jpg",
+					"title": "Die Kinder der Toten",
+					"director": "de Kelly Copper et Pavol Liška",
+					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+					"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+					"cinema": "Cinéma l’Entrepôt",
+					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "19:05",
+					"img": "images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				},
+				{
+					"time": "20:30",
+					"img": "images/content/img-2.jpg",
+					"title": "Surdine / Surdina",
+					"director": "de Rodrigo Areias",
+					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+					"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre",
+					"cinema": "Cinéma le Saint-André-des-Arts",
+					"address": "30 Rue Saint-André des Arts, 75006 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				}
+			]
+		},
+		{
+			"date": "12 JUIN",
+			"weekday": "Samedi",
+			"section": "Hommage aux maîtres",
+			"hasSubsection": true,
+			"films": [
+				{
+					"subsection": "Anja Breien",
+					"subfilms": [
+						{
+							"time": "19:00",
+							"img": "images/content/img-5.jpg",
+							"title": "Solvorn",
+							"director": "d’Anja Breien",
+							"genre": "(Documentaire, Norvège, 1997, 9’, NB, VOSTF)",
+							"actors": "",
+							"cinema": "Cinéma l’Entrepôt",
+							"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+							"price1": "8 €",
+							"price2": "6.5 €"
+						},
+						{
+							"time": "19:00",
+							"img": "images/content/img-6.jpg",
+							"title": "De l’histoire du Chewing-gum / Fra tyggegummiens historie",
+							"director": "d’Anja Breien",
+							"genre": "(Film essai, Norvège, 2012, 24’, C/NB, VOSTF)",
+							"actors": "",
+							"cinema": "Cinéma l’Entrepôt",
+							"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+							"price1": "8 €",
+							"price2": "6.5 €"
+						},
+						{
+							"time": "19:00",
+							"img": "images/content/img-7.jpg",
+							"title": "Yezidi / Jezidi",
+							"director": "d’Anja Breien",
+							"genre": "(Documentaire, Norvège, 2009, 52’ C, VOSTF)",
+							"actors": "",
+							"cinema": "Cinéma l’Entrepôt",
+							"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+							"price1": "8 €",
+							"price2": "6.5 €"
+						}
+					]
+				},
+				{
+					"subsection": "Jean-Claude Carrière",
+					"subfilms": [
+						{
+							"time": "19:05",
+							"img": "images/content/img-8.jpg",
+							"title": "Les Fantômes de Goya / Goya’s Ghosts",
+							"director": "de Miloš Forman, écrit par Jean-Claude Carrière",
+							"genre": "(Fiction, Espagne/Etats-Unis, 2006, 114’, C, VOSTF)",
+							"actors": "avec Javier Bardem, Natalie Portman, Stellan Skarsgård",
+							"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+							"address": "4 rue de Chevreuse, 75006 Paris",
+							"price1": "Entrée libre, dans la limite des places disponibles",
+							"price2": ""
+						}
+					]
+				},
+				{
+					"subsection": "Peter Handke",
+					"subfilms": [
+						{
+							"time": "19:05",
+							"img": "",
+							"title": "L’Absence / Die Abwesenheit",
+							"director": "de Peter Handke",
+							"genre": "(Fiction, Allemagne, 1992, 112’, C, VOSTF)",
+							"actors": "avec Eustaquio Barjau, Jeanne Moreau, Alex Descas, Bruno Ganz, Sophie Semin",
+							"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+							"address": "4 rue de Chevreuse, 75006 Paris",
+							"price1": "Entrée libre, dans la limite des places disponibles",
+							"price2": ""
+						},
+						{
+							"time": "19:05",
+							"img": "images/content/img-9.jpg",
+							"title": "La Femme gauchère / Die Linkshändige Frau",
+							"director": "de Peter Handke",
+							"genre": "(Fiction, Allemagne / France, 1978, 115’, C, VOSTF)",
+							"actors": "avec Edith Clever, Bruno Ganz",
+							"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+							"address": "4 rue de Chevreuse, 75006 Paris",
+							"price1": "Entrée libre, dans la limite des places disponibles",
+							"price2": ""
+						},
+						{
+							"time": "19:05",
+							"img": "images/content/img-10.jpg",
+							"title": "Les Ecrivains contemporains du monde: Peter Handke",
+							"director": "de Neda Valčic Lazović",
+							"genre": "(Documentaire-interview, Serbie, 2020, C, 50’, VO)",
+							"actors": "",
+							"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+							"address": "4 rue de Chevreuse, 75006 Paris",
+							"price1": "Entrée libre, dans la limite des places disponibles",
+							"price2": ""
+						},
+						{
+							"time": "19:05",
+							"img": "images/content/img-11.jpg",
+							"title": "L’Angoisse du gardien de but au moment du penalty / Die Angst des Tormanns beim Elfmete",
+							"director": "de Wim Wenders, écrit par Peter Handke",
+							"genre": "(Fiction, Allemagne / Autriche, 1972, 101’, C, VOSTF)",
+							"actors": "avec Arthur Brauss, Kai Fisher, Erika Pluhar, Libgart Schwarz, Edda Köchl, Rüdiger",
+							"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+							"address": "4 rue de Chevreuse, 75006 Paris",
+							"price1": "Entrée libre, dans la limite des places disponibles",
+							"price2": ""
+						},
+						{
+							"time": "19:05",
+							"img": "",
+							"title": "Peter Handke, le joueur mélancolique / Peter Handke, der schwermütige Spieler",
+							"director": "de Peter Hamm",
+							"genre": "(Documentaire, Allemagne, 2002, 75’, C, VOSTF)",
+							"actors": "",
+							"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+							"address": "4 rue de Chevreuse, 75006 Paris",
+							"price1": "Entrée libre, dans la limite des places disponibles",
+							"price2": ""
+						}
+					]
 				}
 			]
 		}
@@ -211,6 +532,18 @@
 		{
 			"img": "images/content/video-2.jpg",
 			"text": "EFA 2015. Istvan Szabo"
+		},
+		{
+			"img": "images/content/video-3.jpg",
+			"text": "Carlos Saura invité d'honneur"
+		},
+		{
+			"img": "images/content/video-1.jpg",
+			"text": "L'Europe autour de l'Europe — 2014. Le Vaste Monde Mouratova"
+		},
+		{
+			"img": "images/content/video-2.jpg",
+			"text": "EFA 2015. Istvan Szabo"
 		}
 	],
 	"gallery": [
@@ -225,6 +558,266 @@
 		{
 			"img": "images/content/gallery-3.jpg",
 			"text": "Robolove de Maria Arlamovsky au Centre Anim’Montparnasse"
+		}
+	],
+	"calendar": [
+		{
+			"date": "07",
+			"day": "lun"
+		},
+		{
+			"date": "08",
+			"day": "mar"
+		},
+		{
+			"date": "09",
+			"day": "mer"
+		},
+		{
+			"date": "10",
+			"day": "jeu"
+		},
+		{
+			"date": "11",
+			"day": "ven"
+		},
+		{
+			"date": "12",
+			"day": "sum"
+		},
+		{
+			"date": "13",
+			"day": "dim"
+		},
+		{
+			"date": "14",
+			"day": "lun"
+		},
+		{
+			"date": "15",
+			"day": "mar"
+		},
+		{
+			"date": "16",
+			"day": "mer"
+		},
+		{
+			"date": "17",
+			"day": "jeu"
+		},
+		{
+			"date": "18",
+			"day": "ven"
+		},
+		{
+			"date": "19",
+			"day": "sum"
+		},
+		{
+			"date": "20",
+			"day": "dim"
+		},
+		{
+			"date": "21",
+			"day": "lun"
+		},
+		{
+			"date": "22",
+			"day": "mar"
+		},
+		{
+			"date": "23",
+			"day": "mer"
+		},
+		{
+			"date": "24",
+			"day": "jeu"
+		},
+		{
+			"date": "25",
+			"day": "ven"
+		},
+		{
+			"date": "26",
+			"day": "sum"
+		},
+		{
+			"date": "27",
+			"day": "dim"
+		}
+	],
+	"filmsSection": [
+		{
+			"title": "Compétition Prix Sauvage "
+		},
+		{
+			"title": "Compétition Prix Présent"
+		},
+		{
+			"title": "Compétition Prix Sauvage Corto"
+		},
+		{
+			"title": "THEMA: Animaux, hommes, machines, robots"
+		},
+		{
+			"title": "Années 1960 en Italie: pour un nouveau cinéma"
+		},
+		{
+			"title": "Hommage aux maîtres"
+		}
+	],
+	"cinemaList": [
+		{
+			"title": "Cinéma le Saint-André-des-Arts"
+		},
+		{
+			"title": "The Arts Arena, Columbia Global Centers | Europe"
+		},
+		{
+			"title": "Centre d’animation Montparnasse"
+		},
+		{
+			"title": "Cinéma l’Entrepôt"
+		},
+		{
+			"title": "Maison du Portugal"
+		},
+		{
+			"title": "The Arts Arena"
+		}
+	],
+	"cinema": [
+		{
+			"title": "Cinéma le Saint-André-des-Arts",
+			"address": "30 Rue Saint-André des Arts, 75006 Paris",
+			"date": "7 JUIN",
+			"weekday": "Lundi",
+			"films": [
+				{
+					"time": "19:00",
+					"img": "images/content/img-2.jpg",
+					"title": "Surdine / Surdina",
+					"director": "de Rodrigo Areias",
+					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+					"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre",
+					"cinema": "Cinéma le Saint-André-des-Arts",
+					"address": "30 Rue Saint-André des Arts, 75006 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "19:05",
+					"img": "images/content/img-4.jpg",
+					"title": "Die Kinder der Toten",
+					"director": "de Kelly Copper et Pavol Liška",
+					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+					"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+					"cinema": "Cinéma l’Entrepôt",
+					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "20:30",
+					"img": "images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				}
+			]
+		},
+		{
+			"title": "The Arts Arena, Columbia Global Centers | Europe",
+			"address": "30 Rue Saint-André des Arts, 75006 Paris",
+			"date": "8 JUIN",
+			"weekday": "Mardi",
+			"films": [
+				{
+					"time": "19:00",
+					"img": "images/content/img-2.jpg",
+					"title": "Surdine / Surdina",
+					"director": "de Rodrigo Areias",
+					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+					"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre",
+					"cinema": "Cinéma le Saint-André-des-Arts",
+					"address": "30 Rue Saint-André des Arts, 75006 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "19:05",
+					"img": "images/content/img-4.jpg",
+					"title": "Die Kinder der Toten",
+					"director": "de Kelly Copper et Pavol Liška",
+					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+					"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+					"cinema": "Cinéma l’Entrepôt",
+					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "20:30",
+					"img": "images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				}
+			]
+		},
+		{
+			"title": "The Arts Arena, Columbia Global Centers | Europe",
+			"address": "30 Rue Saint-André des Arts, 75006 Paris",
+			"date": "9 JUIN",
+			"weekday": "Mercredi",
+			"films": [
+				{
+					"time": "19:00",
+					"img": "",
+					"title": "Surdine / Surdina",
+					"director": "de Rodrigo Areias",
+					"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+					"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre",
+					"cinema": "Cinéma le Saint-André-des-Arts",
+					"address": "30 Rue Saint-André des Arts, 75006 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "19:05",
+					"img": "images/content/img-4.jpg",
+					"title": "Die Kinder der Toten",
+					"director": "de Kelly Copper et Pavol Liška",
+					"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+					"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+					"cinema": "Cinéma l’Entrepôt",
+					"address": "7 / 9 rue Francis de Pressensé, 75014 Paris",
+					"price1": "8 €",
+					"price2": "6.5 €"
+				},
+				{
+					"time": "20:30",
+					"img": "images/content/img-3.jpg",
+					"title": "A Picture with Yuki",
+					"director": "de Lachezar Avramov",
+					"genre": "(Fiction, Bulgarie, 2019, 110’, C, VOSTF)",
+					"actors": "avec Kiki Sugino, Ruscen Vidinliev et Serafim Todorov",
+					"cinema": "The Arts Arena, Columbia Global Centers | Europe",
+					"address": "4 rue de Chevreuse, 75006 Paris",
+					"price1": "Entrée libre, dans la limite des places disponibles",
+					"price2": ""
+				}
+			]
 		}
 	]
 }

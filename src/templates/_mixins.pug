@@ -1,0 +1,49 @@
+mixin filmsMenu(current)
+	.program-links
+		if current === 'films.html'
+			.program-links__item.active
+				span films
+		else
+			.program-links__item
+				a(href="films.html") films
+		if current === "program.html"
+			.program-links__item.active
+				span horaires
+		else
+			.program-links__item
+				a(href="program.html") horaires
+		if current === "cinemas.html"
+			.program-links__item.active
+				span cinémas
+		else
+			.program-links__item
+				a(href="cinemas.html") cinémas
+
+
+
+mixin menu(currentTitle, currentSubtitle)
+	ul
+		each item in menuAll
+			li(class="nav-item")
+				if item.url === currentTitle
+					a(class="nav-link active" href= item.url)= item.title
+					ul.submenu.active
+						each subitem in item.submenu
+							li(class="nav-item")
+								if subitem.url === currentSubtitle
+									a(class="nav-link active" href= subitem.url)= subitem.title
+								else if subitem.isActive === false
+									a(class="nav-link disabled" href= subitem.url)= subitem.title
+								else
+									a(class="nav-link" href= subitem.url)= subitem.title
+				else
+					a(class="nav-link" href= item.url)= item.title
+					ul.submenu
+						each subitem in item.submenu
+							li(class="nav-item")
+								if subitem.url === currentSubtitle
+									a(class="nav-link active" href= subitem.url)= subitem.title
+								else if subitem.isActive === false
+									a(class="nav-link disabled" href= subitem.url)= subitem.title
+								else
+									a(class="nav-link" href= subitem.url)= subitem.title

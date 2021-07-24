@@ -18,16 +18,15 @@ $(function (){
 		});
 	}
 
-
-	var owl = $(".js-video-carousel");
-	owl.owlCarousel({
+	var video = $(".js-video-carousel");
+	video.owlCarousel({
 		responsiveClass: true,
-		nav: false,
-		dots: false,
+		nav: true,
 		responsive: {
 			0: {
 				items: 1,
-				margin: 20
+				margin: 20,
+
 			},
 			768: {
 				margin: 20,
@@ -42,24 +41,53 @@ $(function (){
 		}
 	});
 
-	$('.next').click(function() {
-		owl.trigger('next.owl.carousel');
-	})
-
-	$('.prev').click(function() {
-		owl.trigger('prev.owl.carousel');
-	})
-
-	$(".fancybox-thumb").fancybox({
-		maxWidth : 800,
-		maxHeight : 600,
-		fitToView : false,
-		width : '70%',
-		height : '70%',
-		autoSize : false,
-		closeClick : false,
-		openEffect : 'none',
-		closeEffect : 'none'
+	var films = $(".js-films-carousel");
+	$(window).on('load resize', function () {
+		if ($(this).width() >= 1366) {
+			films.trigger('destroy.owl.carousel').removeClass('owl-carousel');
+		}
+		else {
+			films.addClass('owl-carousel');
+			films.on('initialized.owl.carousel changed.owl.carousel', function(e) {
+				if (!e.namespace)  {
+					return;
+				}
+				var carousel = e.relatedTarget;
+				$('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+			}).owlCarousel({
+				responsiveClass: true,
+				autoHeight: true,
+				nav: true,
+				dots: false,
+				responsive: {
+					0: {
+						items: 1,
+						margin: 20,
+					},
+					768: {
+						margin: 20,
+						slideBy: 2,
+						items: 2
+					},
+					1024: {
+						margin: 20,
+						slideBy: 3,
+						items: 3
+					}
+				}
+			});
+		}
 	});
+
+	$('.link a').on('click', function(event){
+		event.preventDefault();
+		$('#mapsModal').arcticmodal();
+	});
+
+	$('.video__item a').on('click', function(event){
+		event.preventDefault();
+		$('#videoModal').arcticmodal();
+	});
+
 
 });

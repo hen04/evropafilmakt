@@ -1,0 +1,63 @@
+extends templates/layout
+include templates/_mixins
+
+block content
+	.program-page
+		h1 Programme 2021
+		.program-page__text
+			p Chers amis du festival,<br>
+				| Après une troisième reprogramation, nous sommes heureux de vous présenter le programme de cette 15ème édition, exclusivement EN LIGNE. Ce programme “essentiel” est fidèle à la vocation du festival dès ses débuts – la joie de retrouver les chefs d’oeuvres du passé, les maîtres du cinéma européens, et la joie de découvrir, d’identifier, d’affirmer les nouveaux talents du cinéma de notre continent. En attendant de vous retrouver dans nos merveilleuses salles parisiennes nous vous souhaitons de belles projections et rencontres virtuels.
+			p
+				strong Irena Bilic et l’équipe du festival L’Europe autour de l’Europe
+
+
+		.program-page__content
+
+			.program-page__links
+				-var current = "program.html"
+				+filmsMenu(current)
+
+			.program-page__calendar
+				.program-calendar
+					.program-calendar__all
+						span.active Toutes les dates
+					.program-calendar__list
+						each item in calendar
+							.program-calendar__item
+								a(href="")
+									span.date= item.date
+									span.day= item.day
+
+
+			.program-info
+				each item in program.slice(0,5)
+					.program-info__item
+						.program-info__day
+							.sticky
+								h4= item.date+ ", "
+								h6= item.weekday
+						.program-info__films
+							each subitem in item.films
+								.program-info__film-item
+									.program-info__time
+										h4= subitem.time
+									a(href="#").program-info__img
+										img(src= subitem.img alt= subitem.title)
+									.program-info__content-name
+										h4
+											a(href="#")= subitem.title
+										p.title= subitem.director
+										p= subitem.genre
+											span.actors= subitem.actors
+									.program-info__content-cinema
+										p.title= subitem.cinema
+										p.link
+											a(href="")= subitem.address
+										p.tarif
+											if subitem.price2 === ''
+												span Entrée libre, dans la limite des places disponibles
+											else
+												span Plein tarif: !{' '}
+													strong=  subitem.price1
+												span Tarif réduit: !{' '}
+													strong=  subitem.price2
