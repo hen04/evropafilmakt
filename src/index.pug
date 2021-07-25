@@ -91,3 +91,27 @@ block content
 								strong= item.name
 							p= item.text
 						a(href="")= item.link
+
+		.video
+			h2 Vidéothèque
+			.video__list
+				.video__slider.owl-carousel.js-video-carousel
+					each item in videotheque
+						.item.video__item
+							a(href="#")
+								img(src= item.img alt="")
+								p= item.text
+
+			a(href="video.html" class="btn") Voir les vidéos
+
+
+		.gallery
+			h2 Galeries
+			.gallery__list
+				each item in gallery
+					.gallery__item
+						a(href="gallery-item.html")
+							img(src= item.img alt="")
+							p= item.text
+
+			a(href="gallery.html" class="btn") Voir les galeries

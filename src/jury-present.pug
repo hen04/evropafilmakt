@@ -1,0 +1,15 @@
+extends templates/layout
+
+block content
+	.jury-page
+		h1 Jury
+		h2 Jury Prix Présent
+		.jury-page__list
+			each item in juryItem
+				.jury-page__item
+					.jury-page__img
+						img(src= item.img alt= item.name)
+					.jury-page__info
+						h5= item.name
+							span= item.status
+						p= item.info

@@ -62,7 +62,7 @@ html(lang="ru")
 									ul.sub-menu
 										each subitem in item.submenu
 											li
-												a(href="")= subitem.title
+												a(href= subitem.url)= subitem.title
 
 			.header__banner
 				img(src="images/main-banner.png" alt="")
@@ -76,30 +76,6 @@ html(lang="ru")
 
 		main
 			block content
-
-			.video
-				h2 Vidéothèque
-				.video__list
-					.video__slider.owl-carousel.js-video-carousel
-						each item in videotheque
-							.item.video__item
-								a(href="#")
-									img(src= item.img alt="")
-									p= item.text
-
-				a(href="video.html" class="btn") Voir les vidéos
-
-
-			.gallery
-				h2 Galeries
-				.gallery__list
-					each item in gallery
-						.gallery__item
-							a(href="gallery-item.html")
-								img(src= item.img alt="")
-								p= item.text
-
-				a(href="gallery.html" class="btn") Voir les galeries
 
 		footer.footer
 			.footer__subscribe

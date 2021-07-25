@@ -2477,4 +2477,102 @@ main {
   background-color: #fff !important;
   opacity: .9 !important; }
 
+.jury-page__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
+.jury-page__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-bottom: 48px; }
+  @media only screen and (min-width: 768px) and (max-width: 1279px) {
+    .jury-page__item {
+      /* 768 - 1279 */
+      margin-bottom: 80px; } }
+  @media only screen and (min-width: 1280px) {
+    .jury-page__item {
+      /* > 1280 */
+      margin-bottom: 120px; } }
+  @media only screen and (max-width: 767px) {
+    .jury-page__item {
+      /* < 767 */
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+      flex-flow: column; } }
+  .jury-page__item:last-child {
+    margin-bottom: 0; }
+  @media only screen and (min-width: 1280px) {
+    .jury-page__item:nth-child(even) {
+      /* > 1280 */
+      padding-left: 30%; } }
+
+@media only screen and (max-width: 1023px) {
+  .jury-page__img {
+    /* < 1023 */
+    margin-bottom: 20px; } }
+
+@media only screen and (min-width: 768px) {
+  .jury-page__img {
+    /* > 768 */
+    margin-right: 20px; } }
+
+.jury-page__img img {
+  display: block; }
+
+.jury-page__info {
+  max-width: 600px; }
+  .jury-page__info h5 span {
+    display: block;
+    font-size: 16px;
+    margin-top: 4px; }
+    @media only screen and (min-width: 1280px) {
+      .jury-page__info h5 span {
+        /* > 1280 */
+        font-size: 20px; } }
+
+.editorial {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto; }
+  .editorial__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media only screen and (max-width: 767px) {
+      .editorial__content {
+        /* < 767 */
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse;
+        flex-flow: column-reverse; } }
+  .editorial__text {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    @media only screen and (min-width: 768px) and (max-width: 1279px) {
+      .editorial__text {
+        /* 768 - 1279 */
+        padding-right: 40px; } }
+    @media only screen and (min-width: 1280px) {
+      .editorial__text {
+        /* > 1280 */
+        padding-right: 80px; } }
+  @media only screen and (max-width: 767px) {
+    .editorial__photo {
+      /* < 767 */
+      margin-bottom: 1rem; } }
+  .editorial__photo p {
+    font-weight: 600; }
+  .editorial__photo span {
+    display: block; }
+
 /*# sourceMappingURL=maps/main-style.css.map */
