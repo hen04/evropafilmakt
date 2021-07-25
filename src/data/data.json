@@ -6,19 +6,19 @@
 			"submenu": false
 		},
 		{
-			"url": "festival.html",
+			"url": "about.html",
 			"title": "Festival",
 			"submenu": [
 				{
-					"url": "",
+					"url": "about.html",
 					"title": "Qui sommes-nous"
 				},
 				{
-					"url": "",
+					"url": "editorial.html",
 					"title": "L’éditorial"
 				},
 				{
-					"url": "",
+					"url": "partners.html",
 					"title": "Partenaires"
 				},
 				{
@@ -38,19 +38,19 @@
 			]
 		},
 		{
-			"url": "jury.html",
+			"url": "jury-present.html",
 			"title": "Jury",
 			"submenu": [
 				{
-					"url": "",
+					"url": "jury-present.html",
 					"title": "Jury Prix Présent"
 				},
 				{
-					"url": "",
+					"url": "#",
 					"title": "Jury Prix Sauvage"
 				},
 				{
-					"url": "",
+					"url": "#",
 					"title": "Jury Prix Sauvage CORTO"
 				}
 			]
@@ -510,6 +510,32 @@
 			"name": "Antoine Jouve",
 			"text": "Président du Jury Prix Sauvage Corto",
 			"link": "Jury Prix Sauvage Corto"
+		}
+	],
+	"juryItem": [
+		{
+			"name": "Florent Marcie",
+			"img": "images/content/jury-2.jpg",
+			"status": "(Président du Jury)",
+			"info": "Depuis une trentaine d’années, Florent Marcie parcourt les terrains où s’écrit l’histoire. Des situations de guerre, de libération, de lutte, de dénuement aussi. Il tourne, monte et finance lui-même ses films, dans une économie de moyens et une précarité qui le rapprochent sans conteste des hommes et des femmes qu’il côtoie. En résulte des films longs formats, à la lisière entre cinéma et reportage, présentés en décalage de l’actualité. Une forme de troisième voie qu’il revendique."
+		},
+		{
+			"name": "Simone Audissou",
+			"img": "images/content/jury-6.jpg",
+			"status": "",
+			"info": "Simone Audissou est journaliste Art/Cinéma/High-tech pour le magazine Artension et le blog Médiapart. Elle réalise en 2004 Wellington in Tune, documentaire sur des musiciens d’improvisation néo-zélandais, sélectionné aux Rencontres Internationales du Cinéma des Antipodes. Elle est auteur, pour la presse, de portraits de diverses personnalités, dont Wassyla Tamzali, féministe et fondatrice du centre d’art Ateliers Sauvages à Alger, les réalisateurs Želimir Žilnik et Tiago Hespanha (Cinéma du Réel 2019)."
+		},
+		{
+			"name": "Patrick Morell",
+			"img": "images/content/jury-5.jpg",
+			"status": "",
+			"info": "Patrick Morell est auteur, réalisateur, et parcourt les continents avec sa caméra pour mettre en avant des populations autochtones et les changements environnementaux. Il étudie le journalisme, la philosophie et le cinéma à l’école Louis Lumière. Résident des Etats-Unis, il fonde la société de production Golden Rabbit Films qui produit ses films High Train to Tibet (2009), Nagaland, the last of the headhunters (2012), Inuit Lands, the Melting Point (2017) et Theyyam, Gods Heroes and Ancestors (2020)."
+		},
+		{
+			"name": "Louise Vandeginste",
+			"img": "images/content/jury-4.jpg",
+			"status": "",
+			"info": "Louise Vandeginste est réalisatrice et critique de cinéma. Elle étudie à l’Ecole Louis Lumière en section cinéma, où elle écrit le mémoire intitulé Les motifs de l’addiction au cinéma, de l’intensité à la liberté. Auteuer des court-métrages documentaires, Tierra Libertad (2015) et Poker face (2016), ainsi que des fictions, dont Le Départ d’Ada (2017). Son moyen-métrage documentaire Frère et soeur, tourné au Cambodge, est en cours de post-production. Elle intègre le jury du Prix Vulcain au 71ème Festival de Cannes."
 		}
 	],
 	"videotheque": [
