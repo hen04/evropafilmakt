@@ -23,7 +23,7 @@
 				},
 				{
 					"url": "",
-					"title": "Festivals précédents"
+					"title": "Archives du festival"
 				}
 			]
 		},
@@ -38,20 +38,48 @@
 			]
 		},
 		{
-			"url": "jury-present.html",
-			"title": "Jury",
+			"url": "jury-detail.html",
+			"title": "Jurys",
 			"submenu": [
 				{
-					"url": "jury-present.html",
-					"title": "Jury Prix Présent"
+					"url": "jury-detail.html",
+					"title": "Jury PRIX SAUVAGE"
 				},
 				{
 					"url": "#",
-					"title": "Jury Prix Sauvage"
+					"title": "Jury PRIX PRESENT"
 				},
 				{
 					"url": "#",
-					"title": "Jury Prix Sauvage CORTO"
+					"title": "Jury PRIX SAUVAGE CORTO"
+				},
+				{
+					"url": "#",
+					"title": "Jury PRIX LUNA"
+				}
+			]
+		},
+		{
+			"url": "europe.html",
+			"title": "Europe",
+			"submenu": false
+		},
+		{
+			"url": "online.html",
+			"title": "Online",
+			"submenu": false
+		},
+		{
+			"url": "gallery.html",
+			"title": "Galeries",
+			"submenu": [
+				{
+					"url": "gallery.html",
+					"title": "Photos"
+				},
+				{
+					"url": "video.html",
+					"title": "Vidéothèque"
 				}
 			]
 		},
@@ -62,20 +90,6 @@
 				{
 					"url": "",
 					"title": "Accréditation"
-				}
-			]
-		},
-		{
-			"url": "gallery.html",
-			"title": "Galeries",
-			"submenu": [
-				{
-					"url": "",
-					"title": "Photos"
-				},
-				{
-					"url": "",
-					"title": "Vidéo"
 				}
 			]
 		},
@@ -842,6 +856,124 @@
 					"address": "4 rue de Chevreuse, 75006 Paris",
 					"price1": "Entrée libre, dans la limite des places disponibles",
 					"price2": ""
+				}
+			]
+		}
+	],
+	"galleryList": [
+		{
+			"title": "Soirée de clôture, 17 avril",
+			"active": true,
+			"photo": [
+				{
+					"class": 2,
+					"position": "top",
+					"img": "images/content/gallery-4.jpg"
+				},
+				{
+					"class": 2,
+					"position": "top",
+					"img": "images/content/gallery-5.jpg"
+				},
+				{
+					"class": 3,
+					"position": "top",
+					"img": "images/content/gallery-7.jpg"
+				},
+				{
+					"class": 3,
+					"position": "top",
+					"img": "images/content/gallery-5.jpg"
+				},
+				{
+					"class": 3,
+					"position": "bottom",
+					"img": "images/content/gallery-8.jpg"
+				},
+				{
+					"class": 1,
+					"position": "top",
+					"img": "images/content/gallery-9.jpg"
+				},
+				{
+					"class": 2,
+					"position": "center",
+					"img": "images/content/gallery-4.jpg"
+				},
+				{
+					"class": 2,
+					"position": "top",
+					"img": "images/content/gallery-5.jpg"
+				}
+			]
+		},
+		{
+			"title": "Compétition Prix Sauvage, 16 avril",
+			"photo": [
+				{
+					"img": "images/content/gallery-6.jpg"
+				},
+				{
+					"img": "images/content/gallery-7.jpg"
+				},
+				{
+					"img": ""
+				}
+			]
+		},
+		{
+			"title": "Compétition Prix Sauvage, 15 avril",
+			"photo": [
+				{
+					"img": "images/content/gallery-8.jpg"
+				},
+				{
+					"img": "images/content/gallery-9.jpg"
+				},
+				{
+					"img": ""
+				}
+			]
+		},
+		{
+			"title": "Soirée de clôture, 17 avril",
+			"photo": [
+				{
+					"img": "images/content/gallery-4.jpg"
+				},
+				{
+					"img": "images/content/gallery-5.jpg"
+				},
+				{
+					"img": ""
+				}
+			]
+		},
+		{
+			"title": "Compétition Prix Sauvage, 16 avril",
+			"photo": [
+				{
+					"img": "images/content/gallery-6.jpg"
+				},
+				{
+					"img": "images/content/gallery-7.jpg"
+				},
+				{
+					"img": ""
+				}
+			]
+		},
+		{
+			"title": "Compétition Prix Sauvage, 15 avril",
+			"photo": [
+				{
+					"img": "images/content/gallery-8.jpg"
+				},
+				{
+					"img": "images/content/gallery-9.jpg"
+				},
+				{
+					"img": ""
 				}
 			]
 		}

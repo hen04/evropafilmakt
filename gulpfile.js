@@ -28,7 +28,7 @@ const html = () => {
 }
 
 const styles = () => {
-    return gulp.src('src/styles/**/*.*')
+    return gulp.src(['src/styles/*.scss', 'src/styles/**/*.css'])
         .pipe(sourcemaps.init())
         .pipe(autoprefixer({
             overrideBrowserslist:  ['last 2 versions'],
@@ -51,7 +51,6 @@ const fonts = () => {
         .pipe(gulp.dest('build/fonts/'))
         .pipe(browserSync.stream());
 }
-
 
 const images = () => {
     return gulp.src(['src/images/**/*.png', 'src/images/**/*.jpg', 'src/images/**/*.svg'])
