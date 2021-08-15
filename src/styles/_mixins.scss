@@ -36,6 +36,11 @@ $largedesktop: 1600px;
 			@content;
 		}
 	}
+	@else if $media == alldevices {
+		@media only screen and (max-width: $notebook - 1) { /* < 1365 */
+			@content;
+		}
+	}
 	@else if $media == largedevice {
 		@media only screen and (max-width: $desktop - 1) { /* < 1279 */
 			@content;
@@ -43,6 +48,11 @@ $largedesktop: 1600px;
 	}
 	@else if $media == tabletnotebook {
 		@media only screen and (min-width: $portrait) and (max-width: $notebook - 1) { /* 768 - 1365 */
+			@content;
+		}
+	}
+	@else if $media == notebook {
+		@media only screen and (min-width: $landscape) and (max-width: $notebook - 1) { /* 1024 - 1365 */
 			@content;
 		}
 	}
@@ -107,3 +117,35 @@ $largedesktop: 1600px;
 	}
 }
 
+
+@mixin yearsSelect($className) {
+	&__top {
+		display: flex;
+		align-items: flex-start;
+		width: 100%;
+		
+		@include responsive(mobile) {
+			flex-flow: column;
+			margin-bottom: 64px;
+		}
+	}
+	
+	&__year {
+		@include responsive(mobile) {
+			width: 100%;
+		}
+
+		@include responsive(landscapedesktop) {
+			width: calc(33% - 10px);
+			max-width: 306px;
+		}
+		
+		select {
+			visibility: hidden;
+		}
+		
+		.select2-container {
+			width: 100% !important;
+		}
+	}
+}

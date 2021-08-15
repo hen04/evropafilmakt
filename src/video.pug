@@ -1,0 +1,35 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "gallery.html";
+	- var currentSubtitle = "video.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+
+	.video-page
+		.video-page__section
+			h2 Vidéos d'actualité
+			.video-page__text
+				p Pour toutes les clips vidéo du Festival, !{" "}
+					a(href="") merci de consulter notre chaine Youtube.
+			.video
+				.video__slider.owl-carousel.js-video-carousel(data-nav="false" data-dot="true")
+					each item in video.slice(0,3)
+						.item
+							a(href="#")
+								img(src= item.img alt="")
+								p= item.text
+				a(href="video-albom.html" class="btn") Regardez le vidéo
+
+		.video-page__section
+			h2 Vidéothèque
+			.video
+				.video__slider.owl-carousel.js-video-carousel(data-nav="false" data-dot="true")
+					each item in videotheque.slice(0,3)
+						.item
+							a(href="#")
+								img(src= item.img alt="")
+								p= item.text
+				a(href="video-archive.html" class="btn") Regardez le vidéothèque

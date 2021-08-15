@@ -1,6 +1,11 @@
 extends templates/layout
 include templates/_mixins
 
+block nav
+	- var currentTitle = "program.html";
+	- var currentSubtitle = "cinemas.html";
+	+menu(currentTitle, currentSubtitle)
+
 block content
 	.program-page
 		h1 Programme 2021
@@ -51,12 +56,12 @@ block content
 											span Tarif réduit: !{' '}
 												strong=  subitem.price2
 								if subitem.img !== ''
-									a(href="#").program-info__img
+									a(href="film-detail.html").program-info__img
 										img(src= subitem.img alt= subitem.title)
 
 								.program-info__content-name
 									h4
-										a(href="#")= subitem.title
+										a(href="film-detail.html")= subitem.title
 									p.title= subitem.director
 									p= subitem.genre
 										span= subitem.actors

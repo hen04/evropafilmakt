@@ -9,29 +9,36 @@ $(function (){
 	});
 
 
-	if ( $('html').hasClass('mobile') ) {
-		$('.has-submenu__inner a').on('click', function (event){
-			event.preventDefault();
+	$(window).on('load resize', function () {
+		if ($(this).width() <= 1365) {
+			$('.has-submenu__inner a').on('click', function (event) {
+				event.preventDefault();
 
-			$('.has-submenu').removeClass('opened');
-			$(this).parents('.has-submenu').toggleClass('opened');
-		});
-	}
+				$('.has-submenu').removeClass('opened');
+				$(this).parents('.has-submenu').toggleClass('opened');
+			});
+		}
+	});
 
 	var video = $(".js-video-carousel");
+	var nav = video.data('nav');
+	var dots = video.data('dots');
 	video.owlCarousel({
 		responsiveClass: true,
-		nav: true,
+		nav: nav,
+		dots: dots,
+		autoHeight: false,
 		responsive: {
 			0: {
 				items: 1,
 				margin: 20,
-
+				autoHeight: true,
 			},
 			768: {
 				margin: 20,
 				slideBy: 2,
-				items: 2
+				items: 2,
+				autoHeight: true,
 			},
 			1024: {
 				margin: 20,

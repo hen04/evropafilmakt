@@ -50,21 +50,7 @@ html(lang="ru")
 									span.iconify(data-icon="foundation:social-youtube" data-inline="false")
 
 			.header__menu
-				nav
-					ul.main-menu
-						each item in menu
-							if item.submenu === false
-								li
-									a(href= item.url)= item.title
-							else
-								li.has-submenu
-									.has-submenu__inner
-										a(href= item.url)= item.title
-										span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
-									ul.sub-menu
-										each subitem in item.submenu
-											li
-												a(href= subitem.url)= subitem.title
+				block nav
 
 			.header__banner
 				img(src="images/main-banner.png" alt="")

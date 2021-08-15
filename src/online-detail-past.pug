@@ -1,0 +1,66 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "online.html";
+	- var currentSubtitle = "online-detail.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+
+	.news-page-detail
+		ul.breadcrumbs
+			li
+				a(href="online.html") Online
+
+		h1 The soul of a cyclist
+		.news-page-detail__content
+			each item in news.slice(1,2)
+				.news-page-detail__info
+					p Corps en mouvement est le thème du Festival en 2021. En partenariat avec la Maison du Portugal nous avons le plaisir de vous convier à la projection virtuelle du film The Soul of a Cyclist du réalisateur portugais Nuno Tavares le 12 juin 2021 à 18h. Ce film fait partie de notre section THEMA. Il évoque la découverte du monde en bicyclette. Une façon joyeuse de commencer l’été ! La projection sera suivie de rencontre avec le réalisateur.
+					p Un groupe de cyclistes partage avec nous leur passion pour la bicyclette traditionnelle. Avec eux, nous re-découvrons des valeurs qui se perdent dans la société moderne – l’importance de l’amitié, de la nature, et d’autres détails essentiels pour vivre une vie plus heureuse, plus simple.
+
+					a(href="" class="btn btn-accent") Se joinde à la projection
+
+				.news-page-detail__film
+					.news-sm
+						.news-sm__img
+							if item.online === true
+								span en ligne
+							img(src= item.img alt= item.title)
+						h4= item.title
+						if item.director !== ""
+							p.title= item.director
+						if item.genre !== ""
+							p.genre= item.genre
+
+			.news-page-detail__trailer
+				.video-wrapper
+					iframe(src="https://www.youtube.com/embed/Y856rNtTfDU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+
+			.news-page-detail__gallery
+				h2 Photos de l'exposition
+				each item in galleryList.slice(0,1)
+					a(href="gallery-albom.html").gallery-page__section
+						.gallery-page__preview
+							each subitem in item.photo.slice(0,2)
+								.gallery-page__item
+									img(src=subitem.img alt="")
+				.news-page-detail__btn
+					a(href="gallery-albom.html" class="btn") Voir l'album complet
+
+			.news-page-detail__video
+				h2 Entretien avec le réalisateur du film
+				.video-wrapper
+					iframe(src="https://www.youtube.com/embed/Y856rNtTfDU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+			.news-page-detail__partners
+				h2 Afficher les partenaires
+				.partners
+					each item in partners.slice(0,1)
+						.partners__list
+							each subitem in item.list
+								a(href="" target="_blank").partners__item
+									img(src= subitem.img alt="")
+

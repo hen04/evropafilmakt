@@ -1,0 +1,28 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "gallery.html";
+	- var currentSubtitle = "video.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+
+	.video-page
+		ul.breadcrumbs
+			li
+				a(href="video.html") Vidéo
+
+		.video-page__top
+			h1 Vidéos d'actualité
+			.video-page__year
+				include templates/_incl-years
+		.video
+			.video__list
+				each item in video
+					.video__item
+						a(href="#")
+							img(src= item.img alt="")
+							p= item.text
+
+			include templates/_incl-pagination
