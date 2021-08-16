@@ -138,6 +138,7 @@ $largedesktop: 1600px;
 		@include responsive(landscapedesktop) {
 			width: calc(33% - 10px);
 			max-width: 306px;
+			padding-top: .6rem;
 		}
 		
 		select {

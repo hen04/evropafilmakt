@@ -55,8 +55,8 @@ block content
 											span.actors= subitem.actors
 									.program-info__content-cinema
 										p.title= subitem.cinema
-										p.link
-											a(href="")= subitem.address
+										p.link-cinema
+											a(href="" class="js-map-cinema")= subitem.address
 										p.tarif
 											if subitem.price2 === ''
 												span Entrée libre, dans la limite des places disponibles
