@@ -1171,15 +1171,6 @@ main {
 	&__item {
 		text-decoration: none;
 
-		&:hover {
-			h6 {
-				color: $gray-700;
-			}
-			p {
-				color: $gray-400;
-			}
-		}
-
 		img {
 			width: 100%;
 			display: block;
@@ -1192,10 +1183,12 @@ main {
 
 		p {
 			margin-bottom: 0;
+			color: $gray-400;
 		}
 
 		h6 {
 			margin-bottom: 10px;
+			color: $gray-700;
 		}
 	}
 }
@@ -1429,7 +1422,6 @@ main {
 			display: block;
 			margin-top: 4px;
 		}
-
 	}
 	
 	h5 {

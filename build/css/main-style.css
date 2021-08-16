@@ -1647,10 +1647,6 @@ main {
         align-items: flex-start; } }
   .festival-visitors__item {
     text-decoration: none; }
-    .festival-visitors__item:hover h6 {
-      color: #292929; }
-    .festival-visitors__item:hover p {
-      color: #525252; }
     .festival-visitors__item img {
       width: 100%;
       display: block;
@@ -1658,9 +1654,11 @@ main {
     .festival-visitors__item:last-child {
       padding-top: 140px; }
     .festival-visitors__item p {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      color: #525252; }
     .festival-visitors__item h6 {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      color: #292929; }
 
 .program-info__section {
   margin-bottom: 80px; }
@@ -1865,7 +1863,6 @@ main {
       /* < 767 */
       margin-bottom: 1rem; } }
   .program-info__content-name a {
-    color: #525252;
     display: block; }
     @media only screen and (max-width: 1279px) {
       .program-info__content-name a {
@@ -2007,10 +2004,10 @@ main {
     .program-info__content-cinema p.title {
       font-weight: 600; }
     @media only screen and (min-width: 1024px) {
-      .program-info__content-cinema p.link {
+      .program-info__content-cinema p.link-cinema {
         /* > 1024 */
         font-size: 18px; } }
-    .program-info__content-cinema p.link span {
+    .program-info__content-cinema p.link-cinema span {
       display: block; }
     @media only screen and (min-width: 1024px) {
       .program-info__content-cinema p.tarif {
@@ -2724,7 +2721,8 @@ main {
   .gallery-page__year {
     /* > 1024 */
     width: calc(33% - 10px);
-    max-width: 306px; } }
+    max-width: 306px;
+    padding-top: .6rem; } }
 
 .gallery-page__year select {
   visibility: hidden; }
@@ -3013,7 +3011,8 @@ main {
   .video-page__year {
     /* > 1024 */
     width: calc(33% - 10px);
-    max-width: 306px; } }
+    max-width: 306px;
+    padding-top: .6rem; } }
 
 .video-page__year select {
   visibility: hidden; }
@@ -3086,7 +3085,8 @@ main {
     .news-page__year {
       /* > 1024 */
       width: calc(33% - 10px);
-      max-width: 306px; } }
+      max-width: 306px;
+      padding-top: .6rem; } }
   .news-page__year select {
     visibility: hidden; }
   .news-page__year .select2-container {

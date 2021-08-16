@@ -86,12 +86,12 @@ $(function (){
 		}
 	});
 
-	$('.link a').on('click', function(event){
+	$('.js-map-cinema').on('click', function(event){
 		event.preventDefault();
 		$('#mapsModal').arcticmodal();
 	});
 
-	$('.video__item a').on('click', function(event){
+	$('.js-video-modal').on('click', function(event){
 		event.preventDefault();
 		$('#videoModal').arcticmodal();
 	});
