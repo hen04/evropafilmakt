@@ -45,7 +45,7 @@ html {
 				&:hover {
 					color: $gray-400;
 					
-					h4 {
+					h6 {
 						color: $active;
 					}
 					
@@ -2789,10 +2789,9 @@ main {
 		margin-bottom: 56px;
 	}
 	
-	h4 {
+	h6 {
 		margin-bottom: .5rem;
 		transition: color .3s ease-in-out;
-		text-decoration: underline;
 	}
 
 	&__img {
@@ -2818,6 +2817,7 @@ main {
 	.title {
 		font-weight: 600;
 		color: $gray-700;
+		margin-top: -1.5rem;
 	}
 
 	&__date {
@@ -2849,18 +2849,38 @@ main {
 .news-main {
 	.news-sm {
 		display: flex;
-		width: 67%;
 		padding: 0;
+		width: 100%;
+		margin-bottom: 0;
+		
+		@include responsive(mobile) {
+			flex-flow: wrap;
+		}
+		
+		@include responsive(desktop) {
+			width: 67%;
+		}
 		
 		&__img {
-			width: 50%;
 			box-sizing: border-box;
+
+			@include responsive(tablet) {
+				min-width: 32.5%;
+				margin-right: 20px;
+			}
+
+			@include responsive(desktop) {
+				width: 50%;
+			}
 		}
 		
 		&__text {
-			width: calc(50% - 10px);
-			padding-left: 20px;
-			box-sizing: border-box;
+			
+			@include responsive(desktop) {
+				width: calc(50% - 10px);
+				padding-left: 20px;
+				box-sizing: border-box;
+			}
 		}
 	}
 }
