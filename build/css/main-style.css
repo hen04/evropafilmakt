@@ -326,7 +326,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.25;
   color: #292929; }
 
 h1 {
@@ -575,7 +575,7 @@ html.desktop .main-menu li.has-submenu:hover svg {
 
 html.desktop a.news-sm:hover {
   color: #525252; }
-  html.desktop a.news-sm:hover h4 {
+  html.desktop a.news-sm:hover h6 {
     color: #FF5E00; }
   html.desktop a.news-sm:hover img {
     -webkit-box-shadow: 0 0 0 4px #FF5E00;
@@ -3128,11 +3128,10 @@ main {
     .news-sm {
       /* > 1600 */
       margin-bottom: 56px; } }
-  .news-sm h4 {
+  .news-sm h6 {
     margin-bottom: .5rem;
     -webkit-transition: color .3s ease-in-out;
-    transition: color .3s ease-in-out;
-    text-decoration: underline; }
+    transition: color .3s ease-in-out; }
   .news-sm__img {
     margin-bottom: 1.5rem;
     position: relative; }
@@ -3151,7 +3150,8 @@ main {
         background-color: #000; }
   .news-sm .title {
     font-weight: 600;
-    color: #292929; }
+    color: #292929;
+    margin-top: -1.5rem; }
   .news-sm__date {
     border-top: 1px solid #525252;
     border-bottom: 1px solid #525252;
@@ -3178,17 +3178,37 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 67%;
-  padding: 0; }
+  padding: 0;
+  width: 100%;
+  margin-bottom: 0; }
+  @media only screen and (max-width: 767px) {
+    .news-main .news-sm {
+      /* < 767 */
+      -ms-flex-flow: wrap;
+      flex-flow: wrap; } }
+  @media only screen and (min-width: 1280px) {
+    .news-main .news-sm {
+      /* > 1280 */
+      width: 67%; } }
   .news-main .news-sm__img {
-    width: 50%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
-  .news-main .news-sm__text {
-    width: calc(50% - 10px);
-    padding-left: 20px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
+    @media only screen and (min-width: 768px) and (max-width: 1279px) {
+      .news-main .news-sm__img {
+        /* 768 - 1279 */
+        min-width: 32.5%;
+        margin-right: 20px; } }
+    @media only screen and (min-width: 1280px) {
+      .news-main .news-sm__img {
+        /* > 1280 */
+        width: 50%; } }
+  @media only screen and (min-width: 1280px) {
+    .news-main .news-sm__text {
+      /* > 1280 */
+      width: calc(50% - 10px);
+      padding-left: 20px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; } }
 
 .news-page-detail {
   margin: 0 auto;

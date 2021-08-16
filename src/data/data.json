@@ -1022,7 +1022,7 @@
 	],
 	"news": [
 		{
-			"img": "../images/content/news-1.jpg",
+			"img": "images/content/news-1.jpg",
 			"title": "Festival 2020 on filmocracy.com",
 			"director": "",
 			"date": "12-19 juin 2021",
@@ -1030,7 +1030,7 @@
 			"info": "Grâce au nouveau partenariat avec FILMOCRACY.COM, une plateforme du cinéma indépendant basée à Los Angeles, du 12 au 19 juin 2021 nous vous proposons de revivre l’atmosphère du Festival avec les rencontres et les échanges autour de la sélection essentielle de notre édition 2020. "
 		},
 		{
-			"img": "../images/content/news-2.jpg",
+			"img": "images/content/news-2.jpg",
 			"online": true,
 			"title": "The Soul of a Cyclist / A Alma de um Ciclista",
 			"director": "de Nuno Tavares",
@@ -1039,7 +1039,7 @@
 			"info": "Corps en mouvement est le thème du Festival en 2021. En partenariat avec la Maison du Portugal nous avons le plaisir de vous convier à la projection virtuelle du film The Soul of a Cyclist du réalisateur portugais Nuno Tavares le 12 juin 2021 à 18h. Ce film fait partie de notre section THEMA. Il évoque la découverte du monde en bicyclette. Une façon joyeuse de commencer l’été ! La projection sera suivie de rencontre avec le réalisateur."
 		},
 		{
-			"img": "../images/content/news-3.jpg",
+			"img": "images/content/news-3.jpg",
 			"title": "Those who feel the fire burning",
 			"director": "de Morgan Knibbe",
 			"date": "",
@@ -1047,7 +1047,7 @@
 			"info": "Bienvenu en 2017! Le Festival vous souhaite une belle année et annonce avec plaisir la prochaine projection mensuelle le 31 janvier, le dernier mardi du mois au cinéma L’Entrepôt. Nous vous invitons à (re)découvrir Those Who Feel the Fire Burning, le documentaire réaliste et poétique du réalisateur néerlandais Morgan Knibbe qui a fait partie de programme de compétition Présent du Festival en 2016 et a avait reçu le Prix du Meilleur documentaire de long-métrage à Nederlands Film Festival 2015."
 		},
 		{
-			"img": "../images/content/news-1.jpg",
+			"img": "images/content/news-1.jpg",
 			"title": "Festival 2020 on filmocracy.com",
 			"director": "",
 			"date": "12-19 juin 2021",
@@ -1055,7 +1055,7 @@
 			"info": "Grâce au nouveau partenariat avec FILMOCRACY.COM, une plateforme du cinéma indépendant basée à Los Angeles, du 12 au 19 juin 2021 nous vous proposons de revivre l’atmosphère du Festival avec les rencontres et les échanges autour de la sélection essentielle de notre édition 2020. "
 		},
 		{
-			"img": "../images/content/news-2.jpg",
+			"img": "images/content/news-2.jpg",
 			"online": true,
 			"title": "The Soul of a Cyclist / A Alma de um Ciclista",
 			"director": "de Nuno Tavares",
@@ -1064,7 +1064,7 @@
 			"info": "Corps en mouvement est le thème du Festival en 2021. En partenariat avec la Maison du Portugal nous avons le plaisir de vous convier à la projection virtuelle du film The Soul of a Cyclist du réalisateur portugais Nuno Tavares le 12 juin 2021 à 18h. Ce film fait partie de notre section THEMA. Il évoque la découverte du monde en bicyclette. Une façon joyeuse de commencer l’été ! La projection sera suivie de rencontre avec le réalisateur."
 		},
 		{
-			"img": "../images/content/news-3.jpg",
+			"img": "images/content/news-3.jpg",
 			"title": "Those who feel the fire burning",
 			"director": "de Morgan Knibbe",
 			"date": "",
