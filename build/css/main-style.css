@@ -3329,6 +3329,49 @@ main {
     border-width: 0;
     outline-width: 0; }
 
+.partners__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  @media only screen and (max-width: 1023px) {
+    .partners__section {
+      /* < 1023 */
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+  @media only screen and (min-width: 1024px) {
+    .partners__section {
+      /* > 1024 */
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -ms-flex-flow: nowrap;
+      flex-flow: nowrap; } }
+  .partners__section:last-child .partners__list {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  @media only screen and (min-width: 1024px) {
+    .partners__section h3 {
+      /* > 1024 */
+      width: 33.3%; } }
+  .partners__section .partners__list {
+    border-bottom: 1px solid #525252;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 40px;
+    margin-bottom: 40px; }
+    @media only screen and (min-width: 1024px) {
+      .partners__section .partners__list {
+        /* > 1024 */
+        padding-bottom: 80px;
+        margin-bottom: 80px;
+        margin-left: 20px;
+        width: calc(67.7% - 20px); } }
+
 .partners__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3341,8 +3384,8 @@ main {
       margin: 0 -10px; } }
 
 .partners__item {
-  width: 290px;
-  height: 290px;
+  max-width: 290px;
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3352,20 +3395,23 @@ main {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 10px;
+  padding: 30px 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   @media only screen and (max-width: 767px) {
     .partners__item {
       /* < 767 */
       width: 50%;
-      height: 170px;
-      padding: 0 10px; } }
+      padding: 30px 10px; } }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .partners__item {
+      /* 768 - 1024 */
+      width: 33.3%; } }
   .partners__item:hover img {
     -webkit-filter: grayscale(0);
     filter: grayscale(0); }
   .partners__item img {
-    max-width: 200px;
+    max-width: 100%;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     -webkit-transition: -webkit-filter .3s ease-in-out;
