@@ -1,4 +1,10 @@
 extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "gallery.html";
+	- var currentSubtitle = "gallery.html";
+	+menu(currentTitle, currentSubtitle)
 
 block content
 	.gallery-page

@@ -1,0 +1,66 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "program.html";
+	+menu(currentTitle)
+
+block content
+
+	.film-page
+		ul.breadcrumbs
+			li
+				a(href="program.html") Programme
+
+		.film-page
+			.film-page__title
+				h1 Die Kinder der Toten
+				p.title de Kelly Copper et Pavol Liška
+				p.genre (Fiction, Autriche, 2019, 90’, C, VOSTF)
+					span avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer
+			.film-page__content
+				.film-page__img
+					img(src="images/content/img-4.jpg" alt="Die Kinder der Toten")
+				.film-page__info
+					p Dans un village autrichien, au sombre passé nazi, un accident d’autobus tue Karin.
+					p Mais elle revient à la vie. Commence alors un festival absurde, hilarant et over-thetop de morts-vivants, doppelgängers et réfugiés syriens.
+					p «Tourné en Super 8, Die Kinder Der Toten est un film muet quelque part entre heimatfilme et les films d’horreur amateurs; un projet hybride entre le théâtre, la performance, la littérature et le cinéma, adapté librement du roman éponyme de la lauréate du prix Nobel, Elfriede Jelinek».
+					p «Guy Maddin meets Striptease meets tous les restes d’alcool cachés sous l’évier 	dans cette parade de WTF en 8mm, produite par Ulrich Seidl».
+					p.right
+						strong Nicolas Bardot pour<br> Polyester
+					p «Je me souviens qu’il y avait des vaches dans la rue et au même moment, un club de moto traversait lui aussi la ville, avec des vaches autour. Nous avons vu cette étrange rencontre et avons pensé : il y a quelque chose ici pour nous».
+					p.right
+						strong Kelly Cooper pour Le Polyester
+
+				.film-page__trailer
+					.film-page__trailer-right
+						.video-wrapper
+							iframe(src="https://www.youtube.com/embed/xwQ1zqljgt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+
+				.film-page__author
+					img(src="images/content/author-1.jpg" alt="Kelly Copper & Pavol Liška")
+					.film-page__author-info
+						h6 Kelly Copper & Pavol Liška
+						p «Tourné en Super 8, Die Kinder Der Toten est un film muet quelque part entre heimatfilme et les films d’horreur amateurs; un projet hybride entre le théâtre, la performance, la littérature et le cinéma, adapté librement du roman éponyme de la lauréate du prix Nobel, Elfriede Jelinek».
+						p «Guy Maddin meets Striptease meets tous les restes d’alcool cachés sous l’évier dans cette parade de WTF en 8mm, produite par Ulrich Seidl».
+
+			.film-page__slider
+				h2 Autres films Compétition Prix Sauvage
+				.program-info
+					each item in program.slice(0,1)
+						.program-info__section
+							if item.hasSubsection !== true
+								.program-info__list.owl-carousel.js-films-carousel
+									each subitem in item.films.slice(0,3)
+										.program-info__film-sm
+											a(href="film-detail.html").program-info__img
+												img(src= subitem.img alt= subitem.title)
+											.program-info__content-name
+												h5
+													a(href="film-detail.html")= subitem.title
+												p.title= subitem.director
+												p= subitem.genre
+													span.actors= subitem.actors
+				.film-page__btn
+					a(href="" class="btn") Voir les films

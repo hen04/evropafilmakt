@@ -1,20 +1,18 @@
 extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "gallery.html";
+	- var currentSubtitle = "gallery.html";
+	+menu(currentTitle, currentSubtitle)
+
 
 block content
 	.gallery-page
 		.gallery-page__top
 			h1 Galeries
 			.gallery-page__year
-				select.js-select(style="width: 290px")
-					option 2021
-					option 2022
-					option 2019
-					option 2018
-					option 2017
-					option 2016
-					option 2015
-					option 2014
-					option 2013
+				include templates/_incl-years
 
 		each item in galleryList
 			a(href="gallery-albom.html").gallery-page__section
@@ -25,18 +23,4 @@ block content
 						.gallery-page__item
 							img(src=subitem.img alt="")
 
-		ul.pagination
-			li.prev-page
-				a(href="")
-			li
-				a(href="") 1
-			li.active-page
-				a(href="") 2
-			li
-				a(href="") 3
-			li
-				a(href="") ...
-			li
-				a(href="") 99
-			li.next-page
-				a(href="")
+		include templates/_incl-pagination

@@ -6,3 +6,10 @@
 	text-decoration: none;
 	@include btn();
 }
+
+.btn-accent {
+	background-color: $active;
+	border-color: $active;
+	color: $white;
+	@include btn();
+}

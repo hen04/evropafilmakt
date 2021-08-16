@@ -1,4 +1,10 @@
 extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "about.html";
+	- var currentSubtitle = "editorial.html";
+	+menu(currentTitle, currentSubtitle)
 
 block content
 	.editorial

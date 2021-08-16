@@ -1,6 +1,10 @@
 extends templates/layout
 include templates/_mixins
 
+block nav
+	- var currentTitle = "program.html";
+	+menu(currentTitle)
+
 block content
 	.program-page
 		h1 Programme 2021
@@ -41,11 +45,11 @@ block content
 								.program-info__film-item
 									.program-info__time
 										h4= subitem.time
-									a(href="#").program-info__img
+									a(href="film-detail.html").program-info__img
 										img(src= subitem.img alt= subitem.title)
 									.program-info__content-name
 										h4
-											a(href="#")= subitem.title
+											a(href="film-detail.html")= subitem.title
 										p.title= subitem.director
 										p= subitem.genre
 											span.actors= subitem.actors

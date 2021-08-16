@@ -1,4 +1,9 @@
 extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "jury-detail.html";
+	+menu(currentTitle)
 
 block content
 	.jury-page
