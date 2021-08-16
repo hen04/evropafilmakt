@@ -1074,7 +1074,7 @@
 	],
 	"partners": [
 		{
-			"title": "Afficher les partenaires",
+			"title": "",
 			"list": [
 				{
 					"url": "http://www.paris.fr/",
@@ -1094,7 +1094,28 @@
 			"title": "Partenaires institutionnels:",
 			"list": [
 				{
-					"img": ""
+					"img": "http://evropafilmakt.com/2013/wp-content/uploads/logo/institut-polonais-paris.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2017/wp-content/gallery/partner/forum-culturel-autrichien.png"
+				},
+				{
+					"img": "http://evropafilmakt.com/2018/wp-content/gallery/partner/maison-portugal.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2013/wp-content/uploads/logo/goethe-institut-de-paris.png"
+				},
+				{
+					"img": "http://evropafilmakt.com/2014/wp-content/gallery/partenaires/ambassade-norvege.png"
+				},
+				{
+					"img": "http://evropafilmakt.com/2018/wp-content/gallery/partner/slovensky-institut.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2018/wp-content/gallery/partner/centre-culturel-serbe.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2014/wp-content/gallery/partenaires/institut-hongrois.png"
 				}
 			]
 		},
@@ -1102,7 +1123,10 @@
 			"title": "Partenaires privés:",
 			"list": [
 				{
-					"img": ""
+					"img": "http://evropafilmakt.com/2018/wp-content/gallery/partner/fondation-zygmunt-zaleski.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2016/wp-content/gallery/partner/ascpe.png"
 				}
 			]
 		},
@@ -1110,10 +1134,49 @@
 			"title": "Partenaires associés:",
 			"list": [
 				{
-					"img": ""
+					"img": "http://evropafilmakt.com/2016/wp-content/gallery/partner/lafilmotheque-logo.png"
 				},
 				{
-					"img": ""
+					"img": "http://evropafilmakt.com/2014/wp-content/gallery/partenaires/lentrepot.png"
+				},
+				{
+					"img": "http://evropafilmakt.com/2018/wp-content/gallery/partner/cinema-reel.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2018/wp-content/gallery/partner/grand-action.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2018/wp-content/gallery/partner/maison-des-associations-du-14e.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2015/wp-content/gallery/partner/the-arts-arena.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2013/wp-content/uploads/logo/atelier-montparnasse-hotel.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2014/wp-content/gallery/partenaires/studio-des-ursulines.png"
+				},
+				{
+					"img": "http://evropafilmakt.com/2016/wp-content/gallery/partner/ccp.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2015/wp-content/gallery/partner/saint-andre-des-arts.png"
+				},
+				{
+					"img": "http://evropafilmakt.com/2017/wp-content/gallery/partner/paris-anim-centre-montparnasse.png"
+				},
+				{
+					"img": "http://evropafilmakt.com/2020/wp-content/gallery/partner/blick-productions.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2020/wp-content/gallery/partner/radio-beograd.jpg"
+				},
+				{
+					"img": "http://evropafilmakt.com/2020/wp-content/gallery/partner/greek-film-museum.png"
+				},
+				{
+					"img": "http://evropafilmakt.com/2020/wp-content/gallery/partner/positif.png"
 				}
 			]
 		}

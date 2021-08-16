@@ -1,0 +1,21 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "about.html";
+	- var currentSubtitle = "partners.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+
+		.partners
+			h1 Partenaires
+			each item in partners
+				.partners__section
+					if item.title !== ""
+						h3= item.title
+					.partners__list
+						each subitem in item.list
+							a(href="#" target="_blank").partners__item
+								img(src= subitem.img alt="")
+
