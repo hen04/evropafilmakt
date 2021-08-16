@@ -2941,6 +2941,7 @@ main {
 	
 	&__partners {
 		margin-top: 56px;
+		width: 100%;
 		
 		@include responsive(notebookdesktop) {
 			margin-top: 80px;
