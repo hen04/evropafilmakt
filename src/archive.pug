@@ -1,0 +1,17 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "info.html";
+	- var currentSubtitle = "festival-pass.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+	.festival-archive
+		h1 Festivals précédents
+		.festival-archive__list
+			each item in archive
+				a(href="#").festival-archive__item
+					img(src= item.cover alt= item.title)
+					p.year= item.year
+					p.title= item.title

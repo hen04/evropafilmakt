@@ -1,0 +1,49 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "about.html";
+	- var currentSubtitle = "editorial.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+	.about
+		h1 Qui sommes-nous
+		.about__content
+			.about__text
+				.about__text-section
+					h4 L’histoire du festival
+					p Le festival “L’Europe Autour de l’Europe”, fondé par la cinéaste Irena Bilic, se déroule tous les ans au printemps à Paris. Pendant deux semaines il présente des films d’auteurs et d’art de la Grande Europe (47 pays européens, membres du Conseil de l’Europe). Environ 50 longs métrages et une sélection de documentaires, de films de court métrage, d’animation et expérimentaux sont montrés dans plusieurs salles à Paris, notamment Le Saint-André-des-Arts, L’Entrepôt, Le Grand Action et le Studio des Ursulines. Dans les cinémas d’art et d’essai, centres culturels étrangers et quelques autres lieux exceptionnels de Paris, le public découvre les chefs-d’œuvres cinématographiques européens de toutes les époques.
+					p Depuis 2012, une dizaine de long-métrages de fiction inédits de production récente concourent pour le Prix sauvage et une dizaine de documentaires pour le Prix Présent. Le Prix Sauvage Corto existe depuis 2019 et est déjà le nouveau grand rendez-vous des jeunes auteurs de toute l’Europe. Il récompense le meilleur court-métrage européen – fiction, documentaires et films expérimentaux confondus.
+					p Le festival accueille des réalisateurs, auteurs, acteurs, producteurs et critiques venus de toute l’Europe, avec pour objectif de faire connaître la culture européenne dans toute sa diversité et sa complexité et de réfléchir à son identité et sa singularité.
+				.about__text-section
+					h4 Les grands maîtres du cinéma européen, amis du festival
+					p Parmi les invités qui ont participé aux éditions précédentes figurent les grands maîtres du cinéma européen notamment Agnès Varda, Kine Aune, István Szabó, Marlen Khoutsiev, Carlos Saura, Henning Carlsen, Jan Troell, Neil Jordan, Jim Sheridan, Márta Mészáros, Jonas Mekas, Kira Mouratova, Krzysztof Zanussi, Anja Breien, Karpo Godina, Knut Erik Jensen, Jos Stelling, Armand Gatti, Pierre Rissient, Hans-Jürgen Syberberg, Agnieszka Holland, Peter Fleischmann… Parmi les critiques éminents français et internationaux, le festival a accueilli Antoine de Baecque, Yvette Biro, Michel Ciment, Bruno Dietsch, Elise Domenach, Jean Douchet, Pierre Gras, Mathias Lavin, Kirill Razlogov, Sylvie Rollet, Paul Ryan, Eugénie Zvonkine.
+					p Le Festival fait un effort considérable pour présenter au public parisien les jeunes cinéastes provenant de tous les pays de l’Europe: Gilles Deroo et Marianne Pistone, Verena Paravel, Ania Szczepanska (France), Veiko Ounpuu (Estonie), Ignas Jonynas (Lettonie), Alanté Kavaité (Lituanie), Ninja Thyberg (Suède), Gust van den Berghe (Belgique), Frères Bukharov, Gabor Horcher, Szabolsc Tolnai (Hongrie), Albert Serra, Luis Lopez Carrasco, Miguel Llanso (Espagne), Men Lareida (Suisse), Daniel Hoesl, Albert Sackl, Philipp Fleischmann (Autriche), Kirsten Sheridan, Pat Collins, Johnny O’Reilly (Irlande), Menelaos Karamaghiolis, Petros Sevastikoglou, Penny Panayotopoulou,Yorgos Tsemberopoulos, Mario Garefo (Grèce), Jamal Khalaile et Raed Andoni (Palestine/Israël), Elmar Imanov, Engin Kundag, Frauke Finsterwalder (Allemagne), Eric Poppe, Eskil Vogt, Jan Vardoen (Norvège), Mika Ronkainen (Finlande), Stefan Ivancic, Andriana Stojkovic (Serbie).
+				.about__text-section
+					h4 Evropa Film Akt — l’association organisatrice du Festival
+					p L’association Evropa Film Akt, régie par la Loi 1901, a été fondée par la cinéaste Irena Bilić et est dirigée par un Conseil d’administration de sept membres.
+					p L’activité principale de l’association est l’organisation du festival de films européens, L’Europe autour de l’Europe, mais aussi la production de court-métrages, documentaires. L’association effectue d’autres prestations comme le conseil artistique, la traduction et le sous-titrage.
+
+			.about__photo
+				.about__photo-section
+					.about__photo-item
+						img(src="images/content/about-1.jpg" alt="Agnès Varda")
+						p Agnès Varda
+					.about__photo-item
+						img(src="images/content/about-2.jpg" alt="Jim Sheridan")
+						p Jim Sheridan
+				.about__photo-section
+					.about__photo-item
+						img(src="images/content/about-3.jpg" alt="Kira Mouratova")
+						p Kira Mouratova
+					.about__photo-item
+						img(src="images/content/about-4.jpg" alt="Krzysztof Zanussi")
+						p Krzysztof Zanussi
+				.about__photo-section.about__photo-section--bottom
+					.about__photo-item
+						img(src="images/content/about-4.jpg" alt="Krzysztof Zanussi")
+						p Krzysztof Zanussi
+					.about__photo-item
+						img(src="images/content/about-5.jpg" alt="Hans-Jürgen Syberberg")
+						p Hans-Jürgen Syberberg

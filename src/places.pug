@@ -1,0 +1,22 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "festival-pass.html";
+	- var currentSubtitle = "festival-pass.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+	.info-page
+		h1 Lieux
+		.info-page__map
+			iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5251.453954114144!2d2.3448500379742714!3d48.84434625263436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671c2699803d9%3A0x86be8e589a73a71f!2zMTAgUnVlIGRlcyBVcnN1bGluZXMsIDc1MDA1IFBhcmlzLCDQpNGA0LDQvdGG0LjRjw!5e0!3m2!1sru!2sru!4v1629831818034!5m2!1sru!2sru" allowfullscreen="" loading="lazy")
+		.info-page__list
+			each item in program.slice(1,2)
+				each subitem in item.films
+					.info-page__item
+						h4= subitem.cinema
+						p= subitem.address
+						p Tarif unique festival: !{' '}
+							strong= subitem.price1
+

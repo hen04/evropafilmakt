@@ -1,0 +1,37 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "program.html";
+	- var currentSubtitle = "festival-visitors.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+	.festival-visitors-page
+		h1 Les invités du festival
+		.festival-visitors-page__list
+			each item in visitors
+				.festival-visitors-page__item
+					.festival-visitors-page__author
+						h3= item.name
+						p= item.subtitle
+						.festival-visitors-page__author-info
+							img(src= item.img alt= item.name)
+							.festival-visitors-page__descr
+								p= item.descr
+					if item.imgFilm !== ''
+						.festival-visitors-page__film
+							img(src= item.imgFilm alt= item.title)
+							h4= item.title
+							p= item.genre
+								span.actors= item.actors
+
+	.gallery
+		h2 Galeries
+		.gallery__list
+			each item in gallery
+				.gallery__item
+					a(href="gallery-item.html")
+						img(src= item.img alt="")
+						p= item.text
+		a(href="gallery.html" class="btn") Voir les galeries
