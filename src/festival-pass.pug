@@ -1,0 +1,23 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "info.html";
+	- var currentSubtitle = "festival-pass.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+	.info-page
+		h1 Le Pass du festival
+		.info-page__content
+			p Votre pass Festival vous donnera droit:
+			ul
+				li à l’ensemble des projections, débats et rencontres pendant la période du festival l’Europe autour de l’Europe, qui se tiendra du 12 mars au 29 mars 2020;
+				li au catalogue du festival;
+				li au festival toute l’année: tous les derniers mardis de chaque mois, le festival vous invite à une projection exceptionnelle à l’Entrepôt.
+
+			.info-page__tarifs
+				h5 Tarifs:
+				p Plein tarif: 50 €
+				p Tarif réduit (étudiants, séniors, chômeurs): 25 €
+				p Les passes seront disponibles en vente dans toutes les salles partenaires avant les projections du Festival.

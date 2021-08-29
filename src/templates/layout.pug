@@ -29,7 +29,7 @@ html(lang="ru")
 				.header__right
 					.header__lang
 						a(href="#") En
-					.header__search-btn
+					.header__search-btn.js-search
 						span.iconify(data-icon="ph:magnifying-glass" data-inline="false")
 					.header__menu-btn.js-menu-mobile
 						span.iconify.iconify--menu(data-icon="heroicons-outline:menu" data-inline="false")
@@ -115,12 +115,23 @@ html(lang="ru")
 			#videoModal.box-modal.box-modal__video
 				.box-modal_close.arcticmodal-close
 					span.iconify(data-icon="majesticons:close-line" data-inline="false")
-				iframe(src="https://www.youtube.com/embed/Y5HgSpOcqZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+				iframe(src="https://www.youtube.com/embed/Y5HgSpOcqZg" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+		.search-modal.hidden
+			.search-modal__close.js-search-close
+				span.iconify(data-icon="majesticons:close-line" data-inline="false")
+			.search-modal__form
+				form(action="search-result.html" class="form-search")
+					.search-form
+						input(placeholder="Recherche" class="inp-search")
+						button(type="submit" class="subm-search")
+							span.iconify(data-icon="ph:magnifying-glass" data-inline="false")
 
 
 
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
 		script(src="https://code.iconify.design/1/1.0.7/iconify.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js")
 		script(src="js/libs/device.js")
 		script(src="js/libs/owl.carousel.min.js")
 		script(src="js/libs/jquery.arcticmodal-0.3.min.js")

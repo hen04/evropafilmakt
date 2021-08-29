@@ -1,0 +1,80 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "info.html";
+	- var currentSubtitle = "festival-pass.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+	.info-page
+		h1 Contacts
+		.info-page__contacts
+			.info-page__names
+				.info-page__name-item
+					p
+						strong Pedro Labaig
+					p
+						a(href="mailto:pedrolabaig@gmail.com") pedrolabaig@gmail.com
+					p +33 (0) 6 76 31 97 64
+				.info-page__name-item
+					p
+						strong Direction
+					p Irena Bilic
+					p
+						a(href="mailto:irenabilitch@gmail.com") irenabilitch@gmail.com
+					p +33 (0) 6 60 44 83 28
+				.info-page__name-item
+					p
+						strong  Siège
+					p Evropa Film Akt / Festival l’Europe autour de l’Europe<br>
+						| MDA B.P. 62 <br>
+						| 22, rue Deparcieux <br>
+						| 75014 Paris
+				.info-page__name-item
+					p
+						strong Site web
+					p Alexandre Grebenkov
+					p
+						a(href="mailto:studio@shweb.pro") studio@shweb.pro
+				.info-page__name-item
+					p
+						strong Suivez-nous
+					.social
+						.social__item
+							a(href="" target="_blank")
+								span.iconify(data-icon="typcn:social-instagram")
+						.social__item
+							a(href="" target="_blank")
+								span.iconify(data-icon="foundation:social-twitter")
+						.social__item
+							a(href="" target="_blank")
+								span.iconify(data-icon="foundation:social-facebook")
+						.social__item
+							a(href="" target="_blank")
+								span.iconify(data-icon="foundation:social-youtube")
+
+				.info-page__name-item
+					p
+						strong Soumettre votre film via
+					.request-links
+						a(href="" target="_blank")
+							img(src="images/film-freeway.png" alt="")
+						a(href="" target="_blank")
+							img(src="images/festhome.png" alt="")
+
+			.info-page__form
+				form(id="contacts" class="js-festival-form")
+					.form-item
+						label(for="name") Nom
+						input(type="text" class="inp-text" id="name" required)
+					.form-item
+						label(for="email") Email
+						input(type="email"  class="inp-text" id="email" required)
+					.form-item
+						label(for="message") Message
+						textarea(class="inp-text" id="message" required)
+					.form-item
+						span En cliquant sur le bouton "Envoyer", vous acceptez les conditions de l'offre et la politique de confidentialité.
+					.form-item
+						button(type="submit" class="submit") Envoyer

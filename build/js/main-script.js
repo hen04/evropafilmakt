@@ -96,14 +96,54 @@ $(function (){
 		$('#videoModal').arcticmodal();
 	});
 
-	$('.js-photo-gallery a').simpleLightbox();
-
-	$('.js-select').select2();
-
-	$('.js-select').on('select2:opening select2:closing', function( event ) {
-		var $searchfield = $(this).parent().find('.select2-search__field');
-		$searchfield.prop('disabled', true);
+	$('.js-search').on('click', function(){
+		$('body').toggleClass('search-opened');
+		$('.search-modal').removeClass('hidden');
 	});
 
+	$('.js-search-close').on('click', function () {
+		$('body').toggleClass('search-opened');
+		$('.search-modal').addClass('hidden');
+	});
+
+	$('.js-photo-gallery a').simpleLightbox();
+
+
+	if ($('.js-select').length) {
+		$('.js-select').select2();
+
+		$('.js-select').on('select2:opening select2:closing', function( event ) {
+			var $searchfield = $(this).parent().find('.select2-search__field');
+			$searchfield.prop('disabled', true);
+		});
+	}
+
+	if ( $('.js-festival-form').length ) {
+		console.log(1);
+		$(".js-festival-form").validate({
+			rules: {
+				name: "required",
+				email: {
+					required: true,
+					email: true
+				}
+			},
+			messages: {
+				name: {
+					required: "Это поле обязательно для заполнения",
+				},
+				email: {
+					required: "Это поле обязательно для заполнения",
+					email: "Адрес должен быть вида mail@gmail.com"
+				},
+				message: {
+					required: "Это поле обязательно для заполнения",
+				}
+			},
+			// submitHandler: function() {
+			// 	$('.contacts__result').removeClass('hidden');
+			// }
+		});
+	}
 
 });

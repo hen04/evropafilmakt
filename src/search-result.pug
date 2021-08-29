@@ -1,0 +1,60 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "info.html";
+	- var currentSubtitle = "festival-pass.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+	.search-result
+		h1 Résultats de la recherche
+		.search-result__form
+			form(action="search-result.html" class="form-search")
+				.search-form
+					input(placeholder="Recherche" class="inp-search" value="Prix Présent")
+					button(type="submit" class="subm-search")
+						span.iconify(data-icon="ph:magnifying-glass" data-inline="false")
+
+		.search-result__content
+			.search-result__section
+				h3 Films
+				.search-result__item
+					h5
+						a(href="#") Surdine / Surdina
+					p.title de Rodrigo Areias
+					p (Fiction, Portugal, 2019, 75’, C, VOSTF)
+						span.actors avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre
+				.search-result__item
+					h5
+						a(href="#") Surdine / Surdina
+					p.title de Rodrigo Areias
+					p (Fiction, Portugal, 2019, 75’, C, VOSTF)
+						span.actors avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre
+
+			.search-result__section
+				h3 Jury PRIX PRESENT
+				.search-result__item
+					h5
+						a(href="#") Florent Marcie
+					p.title (Président du Jury)
+					p Depuis une trentaine d’années, Florent Marcie parcourt les terrains où s’écrit l’histoire. Des situations de guerre, de libération, de lutte, de dénuement aussi. Il tourne, monte et finance lui-même ses films, dans une économie de moyens et une précarité qui le rapprochent sans conteste des hommes et des femmes qu’il côtoie. En résulte des films longs formats, à la lisière entre cinéma et reportage, présentés en décalage de l’actualité. Une forme de troisième voie qu’il revendique.
+				.search-result__item
+					h5
+						a(href="#") Florent Marcie
+					p.title (Président du Jury)
+					p Depuis une trentaine d’années, Florent Marcie parcourt les terrains où s’écrit l’histoire. Des situations de guerre, de libération, de lutte, de dénuement aussi. Il tourne, monte et finance lui-même ses films, dans une économie de moyens et une précarité qui le rapprochent sans conteste des hommes et des femmes qu’il côtoie. En résulte des films longs formats, à la lisière entre cinéma et reportage, présentés en décalage de l’actualité. Une forme de troisième voie qu’il revendique.
+
+			.search-result__section
+				h3 Actualités
+				.search-result__item
+					h5
+						a(href="#") The soul of a cyclist
+					p.title date: 12 juin 2021. 18:00
+					p Corps en mouvement est le thème du Festival en 2021. En partenariat avec la Maison du Portugal nous avons le plaisir de vous convier à la projection virtuelle du film The Soul of a Cyclist du réalisateur portugais Nuno Tavares le 12 juin 2021 à 18h. Ce film fait partie de notre section THEMA. Il évoque la découverte du monde en bicyclette. Une façon joyeuse de commencer l’été ! La projection sera suivie de rencontre avec le réalisateur.
+
+			.search-result__section
+				h3 Photos
+				.search-result__item
+					h5
+						a(href="#") Сérémonie de remise des prix Présent

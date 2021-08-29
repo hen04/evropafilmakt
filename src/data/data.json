@@ -22,7 +22,7 @@
 					"title": "Partenaires"
 				},
 				{
-					"url": "",
+					"url": "archive.html",
 					"title": "Archives du festival"
 				}
 			]
@@ -32,7 +32,7 @@
 			"title": "Programme",
 			"submenu": [
 				{
-					"url": "",
+					"url": "festival-visitors.html",
 					"title": "Les invités du festival"
 				}
 			]
@@ -88,25 +88,25 @@
 			"title": "Pro / Presse",
 			"submenu": [
 				{
-					"url": "",
+					"url": "press.html",
 					"title": "Accréditation"
 				}
 			]
 		},
 		{
-			"url": "info.html",
+			"url": "places.html",
 			"title": "Infos pratiques",
 			"submenu": [
 				{
-					"url": "",
+					"url": "places.html",
 					"title": "Lieux"
 				},
 				{
-					"url": "",
+					"url": "festival-pass.html",
 					"title": "Le Pass du festival"
 				},
 				{
-					"url": "",
+					"url": "contacts.html",
 					"title": "Contacts"
 				}
 			]
@@ -1179,6 +1179,135 @@
 					"img": "http://evropafilmakt.com/2020/wp-content/gallery/partner/positif.png"
 				}
 			]
+		}
+	],
+	"visitors": [
+		{
+			"name": "Rodrigo Areias",
+			"subtitle": "directeur du film Surdine",
+			"img": "images/content/visitor-1.jpg",
+			"descr": "Rodrigo Areias commence à travailler dans le cinéma en tant que monteur son pour les réalisateurs Paulo Rocha et Edgar Pêra. Un fois son diplôme en son et image en poche, il se lance dans le milieu du cinema indépendant que ce soit en fiction, documentaire, art vidéo ou clips vidéo. Ses films Corrente (2008) Yay Road (2012) ont été présentés dans plus de cinquante festivals de film internationaux, et récompensés une dizaine de fois. Estrada Palha, son deuxième long-métrage, reçoit la mention spéciale du festival international Karlovy Vary en 2012. La même année Rodrigo Areias est également nommé responsable audiovisuel de l’événement «Guimarães 2012: capitale européenne de la culture».",
+			"imgFilm": "images/content/img-2.jpg",
+			"title": "Surdine / Surdina",
+			"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+			"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre"
+		},
+		{
+			"name": "Kelly Copper, Pavol Liška",
+			"subtitle": "directeur du film Die Kinder der Toten",
+			"img": "images/content/visitor-2.jpg",
+			"descr": "Kelly Copper est américaine, Pavol Liška slovaque. Débarquant aus Etats-Unis à seulement dix-huit ans, Pavol rencontre Kelly au Dartmouth College. Ensemble ils partent à la conquête de New-York et fondent en 1995 leur compagnie de théâtre Nature Theater of Oklahoma (du nom d’une mystérieuse troupe d’un roman inachevé de Kafka). Ils conçoivent des spectacles joyeusement foutraques, à l’esprit très “Mittel Europa”, pleins de danses et de chansons. L’étrangeté, l’ironie, l’excentricité, l’humour noir et les effets de distansciation sont leur marque de fabrique. En 2011, le festival d’Avignon accueille leur spectacle en deux épisodes, Life and Times 1&2, et ils viennent régulièrement en Europe donner des cours ou bien présenter leurs dernières oeuvres. Leur long-métrage Die Kinder der Toten a reçu le prix de la presse à la Berlinale 2019.",
+			"imgFilm": "images/content/img-4.jpg",
+			"title": "Die Kinder der Toten",
+			"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+			"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer"
+		},
+		{
+			"name": "Rodrigo Areias",
+			"subtitle": "directeur du film Surdine",
+			"img": "images/content/visitor-1.jpg",
+			"descr": "Rodrigo Areias commence à travailler dans le cinéma en tant que monteur son pour les réalisateurs Paulo Rocha et Edgar Pêra. Un fois son diplôme en son et image en poche, il se lance dans le milieu du cinema indépendant que ce soit en fiction, documentaire, art vidéo ou clips vidéo. Ses films Corrente (2008) Yay Road (2012) ont été présentés dans plus de cinquante festivals de film internationaux, et récompensés une dizaine de fois. Estrada Palha, son deuxième long-métrage, reçoit la mention spéciale du festival international Karlovy Vary en 2012. La même année Rodrigo Areias est également nommé responsable audiovisuel de l’événement «Guimarães 2012: capitale européenne de la culture».",
+			"imgFilm": "",
+			"title": "",
+			"genre": "",
+			"actors": ""
+		},
+		{
+			"name": "Kelly Copper, Pavol Liška",
+			"subtitle": "directeur du film Die Kinder der Toten",
+			"img": "images/content/visitor-2.jpg",
+			"descr": "Kelly Copper est américaine, Pavol Liška slovaque. Débarquant aus Etats-Unis à seulement dix-huit ans, Pavol rencontre Kelly au Dartmouth College. Ensemble ils partent à la conquête de New-York et fondent en 1995 leur compagnie de théâtre Nature Theater of Oklahoma (du nom d’une mystérieuse troupe d’un roman inachevé de Kafka). Ils conçoivent des spectacles joyeusement foutraques, à l’esprit très “Mittel Europa”, pleins de danses et de chansons. L’étrangeté, l’ironie, l’excentricité, l’humour noir et les effets de distansciation sont leur marque de fabrique. En 2011, le festival d’Avignon accueille leur spectacle en deux épisodes, Life and Times 1&2, et ils viennent régulièrement en Europe donner des cours ou bien présenter leurs dernières oeuvres. Leur long-métrage Die Kinder der Toten a reçu le prix de la presse à la Berlinale 2019.",
+			"imgFilm": "images/content/img-4.jpg",
+			"title": "Die Kinder der Toten",
+			"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+			"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer"
+		},
+		{
+			"name": "Rodrigo Areias",
+			"subtitle": "directeur du film Surdine",
+			"img": "images/content/visitor-1.jpg",
+			"descr": "Rodrigo Areias commence à travailler dans le cinéma en tant que monteur son pour les réalisateurs Paulo Rocha et Edgar Pêra. Un fois son diplôme en son et image en poche, il se lance dans le milieu du cinema indépendant que ce soit en fiction, documentaire, art vidéo ou clips vidéo. Ses films Corrente (2008) Yay Road (2012) ont été présentés dans plus de cinquante festivals de film internationaux, et récompensés une dizaine de fois. Estrada Palha, son deuxième long-métrage, reçoit la mention spéciale du festival international Karlovy Vary en 2012. La même année Rodrigo Areias est également nommé responsable audiovisuel de l’événement «Guimarães 2012: capitale européenne de la culture».",
+			"imgFilm": "images/content/img-2.jpg",
+			"title": "Surdine / Surdina",
+			"genre": "(Fiction, Portugal, 2019, 75’, C, VOSTF)",
+			"actors": "avec Adelaide Teixeira, António Durães, Ana Bustorff, Clara Nogueira, Emília Silvestre"
+		}
+	],
+	"archive": [
+		{
+			"cover": "../images/content/cover-2020.jpg",
+			"year": "2020",
+			"title": "Animaux Hommes Machines Robots"
+		},
+		{
+			"cover": "../images/content/cover-2019.jpg",
+			"year": "2019",
+			"title": "Des animaux et des hommes"
+		},
+		{
+			"cover": "../images/content/cover-2018.jpg",
+			"year": "2018",
+			"title": "Frontières"
+		},
+		{
+			"cover": "../images/content/cover-2017.jpg",
+			"year": "2017",
+			"title": "Les migrations existent. La mort n’existe pas."
+		},
+		{
+			"cover": "../images/content/cover-2016.jpg",
+			"year": "2016",
+			"title": "Chaos et harmonies"
+		},
+		{
+			"cover": "../images/content/cover-2015.jpg",
+			"year": "2015",
+			"title": "Les migrations existent. La mort n’existe pas."
+		},
+		{
+			"cover": "../images/content/cover-2014.jpg",
+			"year": "2014",
+			"title": "Lumière et obscurités"
+		},
+		{
+			"cover": "../images/content/no-cover.png",
+			"year": "2013",
+			"title": "Mémoire et devenir"
+		},
+		{
+			"cover": "../images/content/cover-2012.jpg",
+			"year": "2012",
+			"title": "Silence et bruits"
+		},
+		{
+			"cover": "../images/content/no-cover.png",
+			"year": "2011",
+			"title": "Héros et antihéros"
+		},
+		{
+			"cover": "../images/content/cover-2010.jpg",
+			"year": "2010",
+			"title": "Liberté et dépendances"
+		},
+		{
+			"cover": "../images/content/no-cover.png",
+			"year": "2009",
+			"title": "Nouveaux regards sur l’amour et la guerre"
+		},
+		{
+			"cover": "../images/content/no-cover.png",
+			"year": "2008",
+			"title": "3ème édition"
+		},
+		{
+			"cover": "../images/content/no-cover.png",
+			"year": "2007",
+			"title": "2ème édition"
+		},
+		{
+			"cover": "../images/content/no-cover.png",
+			"year": "2006",
+			"title": "1ème édition"
 		}
 	]
 }
