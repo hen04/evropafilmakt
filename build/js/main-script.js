@@ -119,30 +119,30 @@ $(function (){
 	}
 
 	if ( $('.js-festival-form').length ) {
-		console.log(1);
-		$(".js-festival-form").validate({
+		$('.js-festival-form').validate({
 			rules: {
 				name: "required",
 				email: {
 					required: true,
 					email: true
-				}
+				},
+				message: "required"
 			},
 			messages: {
 				name: {
-					required: "Это поле обязательно для заполнения",
+					required: "Ce champs est obligatoire",
 				},
 				email: {
-					required: "Это поле обязательно для заполнения",
-					email: "Адрес должен быть вида mail@gmail.com"
+					required: "Ce champs est obligatoire",
+					email: "L'adresse doit être de la forme mail@mail.ru"
 				},
 				message: {
-					required: "Это поле обязательно для заполнения",
+					required: "Ce champs est obligatoire",
 				}
 			},
-			// submitHandler: function() {
-			// 	$('.contacts__result').removeClass('hidden');
-			// }
+			submitHandler: function() {
+				$('.info-page__result').removeClass('hidden');
+			}
 		});
 	}
 
