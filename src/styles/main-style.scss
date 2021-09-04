@@ -3683,6 +3683,12 @@ main {
 		}
 	}
 	
+	&__result {
+		p {
+			color: $success;
+		}
+	}
+	
 	&__section {
 		&:not(:first-child) {
 			margin-top: 64px;

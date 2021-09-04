@@ -1235,77 +1235,77 @@
 	],
 	"archive": [
 		{
-			"cover": "../images/content/cover-2020.jpg",
+			"cover": "images/content/cover-2020.jpg",
 			"year": "2020",
 			"title": "Animaux Hommes Machines Robots"
 		},
 		{
-			"cover": "../images/content/cover-2019.jpg",
+			"cover": "images/content/cover-2019.jpg",
 			"year": "2019",
 			"title": "Des animaux et des hommes"
 		},
 		{
-			"cover": "../images/content/cover-2018.jpg",
+			"cover": "images/content/cover-2018.jpg",
 			"year": "2018",
 			"title": "Frontières"
 		},
 		{
-			"cover": "../images/content/cover-2017.jpg",
+			"cover": "images/content/cover-2017.jpg",
 			"year": "2017",
 			"title": "Les migrations existent. La mort n’existe pas."
 		},
 		{
-			"cover": "../images/content/cover-2016.jpg",
+			"cover": "images/content/cover-2016.jpg",
 			"year": "2016",
 			"title": "Chaos et harmonies"
 		},
 		{
-			"cover": "../images/content/cover-2015.jpg",
+			"cover": "images/content/cover-2015.jpg",
 			"year": "2015",
 			"title": "Les migrations existent. La mort n’existe pas."
 		},
 		{
-			"cover": "../images/content/cover-2014.jpg",
+			"cover": "images/content/cover-2014.jpg",
 			"year": "2014",
 			"title": "Lumière et obscurités"
 		},
 		{
-			"cover": "../images/content/no-cover.png",
+			"cover": "images/content/no-cover.png",
 			"year": "2013",
 			"title": "Mémoire et devenir"
 		},
 		{
-			"cover": "../images/content/cover-2012.jpg",
+			"cover": "images/content/cover-2012.jpg",
 			"year": "2012",
 			"title": "Silence et bruits"
 		},
 		{
-			"cover": "../images/content/no-cover.png",
+			"cover": "images/content/no-cover.png",
 			"year": "2011",
 			"title": "Héros et antihéros"
 		},
 		{
-			"cover": "../images/content/cover-2010.jpg",
+			"cover": "images/content/cover-2010.jpg",
 			"year": "2010",
 			"title": "Liberté et dépendances"
 		},
 		{
-			"cover": "../images/content/no-cover.png",
+			"cover": "images/content/no-cover.png",
 			"year": "2009",
 			"title": "Nouveaux regards sur l’amour et la guerre"
 		},
 		{
-			"cover": "../images/content/no-cover.png",
+			"cover": "images/content/no-cover.png",
 			"year": "2008",
 			"title": "3ème édition"
 		},
 		{
-			"cover": "../images/content/no-cover.png",
+			"cover": "images/content/no-cover.png",
 			"year": "2007",
 			"title": "2ème édition"
 		},
 		{
-			"cover": "../images/content/no-cover.png",
+			"cover": "images/content/no-cover.png",
 			"year": "2006",
 			"title": "1ème édition"
 		}

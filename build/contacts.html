@@ -147,17 +147,21 @@
           </div>
           <div class="info-page__form">
             <form class="js-festival-form" id="contacts">
+              <div class="info-page__result hidden">
+                <p>
+                  Votre message a été envoyé.<br>Nous vous contacterons sous peu.</p>
+              </div>
               <div class="form-item">
                 <label for="name">Nom</label>
-                <input class="inp-text" type="text" id="name" required>
+                <input class="inp-text" type="text" id="name" name="name">
               </div>
               <div class="form-item">
                 <label for="email">Email</label>
-                <input class="inp-text" type="email" id="email" required>
+                <input class="inp-text" type="email" id="email" name="email">
               </div>
               <div class="form-item">
                 <label for="message">Message</label>
-                <textarea class="inp-text" id="message" required></textarea>
+                <textarea class="inp-text" id="message" name="message"></textarea>
               </div>
               <div class="form-item"><span>En cliquant sur le bouton "Envoyer", vous acceptez les conditions de l'offre et la politique de confidentialité.</span></div>
               <div class="form-item">
@@ -228,7 +232,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
     <script src="js/libs/device.js"></script>
     <script src="js/libs/owl.carousel.min.js"></script>
     <script src="js/libs/jquery.arcticmodal-0.3.min.js"></script>

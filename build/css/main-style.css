@@ -3956,6 +3956,8 @@ main {
     .info-page__form {
       /* > 1024 */
       width: 50%; } }
+  .info-page__result p {
+    color: #259831; }
   .info-page__section:not(:first-child) {
     margin-top: 64px; }
 
