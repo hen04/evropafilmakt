@@ -523,6 +523,9 @@ a {
 .ml-1 {
   margin-left: 16.5%; }
 
+.ml-2 {
+  margin-left: 33%; }
+
 .ml-3 {
   margin-left: 49.5%; }
 
@@ -1559,6 +1562,109 @@ main {
       padding-left: 10px;
       padding-right: 10px; } }
 
+.last-festival {
+  padding-top: 56px; }
+  @media only screen and (min-width: 768px) and (max-width: 1279px) {
+    .last-festival {
+      /* 768 - 1279 */
+      padding-top: 80px; } }
+  @media only screen and (min-width: 1280px) {
+    .last-festival {
+      /* > 1280 */
+      padding-top: 120px; } }
+  @media only screen and (max-width: 1023px) {
+    .last-festival__item:not(:first-child) {
+      /* < 1023 */
+      margin-top: 40px; } }
+  @media only screen and (min-width: 1024px) {
+    .last-festival__item:not(:first-child) {
+      /* > 1024 */
+      margin-top: 80px; } }
+  @media only screen and (min-width: 1600px) {
+    .last-festival__item:not(:first-child) {
+      /* > 1600 */
+      margin-top: 120px; } }
+
+.film-info__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  @media only screen and (max-width: 1023px) {
+    .film-info__content {
+      /* < 1023 */
+      -ms-flex-flow: wrap;
+      flex-flow: wrap; } }
+
+.film-info__film {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 1023px) {
+    .film-info__film {
+      /* < 1023 */
+      margin-bottom: 2rem;
+      width: 100%; } }
+
+.film-info__film-img {
+  margin-bottom: 1.5rem; }
+  .film-info__film-img img {
+    display: block;
+    max-width: 100%; }
+
+@media only screen and (max-width: 1023px) {
+  .film-info__author {
+    /* < 1023 */
+    width: 60%; } }
+
+.film-info__author-img img {
+  max-width: 100%;
+  display: block; }
+
+.film-info__descr h4 {
+  margin-bottom: 1rem; }
+
+.film-info__descr p {
+  font-size: 20px;
+  margin-bottom: 0; }
+  .film-info__descr p span {
+    display: block;
+    margin-top: .25rem; }
+
+.film-info__foto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  margin-top: 88px; }
+  @media only screen and (max-width: 1023px) {
+    .film-info__foto {
+      /* < 1023 */
+      -ms-flex-flow: wrap;
+      flex-flow: wrap;
+      margin-left: -10px !important;
+      margin-top: 40px; } }
+
+.film-info__foto-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto; }
+
+.film-info__foto-item:last-child {
+  margin-right: 0; }
+
+.film-info__foto-item img {
+  max-width: 100%; }
+  @media only screen and (min-width: 1024px) {
+    .film-info__foto-item img {
+      /* > 1024 */
+      margin-bottom: 1rem; } }
+
 .program-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2469,11 +2575,6 @@ main {
         /* > 1600 */
         font-size: 24px; } }
 
-.test {
-  border: 1px solid #000; }
-  .test .item img {
-    max-width: 100%; }
-
 .program-page__text {
   max-width: 720px; }
 
@@ -3286,7 +3387,7 @@ main {
   @media only screen and (min-width: 1280px) {
     .news-sm__list {
       /* > 1280 */
-      width: 69%; } }
+      width: 68%; } }
   @media only screen and (min-width: 1280px) {
     .news-sm__list--festival .news-sm {
       /* > 1280 */

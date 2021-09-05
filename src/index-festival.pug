@@ -26,74 +26,41 @@ block content
 		p Le festival accueille des réalisateurs, auteurs, acteurs, producteurs et critiques venus de toute l’Europe, avec pour objectif de faire connaître la culture européenne dans toute sa diversité et sa complexité et de réfléchir à son identité et sa singularité.
 		a(href="#") L’histoire du festival
 
-	.program-main
-		.program-main__short-info
-			h2 Programme 2021
-			.program-main__list
-				each item in programChapter
-					a(href="").program-main__item
-						h4= item.title
-						p= item.quantity
-						span.iconify(data-icon="bi:arrow-right" data-inline="false")
 
-		.festival-visitors
-			h4 Les invités du festival
-			.rows.festival-visitors__list
-				a(href="").col-3.festival-visitors__item
-					img(src="images/content/visitor-1.jpg" alt="")
-					h6 Rodrigo Areias
-					p directeur du film Surdine
-				a(href="").col-3.festival-visitors__item
-					img(src="images/content/visitor-1.jpg" alt="")
-					h6 Rodrigo Areias
-					p directeur du film Surdine du film Surdine directeur du film
-			a(href="" class="btn") Voir les invités
-
-	.program-main__info
-		.program-info
-			each item in program.slice(0, 1)
-				.program-info__item
-					.program-info__day
-						.sticky
-							h4= item.date+ ", "
-							h6= item.weekday
-					.program-info__films
-						each subitem in item.films
-							.program-info__film-item
-								.program-info__time
-									h4= subitem.time
-								a(href="#").program-info__img
+	.last-festival
+		h2 Les lauréats du Festival 2021
+		each item in festInfo
+			.last-festival__item
+				h3= item.festTitle
+				.film-info
+					.film-info__content.rows
+						.film-info__film.col-2
+							.film-info__film-img
+								a(href="film-detail.html")
+									img(src= item.filmImg alt= item.filmTitle)
+							.film-info__descr
+								h4
+									a(href="film-detail.html")= item.filmTitle
+								p= item.genre
+									span.actors= item.actors
+						.film-info__author.col-1
+							if item.directorImg !== ""
+								.film-info__author-img
+									img(src= item.directorImg)
+							if item.director !== ""
+								.film-info__author-name
+									p
+										strong= item.director
+					.film-info__foto.ml-2
+						.col-6
+							h4
+								a(href="video-albom.html")= item.fotoTitle
+						.film-info__foto-list.rows
+							each subitem in item.foto
+								.film-info__foto-item.col-4
 									img(src= subitem.img alt= subitem.title)
-								.program-info__content-name
-									h4
-										a(href="#")= subitem.title
-									p.title= subitem.director
-									p= subitem.genre
-										span.actors= subitem.actors
-								.program-info__content-cinema
-									p.title= subitem.cinema
-									p.link-cinema
-										a(href="" class="js-map-cinema")= subitem.address
-										if subitem.price2 === ''
-											span Entrée libre, dans la limite des places disponibles
-										else
-											span Plein tarif: !{' '}
-												strong=  subitem.price1
-											span Tarif réduit: !{' '}
-												strong=  subitem.price2
-		a(href="program.html" class="btn") Voir le programme
-
-	.jury
-		h2 Jurys
-		.jury__list
-			each item in jury
-				.jury__item
-					img(src= item.img alt= item.name)
-					.jury__info
-						p.name
-							strong= item.name
-						p= item.text
-					a(href="")= item.link
+									p
+										strong= subitem.title
 
 	.video
 		h2 Vidéothèque

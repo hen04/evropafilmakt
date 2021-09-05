@@ -1309,5 +1309,67 @@
 			"year": "2006",
 			"title": "1ème édition"
 		}
+	],
+	"festInfo": [
+		{
+			"festTitle": "Prix Sauvage ",
+			"filmImg": "images/content/img-4.jpg",
+			"filmTitle": "Die Kinder der Toten",
+			"director": "de Kelly Copper et Pavol Liška",
+			"directorImg": "images/content/author-1.jpg",
+			"genre": "(Fiction, Autriche, 2019, 90’, C, VOSTF)",
+			"actors": "avec Andrea Maier, Greta Kostka, Klaus Unterrieder, Georg Beyer",
+			"fotoTitle": "Photo et vidéo du prix",
+			"foto": [
+				{
+					"img": "images/content/gallery-1.jpg",
+					"title": "Cérémonie de remise des prix"
+				},
+				{
+					"img": "images/content/gallery-10.jpg",
+					"title": "Cérémonie de remise des prix"
+				}
+			]
+		},
+		{
+			"festTitle": "Prix Sauvage Corto",
+			"filmImg": "images/content/img-12.jpg",
+			"filmTitle": "Alma In The Herd / Alma nel Branco",
+			"director": "d’Agnese Làposi",
+			"directorImg": "images/content/author-2.jpg",
+			"genre": "(Fiction, Suisse, 2019, 24’, C, VOSTF)",
+			"actors": "avec Lavinia Giordano, Leonor Oberson et Leonardo Enrique Maina",
+			"fotoTitle": "Photo et vidéo du prix",
+			"foto": [
+				{
+					"img": "images/content/gallery-1.jpg",
+					"title": "Cérémonie de remise des prix"
+				},
+				{
+					"img": "images/content/gallery-10.jpg",
+					"title": "Cérémonie de remise des prix"
+				}
+			]
+		},
+		{
+			"festTitle": "Prix Present",
+			"filmImg": "images/content/img-13.jpg",
+			"filmTitle": "Walk on the Wild Side",
+			"director": "",
+			"directorImg": "",
+			"genre": "(Documentaire, Angleterre, France, 2018, 57’,C)",
+			"actors": "Germaine McCormack-Kós, artiste et cinéaste indépendante, a eu une vie exceptionnelle – elle travaille dans l’industrie cinématographique à Londres, puis devient peintre et s’installe à Paris. Mais tout est bouleversé par le diagnostic d’un cancer de stade 4. Elle décide de se battre contre la maladie.",
+			"fotoTitle": "Photo et vidéo du prix",
+			"foto": [
+				{
+					"img": "images/content/gallery-1.jpg",
+					"title": "Cérémonie de remise des prix"
+				},
+				{
+					"img": "images/content/gallery-10.jpg",
+					"title": "Cérémonie de remise des prix"
+				}
+			]
+		}
 	]
 }
