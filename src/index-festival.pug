@@ -29,38 +29,39 @@ block content
 
 	.last-festival
 		h2 Les lauréats du Festival 2021
-		each item in festInfo
-			.last-festival__item
-				h3= item.festTitle
-				.film-info
-					.film-info__content.rows
-						.film-info__film.col-2
-							.film-info__film-img
-								a(href="film-detail.html")
-									img(src= item.filmImg alt= item.filmTitle)
-							.film-info__descr
+		.last-festival__list
+			each item in festInfo
+				.last-festival__item
+					h3= item.festTitle
+					.film-info
+						.film-info__content.rows
+							.film-info__film.col-2
+								.film-info__film-img
+									a(href="film-detail.html")
+										img(src= item.filmImg alt= item.filmTitle)
+								.film-info__descr
+									h4
+										a(href="film-detail.html")= item.filmTitle
+									p= item.genre
+										span.actors= item.actors
+							.film-info__author.col-1
+								if item.directorImg !== ""
+									.film-info__author-img
+										img(src= item.directorImg)
+								if item.director !== ""
+									.film-info__author-name
+										p
+											strong= item.director
+						.film-info__foto.ml-2
+							.col-6
 								h4
-									a(href="film-detail.html")= item.filmTitle
-								p= item.genre
-									span.actors= item.actors
-						.film-info__author.col-1
-							if item.directorImg !== ""
-								.film-info__author-img
-									img(src= item.directorImg)
-							if item.director !== ""
-								.film-info__author-name
-									p
-										strong= item.director
-					.film-info__foto.ml-2
-						.col-6
-							h4
-								a(href="video-albom.html")= item.fotoTitle
-						.film-info__foto-list.rows
-							each subitem in item.foto
-								.film-info__foto-item.col-4
-									img(src= subitem.img alt= subitem.title)
-									p
-										strong= subitem.title
+									a(href="video-albom.html")= item.fotoTitle
+							.film-info__foto-list.rows
+								each subitem in item.foto
+									.film-info__foto-item.col-4
+										img(src= subitem.img alt= subitem.title)
+										p
+											strong= subitem.title
 
 	.video
 		h2 Vidéothèque
