@@ -1137,11 +1137,19 @@ body {
         max-height: 80px; } }
   .header-title .title {
     font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 10px; }
-  .header-title .date {
+    line-height: 40px; }
+  .header-title .subtitle {
     font-size: 24px;
-    line-height: 32px; }
+    line-height: 32px;
+    position: static; }
+    .header-title .subtitle a {
+      color: #525252; }
+      .header-title .subtitle a:hover {
+        color: #FF5E00; }
+  .header-title .date {
+    margin-top: .5rem;
+    font-size: 20px;
+    line-height: 28px; }
   .header-title__text {
     display: none; }
     @media only screen and (min-width: 1280px) {
