@@ -687,16 +687,30 @@ body {
 			}
 		}
 	}
-	
+
 	.title {
 		font-size: 32px;
 		line-height: 40px;
-		margin-bottom: 10px;
 	}
-	
-	.date {
+
+	.subtitle {
 		font-size: 24px;
 		line-height: 32px;
+		position: static;
+		
+		a {
+			color: $gray-400;
+
+			&:hover {
+				color: $active;
+			}
+		}
+	}
+
+	.date {
+		margin-top: .5rem;
+		font-size: 20px;
+		line-height: 28px;
 	}
 	
 	&__text {
@@ -707,6 +721,7 @@ body {
 			flex-flow: column;
 		}
 	}
+	
 }
 
 .footer {
