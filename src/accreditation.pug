@@ -1,0 +1,28 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "info.html";
+	- var currentSubtitle = "festival-pass.html";
+	+menu(currentTitle, currentSubtitle)
+
+block content
+	.info-page
+		h1 Accréditation
+		.info-page__content
+			.info-page__section
+				h3 Qui peut être accrédité ?
+				p L’accréditation est gratuite et strictement personnelle. Chaque demande est soumise à l’approbation du festival (attention faire une demande ne garantit en rien votre accréditation).
+				p Le demandeur doit être un professionnel du cinéma et appartenir à l’une des catégories suivantes :
+
+				ul
+					li journalistes
+					li partenaires
+					li institutionnel
+					li distributeurs
+					li producteurs
+
+			.info-page__section
+				h6 Comment être accrédité?
+				p Remplissez notre !{" "}
+					a(href="https://docs.google.com/forms/d/e/1FAIpQLSdc8IUZ5RvltsYtV_aKr6CpQO5jfIR5UArEhuUdU5HMnLB_wA/viewform" target="_blank") formulaire en ligne

@@ -1,0 +1,55 @@
+extends templates/layout
+include templates/_mixins
+
+block nav
+	- var currentTitle = "online.html";
+	+menu(currentTitle)
+
+
+block content
+
+	.news-page
+		h1 Filmocracy
+
+		p Нужен небольшой блок текста, можно написать, что за площака Filmocracy, какие фильмы можно посмотреть и т.д. Ниже можно давать ссылки на фильмы, которые были показаны на этой площадке или фильмы, которые будут показаны. Единственное -- у меня есть опасение, что страницы Online и Filmocracy будут по сути об одном и том же. Это не очень хорошо, люди будут путаться.
+
+		.news-page__section
+			h2 Prochainement
+			.news-page__list
+				each item in news
+					if item.online === true
+						a(href="online-detail.html").news-sm
+							.news-sm__img
+								if item.online === true
+									span en ligne
+								img(src= item.img alt= item.title)
+							h4= item.title
+							if item.director !== ""
+								p.title= item.director
+							if item.date !== ""
+								.news-sm__date
+									span= item.date
+							.news-sm__descr
+								p= item.info
+
+		.news-page__section
+			h2 Evénements passés
+			.news-page__list
+				each item in news
+					if item.online !== true
+						a(href="online-detail-past.html").news-sm
+							.news-sm__img
+								if item.online !== true
+									span.past en ligne
+								img(src= item.img alt= item.title)
+							h4= item.title
+							if item.director !== ""
+								p.title= item.director
+							if item.date !== ""
+								.news-sm__date
+									span= item.date
+							.news-sm__descr
+								p= item.info
+
+
+		include templates/_incl-pagination
