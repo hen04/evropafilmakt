@@ -32,6 +32,72 @@
 			"title": "Programme",
 			"submenu": [
 				{
+					"url": "#",
+					"title": "Compétitions",
+					"subsubmenu": [
+						{
+							"url": "#",
+							"title": "Prix SAUVAGE"
+						},
+						{
+							"url": "#",
+							"title": "Prix PRESENT"
+						},
+						{
+							"url": "#",
+							"title": "Prix SAUVAGE CORTO"
+						}
+					]
+				},
+				{
+					"url": "#",
+					"title": "Hommages / Retrospectives",
+					"subsubmenu": [
+						{
+							"url": "#",
+							"title": "Henning Carlsen"
+						},
+						{
+							"url": "#",
+							"title": "Peter Handke"
+						}
+					]
+				},
+				{
+					"url": "#",
+					"title": "Hors compétition",
+					"subsubmenu": [
+						{
+							"url": "#",
+							"title": "THEMA"
+						},
+						{
+							"url": "#",
+							"title": "Investigation"
+						},
+						{
+							"url": "#",
+							"title": "Vie sauvage"
+						},
+						{
+							"url": "#",
+							"title": "Salon expérimental"
+						},
+						{
+							"url": "#",
+							"title": "Carte blanche"
+						},
+						{
+							"url": "#",
+							"title": "Connexions"
+						},
+						{
+							"url": "#",
+							"title": "Rencontres et événements"
+						}
+					]
+				},
+				{
 					"url": "festival-visitors.html",
 					"title": "Les invités du festival"
 				}
@@ -67,7 +133,12 @@
 		{
 			"url": "online.html",
 			"title": "Online",
-			"submenu": false
+			"submenu": [
+				{
+					"url": "filmocracy.html",
+					"title": "Filmocracy"
+				}
+			]
 		},
 		{
 			"url": "gallery.html",
@@ -88,7 +159,7 @@
 			"title": "Pro / Presse",
 			"submenu": [
 				{
-					"url": "press.html",
+					"url": "accreditation.html",
 					"title": "Accréditation"
 				}
 			]

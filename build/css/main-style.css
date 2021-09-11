@@ -615,7 +615,8 @@ body {
   min-height: 100vh;
   background-color: #fff;
   color: #525252;
-  font: 20px/150% 'GolosUIRegular', sans-serif; }
+  font: 20px/150% 'GolosUIRegular', sans-serif;
+  min-width: 375px; }
   @media only screen and (max-width: 1023px) {
     body {
       /* < 1023 */
@@ -1546,11 +1547,11 @@ main {
       -webkit-box-direction: normal;
       -ms-flex-flow: column;
       flex-flow: column;
-      margin-left: 34%;
+      margin-left: 33%;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 5px;
+      padding-left: 5px; } }
   @media only screen and (min-width: 1366px) {
     .festival-history {
       /* > 1366 */
@@ -1566,7 +1567,7 @@ main {
       -webkit-box-direction: normal;
       -ms-flex-flow: column;
       flex-flow: column;
-      margin-left: 34%;
+      margin-left: 33%;
       padding-left: 10px;
       padding-right: 10px; } }
 
@@ -1888,6 +1889,10 @@ main {
       -webkit-box-direction: normal;
       -ms-flex-flow: column;
       flex-flow: column; } }
+  @media only screen and (min-width: 1280px) {
+    .program-info__list {
+      /* > 1280 */
+      margin: 0 -10px; } }
   .program-info__list .program-info__content-name {
     padding-left: 4px; }
     .program-info__list .program-info__content-name h5 {
@@ -3261,6 +3266,8 @@ main {
     visibility: hidden; }
   .news-page__year .select2-container {
     width: 100% !important; }
+  .news-page__section {
+    margin-top: 40px; }
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .news-page__top h1 {
       /* 768 - 1024 */
@@ -3322,6 +3329,10 @@ main {
     font-weight: 600;
     color: #292929;
     margin-top: -1.5rem; }
+  .news-sm__title-date {
+    margin-bottom: 2rem; }
+    .news-sm__title-date h4 {
+      margin-bottom: .5rem; }
   .news-sm__date {
     border-top: 1px solid #525252;
     border-bottom: 1px solid #525252;
@@ -3395,7 +3406,11 @@ main {
   @media only screen and (min-width: 1280px) {
     .news-sm__list {
       /* > 1280 */
-      width: 68%; } }
+      width: 67.5%; } }
+  @media only screen and (min-width: 1280px) {
+    .news-sm__list--festival {
+      /* > 1280 */
+      width: 100%; } }
   @media only screen and (min-width: 1280px) {
     .news-sm__list--festival .news-sm {
       /* > 1280 */
@@ -3407,14 +3422,19 @@ main {
   @media only screen and (min-width: 1280px) {
     .news-sm__list--festival .news-sm__img {
       /* > 1280 */
-      width: 50%; } }
+      width: 33%;
+      padding-right: 10px; } }
   @media only screen and (min-width: 1280px) {
     .news-sm__list--festival .news-sm__text {
       /* > 1280 */
-      width: 50%;
-      padding-left: 20px;
+      width: 47.5%;
+      padding-left: 10px;
       -webkit-box-sizing: border-box;
       box-sizing: border-box; } }
+  @media only screen and (min-width: 1600px) {
+    .news-sm__list--festival .news-sm__text {
+      /* > 1600 */
+      width: 35%; } }
 
 .news-page-detail {
   margin: 0 auto;
@@ -3976,6 +3996,8 @@ main {
   width: 100%;
   max-width: 1220px;
   margin: 0 auto; }
+  .info-page h1 + .info-page__content {
+    margin-top: -40px; }
   .info-page__content {
     max-width: 910px; }
     .info-page__content li {
@@ -4067,8 +4089,37 @@ main {
       width: 50%; } }
   .info-page__result p {
     color: #259831; }
-  .info-page__section:not(:first-child) {
+  .info-page__section {
     margin-top: 64px; }
+    @media only screen and (min-width: 1280px) {
+      .info-page__section {
+        /* > 1280 */
+        margin-top: 80px; } }
+  .info-page__banners-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media only screen and (max-width: 1023px) {
+      .info-page__banners-list {
+        /* < 1023 */
+        -ms-flex-flow: wrap;
+        flex-flow: wrap; } }
+  @media only screen and (max-width: 767px) {
+    .info-page__banner-item {
+      /* < 767 */
+      width: 100%; } }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .info-page__banner-item {
+      /* 768 - 1024 */
+      width: 50%; } }
+  @media only screen and (max-width: 767px) {
+    .info-page__banner-item:not(:first-child) {
+      /* < 767 */
+      margin-top: 1rem; } }
+  .info-page__banner-item img {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 1rem; }
 
 .request-links {
   display: -webkit-box;

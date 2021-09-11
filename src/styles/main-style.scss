@@ -96,6 +96,7 @@ body {
 	background-color: $white;
 	color: $gray-400;
 	font: 20px/150% 'GolosUIRegular', sans-serif;
+	min-width: 375px;
 	
 	@include responsive(device) {
 		font-size: 16px;
@@ -1119,10 +1120,10 @@ main {
 		width: 66%;
 		display: flex;
 		flex-flow: column;
-		margin-left: 34%;
+		margin-left: 33%;
 		box-sizing: border-box;
-		padding-right: 10px;
-		padding-left: 10px;
+		padding-right: 5px;
+		padding-left: 5px;
 	}
 	
 	@include responsive(notebookdesktop) {
@@ -1133,7 +1134,7 @@ main {
 		width: 36%;
 		display: flex;
 		flex-flow: column;
-		margin-left: 34%;
+		margin-left: 33%;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -1455,6 +1456,10 @@ main {
 
 		@include responsive(mobile) {
 			flex-flow: column;
+		}
+		
+		@include responsive(desktop) {
+			margin: 0 -10px;
 		}
 
 		.program-info__content-name {
@@ -2927,6 +2932,10 @@ main {
 	
 	@include yearsSelect('news-page');
 
+	&__section {
+		margin-top: 40px;
+	}
+	
 	&__top {
 		h1 {
 			@include responsive(smtablet) {
@@ -3005,6 +3014,15 @@ main {
 		color: $gray-700;
 		margin-top: -1.5rem;
 	}
+	
+	&__title-date {
+		margin-bottom: 2rem;
+		
+		h4 {
+			margin-bottom: .5rem;
+		}
+	
+	}
 
 	&__date {
 		border-top: 1px solid $gray-400;
@@ -3082,10 +3100,14 @@ main {
 	flex-flow: wrap;
 	
 	@include responsive(desktop) {
-		width: 68%;
+		width: 67.5%;
 	}
 
 	&--festival {
+		@include responsive(desktop) {
+			width: 100%;
+		}
+
 		.news-sm {
 			@include responsive(desktop) {
 				flex-flow: row;
@@ -3094,15 +3116,20 @@ main {
 			
 			&__img {
 				@include responsive(desktop) {
-					width: 50%;
+					width: 33%;
+					padding-right: 10px;
 				}
 			}
 			
 			&__text {
 				@include responsive(desktop) {
-					width: 50%;
-					padding-left: 20px;
+					width: 47.5%;
+					padding-left: 10px;
 					box-sizing: border-box;
+				}
+				
+				@include responsive(largedesktop) {
+					width: 35%;
 				}
 			}
 		}
@@ -3691,6 +3718,10 @@ main {
 	max-width: 1220px;
 	margin: 0 auto;
 	
+	h1 + .info-page__content {
+		margin-top: -40px;
+	}
+	
 	&__content {
 		max-width: 910px;
 		
@@ -3719,6 +3750,7 @@ main {
 			}
 		}
 	}
+
 	&__list {
 		display: flex;
 		flex-flow: wrap;
@@ -3742,7 +3774,7 @@ main {
 			margin-bottom: 1rem;
 		}
 	}
-	
+
 	&__tarifs {
 		margin-top: 48px;
 	}
@@ -3805,10 +3837,43 @@ main {
 	}
 	
 	&__section {
-		&:not(:first-child) {
-			margin-top: 64px;
+		margin-top: 64px;
+
+		@include responsive(desktop) {
+			margin-top: 80px;
 		}
 	}
+	
+	&__banners-list {
+		display: flex;
+		
+		@include responsive(device) {
+			flex-flow: wrap;
+		}
+	}
+	
+	&__banner-item {
+		@include responsive(mobile) {
+			width: 100%;
+		}
+		
+		@include responsive(smtablet) {
+			width: 50%;
+		}
+
+		&:not(:first-child) {
+			@include responsive(mobile) {
+				margin-top: 1rem;
+			}
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+			margin-bottom: 1rem;
+		}
+	}
+	
 }
 
 .request-links {
