@@ -11,7 +11,7 @@ $(function (){
 
 	$(window).on('load resize', function () {
 		if ($(this).width() <= 1365) {
-			$('.has-submenu__inner a').on('click', function (event) {
+			$('.has-submenu__inner').on('click', function (event) {
 				event.preventDefault();
 
 				$('.has-submenu').removeClass('opened');

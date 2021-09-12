@@ -11,19 +11,23 @@
 			"submenu": [
 				{
 					"url": "about.html",
-					"title": "Qui sommes-nous"
+					"title": "Qui sommes-nous",
+					"subsubmenu": false
 				},
 				{
 					"url": "editorial.html",
-					"title": "L’éditorial"
+					"title": "L’éditorial",
+					"subsubmenu": false
 				},
 				{
 					"url": "partners.html",
-					"title": "Partenaires"
+					"title": "Partenaires",
+					"subsubmenu": false
 				},
 				{
 					"url": "archive.html",
-					"title": "Archives du festival"
+					"title": "Archives du festival",
+					"subsubmenu": false
 				}
 			]
 		},
@@ -99,7 +103,8 @@
 				},
 				{
 					"url": "festival-visitors.html",
-					"title": "Les invités du festival"
+					"title": "Les invités du festival",
+					"subsubmenu": false
 				}
 			]
 		},
@@ -109,19 +114,23 @@
 			"submenu": [
 				{
 					"url": "jury-detail.html",
-					"title": "Jury PRIX SAUVAGE"
+					"title": "Jury PRIX SAUVAGE",
+					"subsubmenu": false
 				},
 				{
 					"url": "#",
-					"title": "Jury PRIX PRESENT"
+					"title": "Jury PRIX PRESENT",
+					"subsubmenu": false
 				},
 				{
 					"url": "#",
-					"title": "Jury PRIX SAUVAGE CORTO"
+					"title": "Jury PRIX SAUVAGE CORTO",
+					"subsubmenu": false
 				},
 				{
 					"url": "#",
-					"title": "Jury PRIX LUNA"
+					"title": "Jury PRIX LUNA",
+					"subsubmenu": false
 				}
 			]
 		},
@@ -136,7 +145,8 @@
 			"submenu": [
 				{
 					"url": "filmocracy.html",
-					"title": "Filmocracy"
+					"title": "Filmocracy",
+					"subsubmenu": false
 				}
 			]
 		},
@@ -146,11 +156,13 @@
 			"submenu": [
 				{
 					"url": "gallery.html",
-					"title": "Photos"
+					"title": "Photos",
+					"subsubmenu": false
 				},
 				{
 					"url": "video.html",
-					"title": "Vidéothèque"
+					"title": "Vidéothèque",
+					"subsubmenu": false
 				}
 			]
 		},
@@ -160,7 +172,8 @@
 			"submenu": [
 				{
 					"url": "accreditation.html",
-					"title": "Accréditation"
+					"title": "Accréditation",
+					"subsubmenu": false
 				}
 			]
 		},
@@ -170,15 +183,18 @@
 			"submenu": [
 				{
 					"url": "places.html",
-					"title": "Lieux"
+					"title": "Lieux",
+					"subsubmenu": false
 				},
 				{
 					"url": "festival-pass.html",
-					"title": "Le Pass du festival"
+					"title": "Le Pass du festival",
+					"subsubmenu": false
 				},
 				{
 					"url": "contacts.html",
-					"title": "Contacts"
+					"title": "Contacts",
+					"subsubmenu": false
 				}
 			]
 		}
