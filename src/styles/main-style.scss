@@ -346,7 +346,7 @@ body {
 			}
 			
 			@include responsive(smtablet) {
-				top: 128px;
+				top: 118px;
 			}
 
 			.main-menu {
@@ -422,9 +422,10 @@ body {
 			}
 
 			@include responsive(notebookdesktop) {
-				padding: 20px;
+				padding: 20px 16px;
 				font-size: 20px;
 			}
+			
 
 			&:after {
 				@include responsive(alldevices) {
@@ -447,8 +448,8 @@ body {
 					line-height: 1.25;
 				}
 				
-				@include responsive(notebook) {
-					width: auto;
+				@include responsive(mobile) {
+					font-size: 22px;
 				}
 			}
 
@@ -468,7 +469,6 @@ body {
 	
 	.sub-menu {
 		display: none;
-		min-width: 300px;
 		background-color: $white;
 		
 		@include responsive(device) {
@@ -480,15 +480,19 @@ body {
 		}
 		
 		@include responsive(notebook) {
-			margin-right: auto;
-			padding-top: 16px;
+			flex-flow: column;
+			width: 100%;
+			padding-left: 30px;
+			box-sizing: border-box;
+			margin-bottom: -20px;
 		}
-
+		
 		@include responsive(notebookdesktop) {
+			min-width: 1000px;
 			margin-top: 20px;
 			position: absolute;
 		}
-		
+
 		&:before {
 			@include responsive(notebookdesktop) {
 				content: '';
@@ -499,6 +503,7 @@ body {
 				right: -1680px;
 				left: -1680px;
 				border-top: 1px solid $gray-400;
+				box-shadow: 0 4px 8px 0 rgba($gray-400, .08);
 			}
 		}
 		
@@ -508,7 +513,7 @@ body {
 			}
 			
 			@include responsive(notebook) {
-				padding: 0 24px;
+				padding: 14px 0;
 			}
 
 			@include responsive(notebookdesktop) {
@@ -527,16 +532,89 @@ body {
 				}
 			}
 			
-			&:after {
-				@include responsive(notebook) {
-					content: none;
-				}
+		}
+	}
+	
+	.has-third-menu {
+		@include responsive(device) {
+			flex-flow: column;
+			align-items: flex-start;
+		}
+		
+		@include responsive(alldevices) {
+			flex-flow: column;
+			align-items: flex-start;
+		}
+		
+		@include responsive(notebook) {
+			width: 100%;
+			align-items: flex-start !important;
+		}
+
+		&__inner {
+			@include responsive(device) {
+				width: 100%;
 			}
 			
+			@include responsive(notebook) {
+				width: 100%;
+			}
+
 			a {
-				@include responsive(notebook) {
-					font-size: 20px;
+				&:hover {
+					color: $active;
 				}
+			}
+		}
+		
+		li {
+			@include responsive(device) {
+				padding: 6px 0;
+			}
+			
+			@include responsive(notebook) {
+				padding: 6px 0;
+			}
+			
+			&:after {
+				content: none;
+			}
+		}
+	}
+
+	.third-level-menu {
+		display: flex;
+		flex-flow: wrap;
+		padding-left: 40px;
+		box-sizing: border-box;
+
+		@include responsive(smtablet) {
+			width: 100%;
+		}
+		
+		li {
+			margin-right: 24px;
+			
+			@include responsive(device) {
+				width: 100%;
+			}
+			
+			@include responsive(smtablet) {
+				width: auto;
+				white-space: nowrap;
+			}
+			
+			@include responsive(notebook) {
+				width: auto;
+				white-space: nowrap;
+			}
+
+			&:first-child {
+				padding-top: .5rem;
+			}
+			&:last-child {
+				padding-bottom: .5rem;
+				margin-right: 0;
 			}
 		}
 	}
@@ -567,16 +645,21 @@ body {
 		}
 	}
 	
-	&__request {
+	&__links {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
-		padding: 16px 0;
 		border-bottom: 1px solid $gray-400;
+		padding: 16px 20px;
+		
+		@include responsive(landscapedesktop) {
+			padding: 16px 40px;
+		}
 		
 		@include responsive(mobile) {
 			flex-flow: wrap;
 		}
+
 
 		p {
 			margin: 0;
@@ -587,30 +670,80 @@ body {
 				text-align: center;
 				margin-bottom: 12px;
 			}
+			
+			@include responsive(desktop) {
+				margin-right: 20px;
+			}
 		}
 		
 		a {
 			display: block;
-			
-			@include responsive(mobile) {
-				margin: 0 12px;
-			}
-			
-			@include responsive(tabletdesktop) {
-				margin-left: 24px;
-			}
 		}
 
 		img {
 			display: block;
+			border-radius: 5px;
+			border: 1px solid #3f3f3f;
 			
 			@include responsive(mobile) {
-				max-width: 100px;
+				//max-width: 100px;
 			}
 			
 			@include responsive(tabletnotebook) {
 				max-width: 120px;
 			}
+		}
+	}
+	
+
+	&__filmocracy-link,
+	&__request-links {
+		display: flex;
+		align-items: center;
+
+		@include responsive(device) {
+			flex-flow: column;
+			width: 100%;
+		}
+		
+		@include responsive(tablet) {
+			justify-content: center;
+			flex-flow: column;
+			width: 50%;
+		}
+		
+		img {
+			@include responsive(device) {
+				margin-top: .5rem;
+			}
+			
+			@include responsive(tablet) {
+				margin-top: .5rem;
+			}
+		}
+	}
+	
+	&__filmocracy-link {
+		@include responsive(mobile) {
+			margin-bottom: 1.5rem;
+			justify-content: center;
+		}
+	}
+	
+	&__request-links-img {
+		display: flex;
+		justify-content: center;
+
+		@include responsive(device) {
+			width: 100%;
+		}
+		
+		@include responsive(tablet) {
+			width: 100%;
+		}
+		
+		a {
+			margin: 0 .5rem;
 		}
 	}
 }
@@ -677,7 +810,7 @@ body {
 .header-title {
 	display: flex;
 	align-items: center;
-	padding-top: 10px;
+	//padding-top: 10px;
 	
 	&__img {
 		margin-right: 12px;
@@ -695,10 +828,6 @@ body {
 	}
 
 	.subtitle {
-		font-size: 24px;
-		line-height: 32px;
-		position: static;
-		
 		a {
 			color: $gray-400;
 
@@ -710,8 +839,8 @@ body {
 
 	.date {
 		margin-top: .5rem;
-		font-size: 20px;
-		line-height: 28px;
+		font-size: 24px;
+		line-height: 32px;
 	}
 	
 	&__text {

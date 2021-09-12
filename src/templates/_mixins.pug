@@ -50,5 +50,15 @@ mixin menu(currentTitle, currentSubtitle)
 								span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
 							ul.sub-menu
 								each subitem in item.submenu
-									li
-										a(href= subitem.url)= subitem.title
+									if subitem.subsubmenu === false
+										li
+											a(href= subitem.url)= subitem.title
+									else
+										li.has-third-menu
+											.has-third-menu__inner
+												a(href= subitem.url)= subitem.title
+											ul.third-level-menu
+												each subsubitem in subitem.subsubmenu
+													li
+														a(href="#")= subsubitem.title
+

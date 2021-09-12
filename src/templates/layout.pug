@@ -25,8 +25,6 @@ html(lang="ru")
 							img(src="images/wolf.png" alt="")
 						.header-title__text
 							.title Festival de films européens de Paris
-							.subtitle aussi sur !{" "}
-								a(href="https://filmocracy.com/" target="_blank") Filmocracy
 							.date Du 17 au 30 novembre Paris 2021
 				.header__right
 					.header__lang
@@ -57,12 +55,18 @@ html(lang="ru")
 			.header__banner
 				img(src="images/main-banner.png" alt="")
 
-			.header__request
-				p Soumettre votre film via
-				a(href="" target="_blank")
-					img(src="images/film-freeway.png" alt="")
-				a(href="" target="_blank")
-					img(src="images/festhome.png" alt="")
+			.header__links
+				.header__filmocracy-link
+					p Partenaire de projections virtuelles
+					a(href="" target="_blank")
+						img(src="images/filmocracy.png" alt="")
+				.header__request-links
+					p Soumettre votre film via
+					.header__request-links-img
+						a(href="" target="_blank")
+							img(src="images/film-freeway.png" alt="")
+						a(href="" target="_blank")
+							img(src="images/festhome.png" alt="")
 
 		main
 			block content
