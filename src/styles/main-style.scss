@@ -97,6 +97,11 @@ body {
 	color: $gray-400;
 	font: 18px/150% 'GolosUIRegular', sans-serif;
 	//font: 18px/150% 'Signika', sans-serif;
+	//font: 18px/150% 'Merriweather Sans', sans-serif;
+	//font: 18px/150% 'Cabin', sans-serif;
+	//font: 18px/150% 'Source Sans Pro', sans-serif;
+	//font: 18px/150% 'PT Sans', sans-serif;
+	//font: 18px/150% 'Lato', sans-serif;
 	min-width: 375px;
 	
 	@include responsive(device) {
