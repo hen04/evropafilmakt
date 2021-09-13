@@ -615,7 +615,7 @@ body {
   min-height: 100vh;
   background-color: #fff;
   color: #525252;
-  font: 20px/150% 'GolosUIRegular', sans-serif;
+  font: 18px/150% 'GolosUIRegular', sans-serif;
   min-width: 375px; }
   @media only screen and (max-width: 1023px) {
     body {
