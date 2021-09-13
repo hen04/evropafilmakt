@@ -93,17 +93,17 @@ $largedesktop: 1600px;
 	}
 	
 	@include responsive(tabletnotebook) {
-		font-size: $heading + 4;
-		margin-bottom: $heading + 4;
+		font-size: $heading;
+		margin-bottom: $heading;
 	}
 	
 	@include responsive(notebookdesktop) {
-		font-size: $heading + 8;
-		margin-bottom: $heading + 8;
+		font-size: $heading;
+		margin-bottom: $heading;
 	}
 	
 	@include responsive(largedesktop) {
-		font-size: $heading + 16;
+		font-size: $heading;
 		//margin-bottom: $heading + 16;
 	}
 }
