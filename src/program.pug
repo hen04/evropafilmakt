@@ -26,9 +26,13 @@ block content
 					.program-calendar__all
 						span.active Toutes les dates
 					.program-calendar__list
-						each item in calendar
+						.program-calendar__item
+							span.anchor
+								span.date 07
+								span.day lun
+						each item in calendar.slice(1)
 							.program-calendar__item
-								a(href="")
+								a(href="" class="anchor")
 									span.date= item.date
 									span.day= item.day
 

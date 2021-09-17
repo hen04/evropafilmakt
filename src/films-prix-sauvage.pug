@@ -4,7 +4,8 @@ include templates/_mixins
 block nav
 	- var currentTitle = "program.html";
 	- var currentSubtitle = "films.html";
-	+menu(currentTitle, currentSubtitle)
+	- var currentThirdTitle = "films-prix-sauvage.html";
+	+menu(currentTitle, currentSubtitle, currentThirdTitle)
 
 block content
 	.program-page
@@ -25,14 +26,16 @@ block content
 			.program-page__calendar
 				.program-calendar
 					.program-calendar__all
-						span.anchor Tous les films
+						a(href="films.html") Tous les films
 					.program-calendar__list
-						each item in filmsSection
+						.program-calendar__item
+							span.anchor.active Compétition Prix Sauvage
+						each item in filmsSection.slice(1)
 							.program-calendar__item
 								a(href="" class="anchor")= item.title
 
 			.program-info
-				each item in program
+				each item in program.slice(0,1)
 					.program-info__section
 						h3= item.section
 						if item.hasSubsection !== true

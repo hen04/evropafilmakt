@@ -27,10 +27,11 @@ block content
 					.program-calendar__all
 						span.active Toutes les dates
 					.program-calendar__list
-						each item in cinemaList
+						.program-calendar__item
+							span.anchor Cinéma le Saint-André-des-Arts
+						each item in cinemaList.slice(1)
 							.program-calendar__item
-								a(href="")
-									span= item.title
+								a(href="" class="anchor")= item.title
 
 
 			.program-info

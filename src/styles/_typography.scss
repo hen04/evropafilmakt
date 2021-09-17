@@ -1,27 +1,5 @@
 @import "mixins";
 
-@font-face {
-	font-family: 'GolosUIRegular';
-	src: url('../fonts/Golos-UI_Regular.eot');
-	src: url('../fonts/Golos-UI_Regular.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/Golos-UI_Regular.woff') format('woff'),
-	url('../fonts/Golos-UI_Regular.ttf') format('truetype'),
-	url('../fonts/Golos-UI_Regular.svg#GolosUIRegular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'GolosUIMedium';
-	src: url('../fonts/Golos-UI_Medium.eot');
-	src: url('../fonts/Golos-UI_Medium.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/Golos-UI_Medium.woff') format('woff'),
-	url('../fonts/Golos-UI_Medium.ttf') format('truetype'),
-	url('../fonts/Golos-UI_Medium.svg#GolosUIMedium') format('svg');
-	font-weight: 500;
-	font-style: normal;
-}
-
 h1,
 h2,
 h3,

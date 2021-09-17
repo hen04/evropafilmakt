@@ -36,11 +36,11 @@
 			"title": "Programme",
 			"submenu": [
 				{
-					"url": "#",
+					"url": false,
 					"title": "Compétitions",
 					"subsubmenu": [
 						{
-							"url": "#",
+							"url": "films-prix-sauvage.html",
 							"title": "Prix SAUVAGE"
 						},
 						{
@@ -54,7 +54,7 @@
 					]
 				},
 				{
-					"url": "#",
+					"url": false,
 					"title": "Hommages / Retrospectives",
 					"subsubmenu": [
 						{
@@ -68,7 +68,7 @@
 					]
 				},
 				{
-					"url": "#",
+					"url": false,
 					"title": "Hors compétition",
 					"subsubmenu": [
 						{
@@ -142,13 +142,7 @@
 		{
 			"url": "online.html",
 			"title": "Online",
-			"submenu": [
-				{
-					"url": "filmocracy.html",
-					"title": "Filmocracy",
-					"subsubmenu": false
-				}
-			]
+			"submenu": false
 		},
 		{
 			"url": "gallery.html",
