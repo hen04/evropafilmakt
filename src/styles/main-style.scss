@@ -96,7 +96,7 @@ body {
 	background-color: $white;
 	color: $gray-400;
 	font: 18px/150% 'Lato', Roboto, sans-serif;
-	min-width: 375px;
+	min-width: 360px;
 	
 	@include responsive(device) {
 		font-size: 16px;
@@ -1064,8 +1064,6 @@ body {
 
 		@include responsive(mobile) {
 			margin: auto 0;
-			//padding-left: 20px;
-			//margin-top: -40px;
 		}
 
 		@include responsive(desktop) {
@@ -1244,7 +1242,7 @@ main {
 	}
 }
 
-.festival-history {
+.history {
 	@include paddingBlock();
 	
 	@include responsive(mobile) {
@@ -1275,6 +1273,26 @@ main {
 		margin-left: 33%;
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	
+	&--festival {
+		@include responsive(tabletdesktop) {
+			margin-left: 34%;
+			padding-left: 10px;
+		}
+
+		@include responsive(notebookdesktop) {
+			width: 45%;
+		}
+		
+		@include responsive(largedesktop) {
+			width: 36%;
+		}
+
+		@include responsive(desktop) {
+			padding-left: 0;
+		}
+
 	}
 }
 
@@ -3259,24 +3277,30 @@ main {
 			@include responsive(desktop) {
 				flex-flow: row;
 				width: 100%;
+				margin-right: 0;
 			}
 			
 			&__img {
 				@include responsive(desktop) {
-					width: 33%;
+					min-width: calc(34% - 10px);
+					width: calc(34% - 10px);
 					padding-right: 10px;
 				}
 			}
 			
 			&__text {
 				@include responsive(desktop) {
-					width: 47.5%;
+					//width: 47.5%;
 					padding-left: 10px;
 					box-sizing: border-box;
 				}
 				
+				@include responsive(notebookdesktop) {
+					width: 45%;
+				}
+				
 				@include responsive(largedesktop) {
-					width: 35%;
+					width: 36%;
 				}
 			}
 		}

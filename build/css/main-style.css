@@ -602,7 +602,7 @@ body {
   background-color: #fff;
   color: #525252;
   font: 18px/150% 'Lato', Roboto, sans-serif;
-  min-width: 375px; }
+  min-width: 360px; }
   @media only screen and (max-width: 1023px) {
     body {
       /* < 1023 */
@@ -1635,27 +1635,27 @@ main {
     padding-top: 24px;
     text-decoration: none; }
 
-.festival-history {
+.history {
   padding-top: 56px; }
   @media only screen and (min-width: 768px) and (max-width: 1279px) {
-    .festival-history {
+    .history {
       /* 768 - 1279 */
       padding-top: 80px; } }
   @media only screen and (min-width: 1280px) {
-    .festival-history {
+    .history {
       /* > 1280 */
       padding-top: 120px; } }
   @media only screen and (max-width: 767px) {
-    .festival-history {
+    .history {
       /* < 767 */
       width: 100%; } }
   @media only screen and (min-width: 1024px) {
-    .festival-history {
+    .history {
       /* > 1024 */
       margin-left: 34%;
       padding-left: 10px; } }
   @media only screen and (min-width: 1280px) {
-    .festival-history {
+    .history {
       /* > 1280 */
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1669,11 +1669,11 @@ main {
       box-sizing: border-box;
       padding-left: 0; } }
   @media only screen and (min-width: 1366px) {
-    .festival-history {
+    .history {
       /* > 1366 */
       padding-left: 20px; } }
   @media only screen and (min-width: 1600px) {
-    .festival-history {
+    .history {
       /* > 1600 */
       width: 36%;
       display: -webkit-box;
@@ -1686,6 +1686,23 @@ main {
       margin-left: 33%;
       padding-left: 10px;
       padding-right: 10px; } }
+  @media only screen and (min-width: 768px) {
+    .history--festival {
+      /* > 768 */
+      margin-left: 34%;
+      padding-left: 10px; } }
+  @media only screen and (min-width: 1366px) {
+    .history--festival {
+      /* > 1366 */
+      width: 45%; } }
+  @media only screen and (min-width: 1600px) {
+    .history--festival {
+      /* > 1600 */
+      width: 36%; } }
+  @media only screen and (min-width: 1280px) {
+    .history--festival {
+      /* > 1280 */
+      padding-left: 0; } }
 
 .last-festival {
   padding-top: 56px; }
@@ -3539,23 +3556,28 @@ main {
       -webkit-box-direction: normal;
       -ms-flex-flow: row;
       flex-flow: row;
-      width: 100%; } }
+      width: 100%;
+      margin-right: 0; } }
   @media only screen and (min-width: 1280px) {
     .news-sm__list--festival .news-sm__img {
       /* > 1280 */
-      width: 33%;
+      min-width: calc(34% - 10px);
+      width: calc(34% - 10px);
       padding-right: 10px; } }
   @media only screen and (min-width: 1280px) {
     .news-sm__list--festival .news-sm__text {
       /* > 1280 */
-      width: 47.5%;
       padding-left: 10px;
       -webkit-box-sizing: border-box;
       box-sizing: border-box; } }
+  @media only screen and (min-width: 1366px) {
+    .news-sm__list--festival .news-sm__text {
+      /* > 1366 */
+      width: 45%; } }
   @media only screen and (min-width: 1600px) {
     .news-sm__list--festival .news-sm__text {
       /* > 1600 */
-      width: 35%; } }
+      width: 36%; } }
 
 .news-page-detail {
   margin: 0 auto;
