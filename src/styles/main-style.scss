@@ -41,6 +41,10 @@ html {
 		}
 		
 		a {
+		&:hover {
+				color: $active;
+			}
+
 			&.news-sm {
 				&:hover {
 					color: $gray-400;
@@ -138,8 +142,11 @@ body {
 		cursor: pointer;
 		
 		@include responsive(device) {
-			right: 16px;
-			top: 24px;
+			right: 20px;
+			top: 29px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 		
 		@include responsive(tablet) {
@@ -154,6 +161,10 @@ body {
 		
 		.iconify {
 			font-size: 32px;
+			
+			@include responsive(mobile) {
+				font-size: 24px;
+			}
 		}
 	}
 	
@@ -210,7 +221,8 @@ body {
 		margin: 0 auto;
 		
 		@include responsive(mobile) {
-			display: none;
+			//display: none;
+			margin: 0 auto 0 16px;
 		}
 	}
 	
@@ -237,6 +249,7 @@ body {
 		
 		@include responsive(mobile) {
 			justify-content: flex-end;
+			width: 130px;
 		}
 	}
 	
@@ -268,7 +281,7 @@ body {
 		}
 
 		.iconify {
-			font-size: 28px;
+			font-size: 24px;
 			margin: 0 4px;
 			cursor: pointer;
 			color: $gray-400;
@@ -813,6 +826,10 @@ body {
 		img {
 			@include responsive(device) {
 				max-height: 80px;
+			}
+
+			@include responsive(mobile) {
+				max-height: 44px;
 			}
 		}
 	}
@@ -4184,12 +4201,19 @@ main {
 	margin: 0 20px;
 	
 	.inp-search {
-		height: 60px;
 		width: 100%;
 		background-color: transparent;
 		border-bottom: 2px solid $gray-400;
 		padding: 0 8px;
 		box-sizing: border-box;
+		
+		@include responsive(mobile) {
+			height: 48px;
+		}
+		
+		@include responsive(tabletdesktop) {
+			height: 60px;
+		}
 		
 		&:focus,
 		&:active {
@@ -4203,7 +4227,7 @@ main {
 		position: absolute;
 		right: 8px;
 		top: 50%;
-		margin-top: -12px;
+		transform: translateY(-50%);
 		z-index: 9;
 		background-color: transparent;
 		border: 0;
