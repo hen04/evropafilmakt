@@ -39,7 +39,7 @@ mixin menu(currentTitle, currentSubtitle, currentThirdTitle)
 								span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
 							ul.sub-menu
 								each subitem in item.submenu
-									li.has-submenu
+									li.has-third-menu
 										.has-third-menu__inner
 											if subitem.url !== false
 												a(href= subitem.url)= subitem.title
