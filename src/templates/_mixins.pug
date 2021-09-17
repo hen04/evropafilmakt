@@ -21,7 +21,7 @@ mixin filmsMenu(current)
 
 
 
-mixin menu(currentTitle, currentSubtitle)
+mixin menu(currentTitle, currentSubtitle, currentThirdTitle)
 	nav
 		ul.main-menu
 			each item in menu
@@ -39,26 +39,35 @@ mixin menu(currentTitle, currentSubtitle)
 								span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
 							ul.sub-menu
 								each subitem in item.submenu
-									li
-										if subitem.url === currentSubtitle
-											a(href= subitem.url class="active")= subitem.title
-										else
-											a(href= subitem.url)= subitem.title
+									li.has-submenu
+										.has-third-menu__inner
+											if subitem.url !== false
+												a(href= subitem.url)= subitem.title
+											else
+												span= subitem.title
+										ul.third-level-menu
+											each subsubitem in subitem.subsubmenu
+												li
+													if subsubitem.url !== false
+														if subsubitem.url === currentThirdTitle
+															a(href= subsubitem.url class="active")= subsubitem.title
+														else
+															a(href= subsubitem.url)= subsubitem.title
+													else
+														span= subsubitem.title
 						else
 							.has-submenu__inner
 								a(href= item.url)= item.title
 								span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
 							ul.sub-menu
 								each subitem in item.submenu
-									if subitem.subsubmenu === false
-										li
+									li.has-third-menu
+										.has-third-menu__inner
 											a(href= subitem.url)= subitem.title
-									else
-										li.has-third-menu
-											.has-third-menu__inner
-												a(href= subitem.url)= subitem.title
-											ul.third-level-menu
-												each subsubitem in subitem.subsubmenu
-													li
-														a(href="#")= subsubitem.title
-
+										ul.third-level-menu
+											each subsubitem in subitem.subsubmenu
+												li
+													if subsubitem.url !== false
+														a(href= subsubitem.url)= subsubitem.title
+													else
+														span= subsubitem.title

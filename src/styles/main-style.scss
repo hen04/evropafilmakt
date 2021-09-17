@@ -183,6 +183,7 @@ body {
 
 .header {
 	overflow: hidden;
+	width: 100%;
 	
 	@include responsive(largedesktop) {
 		max-width: 1900px;
@@ -559,6 +560,12 @@ body {
 			@include responsive(notebook) {
 				width: 100%;
 			}
+			
+			span {
+				@include responsive(largedesktop) {
+					font-size: 24px;
+				}
+			}
 
 			a {
 				&:hover {
@@ -638,6 +645,16 @@ body {
 	&__banner {
 		border-top: 1px solid $gray-400;
 		border-bottom: 1px solid $gray-400;
+		
+		@include responsive(mobile) {
+			background-color: gray;
+			min-height: 240px;
+		}
+		
+		@include responsive(smtablet) {
+			background-color: gray;
+			min-height: 300px;
+		}
 
 		img {
 			max-width: 100%;
@@ -647,7 +664,6 @@ body {
 	
 	&__links {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid $gray-400;
 		padding: 16px 20px;
@@ -656,22 +672,22 @@ body {
 			padding: 16px 40px;
 		}
 		
-		@include responsive(mobile) {
-			flex-flow: wrap;
+		@include responsive(device) {
+			justify-content: center;
 		}
-
+		
+		@include responsive(landscapedesktop) {
+			justify-content: space-between;
+		}
 
 		p {
 			margin: 0;
-			font-family: 'GolosUIMedium';
 			
-			@include responsive(mobile) {
-				width: 100%;
-				text-align: center;
-				margin-bottom: 12px;
+			@include responsive(device) {
+				display: none;
 			}
 			
-			@include responsive(desktop) {
+			@include responsive(landscapedesktop) {
 				margin-right: 20px;
 			}
 		}
@@ -683,14 +699,17 @@ body {
 		img {
 			display: block;
 			border-radius: 5px;
-			border: 1px solid #3f3f3f;
-			
-			@include responsive(mobile) {
-				//max-width: 100px;
+
+			@include responsive(tabletdesktop) {
+				border: 1px solid #3f3f3f;
 			}
 			
-			@include responsive(tabletnotebook) {
-				max-width: 120px;
+			@include responsive(mobile) {
+				max-height: 35px;
+			}
+			
+			@include responsive(tabletdesktop) {
+				max-height: 40px;
 			}
 		}
 	}
@@ -700,36 +719,14 @@ body {
 	&__request-links {
 		display: flex;
 		align-items: center;
+	}
 
-		@include responsive(device) {
-			flex-flow: column;
-			width: 100%;
-		}
-		
-		@include responsive(tablet) {
-			justify-content: center;
-			flex-flow: column;
-			width: 50%;
-		}
-		
-		img {
-			@include responsive(device) {
-				margin-top: .5rem;
-			}
-			
-			@include responsive(tablet) {
-				margin-top: .5rem;
-			}
-		}
-	}
-	
 	&__filmocracy-link {
-		@include responsive(mobile) {
-			margin-bottom: 1.5rem;
-			justify-content: center;
+		@include responsive(device) {
+			margin-right: .5rem;
 		}
 	}
-	
+
 	&__request-links-img {
 		display: flex;
 		justify-content: center;
@@ -738,12 +735,10 @@ body {
 			width: 100%;
 		}
 		
-		@include responsive(tablet) {
-			width: 100%;
-		}
-		
 		a {
-			margin: 0 .5rem;
+			&:first-child {
+				margin-right: .5rem;
+			}
 		}
 	}
 }
@@ -858,9 +853,10 @@ body {
 	padding: 0 0 32px;
 	margin-top: auto;
 	display: grid;
+	grid-template-columns: 1fr 1fr;
 	grid-template-areas: "subscribe subscribe"
-												"logo menu"
-												"social menu"
+												"logo social"
+												"menu menu"
 												"copyright copyright"
 												"development development";
 
@@ -982,6 +978,10 @@ body {
 			padding: 24px 20px 0 0;
 		}
 		
+		@include responsive(mobile) {
+			padding: 0 20px 0;
+		}
+		
 		ul {
 			margin: 0;
 			padding: 0;
@@ -990,7 +990,8 @@ body {
 			justify-content: flex-start;
 			
 			@include responsive(mobile) {
-				flex-flow: column;
+				flex-flow: wrap;
+				margin-bottom: 1rem;
 			}
 			
 			@include responsive(landscapedesktop) {
@@ -1006,7 +1007,7 @@ body {
 			}
 
 			@include responsive(mobile) {
-				margin: 0 0 20px;
+				margin: 0 .5rem .5rem 0;
 			}
 			
 			@include responsive(desktop) {
@@ -1062,8 +1063,9 @@ body {
 		}
 
 		@include responsive(mobile) {
-			padding-left: 20px;
-			margin-top: -40px;
+			margin: auto 0;
+			//padding-left: 20px;
+			//margin-top: -40px;
 		}
 
 		@include responsive(desktop) {
@@ -1072,7 +1074,6 @@ body {
 		}
 
 		p {
-			font-family: 'GolosUIMedium';
 			
 			@include responsive(mobile) {
 				margin: 0 0 .5rem;
@@ -1121,7 +1122,7 @@ body {
 	display: flex;
 	
 	@include responsive(mobile) {
-		max-width: 150px;
+		//max-width: 150px;
 	}
 	
 	@include responsive(tabletdesktop) {
@@ -1137,10 +1138,15 @@ body {
 	}
 
 	.iconify {
-		font-size: 40px;
-		margin: 0 6px;
+		font-size: 36px;
+		margin: 0 2px;
 		color: $gray-400;
 		transition: color .3s ease-in-out;
+		
+		@include responsive(tabletdesktop) {
+			font-size: 40px;
+			margin: 0 6px;
+		}
 	}
 	
 	&__item {
@@ -1245,18 +1251,21 @@ main {
 		width: 100%;
 	}
 	
-	@include responsive(tabletdesktop) {
-		width: 66%;
+	@include responsive(landscapedesktop) {
+		margin-left: 34%;
+		padding-left: 10px;
+	}
+	
+	@include responsive(desktop) {
 		display: flex;
 		flex-flow: column;
-		margin-left: 33%;
+		margin-left: 50%;
 		box-sizing: border-box;
-		padding-right: 5px;
-		padding-left: 5px;
+		padding-left: 0;
 	}
 	
 	@include responsive(notebookdesktop) {
-		width: 46%;
+		padding-left: 20px;
 	}
 
 	@include responsive(largedesktop) {
@@ -2424,6 +2433,10 @@ main {
 		@include responsive(largedesktop) {
 			font-size: 28px;
 		}
+		
+		a {
+			text-decoration: none;
+		}
 	}
 	
 	&__list {
@@ -2437,12 +2450,17 @@ main {
 	
 	&__item {
 		margin-left: 24px;
+		margin-bottom: 1rem;
 		
 		@include responsive(desktop) {
 			margin-left: 40px;
 		}
 		
-		a {
+		@include responsive(largedesktop) {
+			margin-bottom: 1.25rem;
+		}
+
+		.anchor {
 			display: flex;
 			flex-flow: column;
 			text-decoration: none;
@@ -2450,15 +2468,15 @@ main {
 			color: $gray-700;
 			font-size: 20px;
 			line-height: 125%;
-			margin-bottom: 1rem;
-
-			&:hover {
-				color: $active;
-			}
 
 			@include responsive(largedesktop) {
 				font-size: 28px;
-				margin-bottom: 20px;
+			}
+		}
+
+		a {
+			&:hover {
+				color: $active;
 			}
 		}
 
@@ -3228,7 +3246,7 @@ main {
 	display: flex;
 	flex-flow: wrap;
 	
-	@include responsive(desktop) {
+	@include responsive(notebookdesktop) {
 		width: 67.5%;
 	}
 
