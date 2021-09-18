@@ -1407,10 +1407,6 @@ main {
 		
 		img {
 			max-width: 100%;
-			
-			@include responsive(landscapedesktop) {
-				margin-bottom: 1rem;
-			}
 		}
 	}
 }
@@ -2292,11 +2288,18 @@ main {
 	.btn {
 		margin: 0 auto;
 	}
-	
+
 	p {
-		margin-top: 1rem;
-		font-size: 24px;
-		line-height: 1.2;
+		margin: .5rem 0 0 0;
+		font-size: 20px;
+
+		@include responsive(notebookdesktop) {
+			margin: 1rem 0 0 0
+		}
+
+		@include responsive(largedesktop) {
+			font-size: 24px;
+		}
 	}
 }
 
@@ -2356,9 +2359,8 @@ main {
 	}
 	
 	p {
-		line-height: 1.4;
 		margin: .5rem 0 0 0;
-		font-size: 18px;
+		font-size: 20px;
 
 		@include responsive(notebookdesktop) {
 			margin: 1rem 0 0 0
@@ -3341,7 +3343,7 @@ main {
 	
 	&__film {
 		@include responsive(device) {
-			margin-top: 32px;
+			margin-top: 56px;
 		}
 
 		@include responsive(landscapedesktop) {
@@ -4030,6 +4032,10 @@ main {
 		@include responsive(desktop) {
 			margin-top: 80px;
 		}
+		
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 	
 	&__banners-list {
@@ -4233,6 +4239,7 @@ main {
 		border: 0;
 		font-size: 24px;
 		cursor: pointer;
+		display: flex;
 	}
 }
 
