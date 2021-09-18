@@ -39,7 +39,7 @@ block content
 					.program-info__section
 						h3= item.section
 						if item.hasSubsection !== true
-							.program-info__list.owl-carousel.js-films-carousel
+							.program-info__list
 								each subitem in item.films
 									.program-info__film-sm
 										a(href="film-detail.html").program-info__img
@@ -56,7 +56,7 @@ block content
 								.program-info__section-inner
 									if subitem.subsection !== ""
 										h4= subitem.subsection
-									.program-info__list.owl-carousel.js-films-carousel
+									.program-info__list
 										each film in subitem.subfilms
 											.item.program-info__film-sm
 												if film.img !== ""
