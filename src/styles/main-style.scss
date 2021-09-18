@@ -2419,7 +2419,9 @@ main {
 		}
 		
 		&:last-child {
-			padding-left: 16px;
+			@include responsive(desktop) {
+				padding-left: 16px;
+			}
 		}
 	}
 }

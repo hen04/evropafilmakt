@@ -2776,8 +2776,10 @@ main {
   .program-links__item.active a,
   .program-links__item.active span {
     background-color: #FF5E00; }
-  .program-links__item:last-child {
-    padding-left: 16px; }
+  @media only screen and (min-width: 1280px) {
+    .program-links__item:last-child {
+      /* > 1280 */
+      padding-left: 16px; } }
 
 .program-calendar {
   display: -webkit-box;
