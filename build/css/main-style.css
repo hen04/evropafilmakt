@@ -325,7 +325,7 @@ h6 {
   h1 {
     /* 768 - 1365 */
     font-size: 40px;
-    margin-bottom: 40px; } }
+    margin-bottom: 32px; } }
 
 @media only screen and (min-width: 1366px) {
   h1 {
@@ -349,7 +349,7 @@ h2 {
     h2 {
       /* 768 - 1365 */
       font-size: 32px;
-      margin-bottom: 32px; } }
+      margin-bottom: 24px; } }
   @media only screen and (min-width: 1366px) {
     h2 {
       /* > 1366 */
@@ -371,7 +371,7 @@ h3 {
     h3 {
       /* 768 - 1365 */
       font-size: 28px;
-      margin-bottom: 28px; } }
+      margin-bottom: 20px; } }
   @media only screen and (min-width: 1366px) {
     h3 {
       /* > 1366 */
@@ -394,7 +394,7 @@ h4 {
     h4 {
       /* 768 - 1365 */
       font-size: 24px;
-      margin-bottom: 24px; } }
+      margin-bottom: 16px; } }
   @media only screen and (min-width: 1366px) {
     h4 {
       /* > 1366 */
@@ -416,7 +416,7 @@ h5 {
     h5 {
       /* 768 - 1365 */
       font-size: 20px;
-      margin-bottom: 20px; } }
+      margin-bottom: 12px; } }
   @media only screen and (min-width: 1366px) {
     h5 {
       /* > 1366 */
@@ -437,7 +437,7 @@ h5 {
   h6 {
     /* 768 - 1365 */
     font-size: 18px;
-    margin-bottom: 18px; } }
+    margin-bottom: 10px; } }
 
 @media only screen and (min-width: 1366px) {
   h6 {
@@ -2234,8 +2234,7 @@ main {
   @media only screen and (min-width: 1280px) {
     .program-info h6 {
       /* > 1280 */
-      margin: auto 0 0 4px;
-      padding-bottom: 8px; } }
+      margin: auto 0 0 4px; } }
   @media only screen and (min-width: 1600px) {
     .program-info h6 {
       /* > 1600 */
@@ -2396,14 +2395,6 @@ main {
     .program-info__cinema-item .program-info__time {
       /* 768 - 1279 */
       padding-top: 1rem; } }
-  @media only screen and (max-width: 767px) {
-    .program-info__cinema-item .program-info__content-name h4 {
-      /* < 767 */
-      margin-bottom: .5rem; } }
-  @media only screen and (min-width: 768px) {
-    .program-info__cinema-item .program-info__content-name h4 {
-      /* > 768 */
-      margin-bottom: 1rem; } }
   @media only screen and (max-width: 767px) {
     .program-info__cinema-item .program-info__cinema-detail {
       /* < 767 */
@@ -2704,7 +2695,7 @@ main {
       .gallery__item {
         /* < 767 */
         width: 100%;
-        margin-bottom: 24px; } }
+        margin-bottom: 2rem; } }
     @media only screen and (max-width: 767px) {
       .gallery__item:last-child {
         /* < 767 */
@@ -2759,13 +2750,19 @@ main {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media only screen and (min-width: 1280px) {
+    .program-links {
+      /* > 1280 */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; } }
   .program-links__item a,
   .program-links__item span {
     background-color: #000;
     color: #fff;
     text-decoration: none;
     padding: 4px 16px 8px;
-    font-size: 20px; }
+    font-size: 20px;
+    display: inline-block; }
     @media only screen and (min-width: 1366px) {
       .program-links__item a,
       .program-links__item span {
@@ -2779,6 +2776,8 @@ main {
   .program-links__item.active a,
   .program-links__item.active span {
     background-color: #FF5E00; }
+  .program-links__item:last-child {
+    padding-left: 16px; }
 
 .program-calendar {
   display: -webkit-box;
@@ -3482,7 +3481,7 @@ main {
   .news-sm .title {
     font-weight: 600;
     color: #292929;
-    margin-top: -1.5rem; }
+    margin-top: -.5rem; }
   .news-sm__title-date {
     margin-bottom: 2rem; }
     .news-sm__title-date h4 {
@@ -4170,8 +4169,6 @@ main {
   width: 100%;
   max-width: 1220px;
   margin: 0 auto; }
-  .info-page h1 + .info-page__content {
-    margin-top: -40px; }
   .info-page__content {
     max-width: 910px; }
     .info-page__content li {
