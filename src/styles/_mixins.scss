@@ -75,7 +75,7 @@ $largedesktop: 1600px;
 
 
 @mixin paddingBlock() {
-	padding-top: 56px;
+	padding-top: 40px;
 
 	@include responsive(tablet) {
 		padding-top: 80px;
@@ -89,7 +89,7 @@ $largedesktop: 1600px;
 @mixin heading($heading) {
 	@include responsive(mobile) {
 		font-size: $heading;
-		margin-bottom: $heading;
+		margin-bottom: $heading - 8;
 	}
 	
 	@include responsive(tabletnotebook) {
