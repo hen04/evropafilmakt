@@ -103,7 +103,7 @@
 				},
 				{
 					"url": "festival-visitors.html",
-					"title": "Les invités du festival",
+					"title": "Les invités du festival 2021",
 					"subsubmenu": false
 				}
 			]
@@ -135,11 +135,6 @@
 			]
 		},
 		{
-			"url": "europe.html",
-			"title": "Europe",
-			"submenu": false
-		},
-		{
 			"url": "online.html",
 			"title": "Online",
 			"submenu": false
@@ -159,6 +154,11 @@
 					"subsubmenu": false
 				}
 			]
+		},
+		{
+			"url": "europe.html",
+			"title": "Europe",
+			"submenu": false
 		},
 		{
 			"url": "press.html",

@@ -39,22 +39,26 @@ mixin menu(currentTitle, currentSubtitle, currentThirdTitle)
 								span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
 							ul.sub-menu
 								each subitem in item.submenu
-									li.has-third-menu
-										.has-third-menu__inner
-											if subitem.url !== false
-												a(href= subitem.url)= subitem.title
-											else
-												span= subitem.title
-										ul.third-level-menu
-											each subsubitem in subitem.subsubmenu
-												li
-													if subsubitem.url !== false
-														if subsubitem.url === currentThirdTitle
-															a(href= subsubitem.url class="active")= subsubitem.title
+									if subitem.subsubmenu !== false
+										li.has-third-menu
+											.has-third-menu__inner
+												if subitem.url !== false
+													a(href= subitem.url)= subitem.title
+												else
+													span= subitem.title
+											ul.third-level-menu
+												each subsubitem in subitem.subsubmenu
+													li
+														if subsubitem.url !== false
+															if subsubitem.url === currentThirdTitle
+																a(href= subsubitem.url class="active")= subsubitem.title
+															else
+																a(href= subsubitem.url)= subsubitem.title
 														else
-															a(href= subsubitem.url)= subsubitem.title
-													else
-														span= subsubitem.title
+															span= subsubitem.title
+									else
+										li
+											a(href= subitem.url)= subitem.title
 						else
 							.has-submenu__inner
 								a(href= item.url)= item.title
@@ -62,12 +66,5 @@ mixin menu(currentTitle, currentSubtitle, currentThirdTitle)
 							ul.sub-menu
 								each subitem in item.submenu
 									li.has-third-menu
-										.has-third-menu__inner
+										.has-third-menu__inner.has-third-menu__inner--1
 											a(href= subitem.url)= subitem.title
-										ul.third-level-menu
-											each subsubitem in subitem.subsubmenu
-												li
-													if subsubitem.url !== false
-														a(href= subsubitem.url)= subsubitem.title
-													else
-														span= subsubitem.title
