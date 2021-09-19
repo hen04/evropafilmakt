@@ -598,7 +598,9 @@ body {
 					color: $active;
 				}
 			}
+			
 		}
+
 		
 		li {
 			@include responsive(device) {
@@ -614,7 +616,11 @@ body {
 			}
 		}
 	}
-
+	
+	.has-submenu-arrow {
+		padding-right: 12px;
+	}
+	
 	.third-level-menu {
 		display: flex;
 		flex-flow: wrap;
