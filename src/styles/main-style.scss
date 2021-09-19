@@ -1375,8 +1375,17 @@ main {
 		}
 
 		p {
-			font-size: 20px;
 			margin-bottom: 0;
+			font-size: 16px;
+			line-height: 125%;
+			
+			@include responsive(notebookdesktop) {
+				font-size: 18px;
+			}
+			
+			@include responsive(largedesktop) {
+				font-size: 20px;
+			}
 			
 			span {
 				display: block;
