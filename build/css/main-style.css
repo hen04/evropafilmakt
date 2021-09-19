@@ -1125,12 +1125,10 @@ body {
     @media only screen and (max-width: 767px) {
       .header__banner {
         /* < 767 */
-        background-color: gray;
         min-height: 240px; } }
     @media only screen and (min-width: 768px) and (max-width: 1023px) {
       .header__banner {
         /* 768 - 1024 */
-        background-color: gray;
         min-height: 300px; } }
     .header__banner img {
       max-width: 100%;
@@ -2921,7 +2919,7 @@ main {
   width: 100%;
   border-radius: 2px; }
   .box-modal__maps iframe {
-    height: 600px; }
+    height: 540px; }
   @media only screen and (max-width: 767px) {
     .box-modal__video iframe {
       /* < 767 */

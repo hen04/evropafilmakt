@@ -683,12 +683,10 @@ body {
 		border-bottom: 1px solid $gray-400;
 		
 		@include responsive(mobile) {
-			background-color: gray;
 			min-height: 240px;
 		}
 		
 		@include responsive(smtablet) {
-			background-color: gray;
 			min-height: 300px;
 		}
 
@@ -2584,13 +2582,13 @@ main {
 }
 
 .box-modal {
-	background-color: #fff;
+	background-color:$white;
 	width: 100%;
 	border-radius: 2px;
 	
 	&__maps {
 		iframe {
-			height: 600px;
+			height: 540px;
 		}
 	}
 	
