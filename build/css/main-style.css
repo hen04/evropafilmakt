@@ -2204,11 +2204,24 @@ main {
     @media only screen and (min-width: 1366px) {
       .program-info__content-name p {
         /* > 1366 */
+        font-size: 18px; } }
+    @media only screen and (min-width: 1600px) {
+      .program-info__content-name p {
+        /* > 1600 */
         font-size: 20px; } }
     .program-info__content-name p.title {
       color: #292929;
-      font-weight: 600;
-      margin-bottom: 10px; }
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 18px; }
+      @media only screen and (min-width: 1366px) {
+        .program-info__content-name p.title {
+          /* > 1366 */
+          font-size: 20px; } }
+      @media only screen and (min-width: 1600px) {
+        .program-info__content-name p.title {
+          /* > 1600 */
+          font-size: 22px; } }
   .program-info__content-name .actors {
     display: block;
     margin-top: 4px; }
@@ -4375,9 +4388,13 @@ main {
   @media only screen and (min-width: 1280px) {
     .festival-archive__item {
       /* > 1280 */
-      margin-bottom: 80px;
+      margin-bottom: 64px;
       padding: 0 10px;
       width: 33.3%; } }
+  @media only screen and (min-width: 1600px) {
+    .festival-archive__item {
+      /* > 1600 */
+      margin-bottom: 80px; } }
   .festival-archive__item:hover img {
     -webkit-box-shadow: 0 0 0 4px #FF5E00;
     box-shadow: 0 0 0 4px #FF5E00; }

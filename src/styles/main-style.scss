@@ -1780,13 +1780,27 @@ main {
 			line-height: 125%;
 			
 			@include responsive(notebookdesktop) {
+				font-size: 18px;
+			}
+			
+			@include responsive(largedesktop) {
 				font-size: 20px;
 			}
 			
 			&.title {
 				color: $gray-700;
-				font-weight: 600;
+				font-weight: 700;
 				margin-bottom: 10px;
+				font-size: 18px;
+				
+				@include responsive(notebookdesktop) {
+					font-size: 20px;
+				}
+				
+				@include responsive(largedesktop) {
+					font-size: 22px;
+				}
+				
 			}
 		}
 		
@@ -4153,9 +4167,13 @@ main {
 		}
 		
 		@include responsive(desktop) {
-			margin-bottom: 80px;
+			margin-bottom: 64px;
 			padding: 0 10px;
 			width: 33.3%;
+		}
+		
+		@include responsive(largedesktop) {
+			margin-bottom: 80px;
 		}
 		
 		&:hover {

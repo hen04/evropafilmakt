@@ -22,7 +22,8 @@ block content
 					if item.imgFilm !== ''
 						.festival-visitors-page__film
 							img(src= item.imgFilm alt= item.title)
-							h4= item.title
+							h4
+								a(href="film-detail.html")= item.title
 							p= item.genre
 								span.actors= item.actors
 
