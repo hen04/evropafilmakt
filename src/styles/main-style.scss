@@ -241,11 +241,12 @@ body {
 	}
 	
 	&__logo {
+		min-height: 50px;
 
 		img {
-
 			@include responsive(device) {
 				max-height: 80px;
+				
 			}
 
 			@include responsive(mobile) {
