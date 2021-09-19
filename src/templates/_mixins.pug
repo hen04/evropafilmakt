@@ -36,7 +36,8 @@ mixin menu(currentTitle, currentSubtitle, currentThirdTitle)
 						if item.url === currentTitle
 							.has-submenu__inner
 								a(href= item.url class="active")= item.title
-								span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
+								.has-submenu-arrow
+									span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
 							ul.sub-menu
 								each subitem in item.submenu
 									if subitem.subsubmenu !== false
@@ -62,9 +63,10 @@ mixin menu(currentTitle, currentSubtitle, currentThirdTitle)
 						else
 							.has-submenu__inner
 								a(href= item.url)= item.title
-								span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
+								.has-submenu-arrow
+									span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
 							ul.sub-menu
 								each subitem in item.submenu
 									li.has-third-menu
-										.has-third-menu__inner.has-third-menu__inner--1
+										.has-third-menu__inner
 											a(href= subitem.url)= subitem.title
