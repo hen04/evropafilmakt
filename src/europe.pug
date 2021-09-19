@@ -14,7 +14,7 @@ block content
 
 		.news-page__list
 			each item in news
-				a(href="news-detail.html").news-sm
+				a(href="europe-detail.html").news-sm
 					.news-sm__img
 						if item.online === true
 							span en ligne
@@ -22,9 +22,6 @@ block content
 					h4= item.title
 					if item.director !==""
 						p.title= item.director
-					if item.date !==""
-						.news-sm__date
-							span= item.date
 					.news-sm__descr
 						p= item.info
 
