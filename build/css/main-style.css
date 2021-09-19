@@ -1302,12 +1302,12 @@ body {
   @media only screen and (min-width: 768px) and (max-width: 1279px) {
     .footer {
       /* 768 - 1279 */
-      grid-template-columns: 370px 1fr 370px;
+      grid-template-columns: 360px 1fr 360px;
       grid-template-areas: "subscribe subscribe subscribe" "menu menu menu" "logo social social" "copyright development development"; } }
   @media only screen and (min-width: 1280px) {
     .footer {
       /* > 1280 */
-      grid-template-columns: 300px 1fr 370px;
+      grid-template-columns: 360px 1fr 360px;
       grid-template-areas: "subscribe subscribe subscribe" "logo menu menu" "logo social development" "copyright social development"; } }
   @media only screen and (min-width: 1600px) {
     .footer {
@@ -1440,7 +1440,7 @@ body {
       @media only screen and (min-width: 1280px) {
         .footer__menu li {
           /* > 1280 */
-          margin-left: 30px;
+          margin-left: 24px;
           font-size: 18px; } }
       @media only screen and (min-width: 1280px) {
         .footer__menu li:first-child {
@@ -2015,8 +2015,7 @@ main {
       /* > 768 */
       margin-bottom: 0; } }
   .program-info__section-inner h4 {
-    width: 100%;
-    margin-bottom: 0; }
+    width: 100%; }
     @media only screen and (min-width: 1024px) {
       .program-info__section-inner h4 {
         /* > 1024 */
@@ -4393,32 +4392,13 @@ main {
         /* > 1280 */
         width: calc(100% - 8px); } }
   .festival-archive__item .year {
-    line-height: 1.25; }
-    @media only screen and (max-width: 1023px) {
-      .festival-archive__item .year {
-        /* < 1023 */
-        font-size: 1.5rem;
-        margin-bottom: 0; } }
-    @media only screen and (min-width: 768px) and (max-width: 1279px) {
-      .festival-archive__item .year {
-        /* 768 - 1279 */
-        font-size: 1.5rem;
-        margin-bottom: 0; } }
+    line-height: 1.25;
+    margin-bottom: 0;
+    font-size: 1.5rem; }
   .festival-archive__item .title {
     line-height: 1.25;
-    margin-bottom: 0; }
-    @media only screen and (max-width: 1023px) {
-      .festival-archive__item .title {
-        /* < 1023 */
-        font-size: 1.5rem; } }
-    @media only screen and (min-width: 768px) and (max-width: 1279px) {
-      .festival-archive__item .title {
-        /* 768 - 1279 */
-        font-size: 1.5rem; } }
-    @media only screen and (min-width: 1280px) {
-      .festival-archive__item .title {
-        /* > 1280 */
-        font-size: 2rem; } }
+    margin-bottom: 0;
+    font-size: 1.5rem; }
 
 .search-form {
   position: relative;

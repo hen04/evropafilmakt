@@ -875,7 +875,7 @@ body {
 												"development development";
 
 	@include responsive(tablet) {
-		grid-template-columns: 370px 1fr 370px;
+		grid-template-columns: 360px 1fr 360px;
 		grid-template-areas: "subscribe subscribe subscribe"
 												"menu menu menu"
 												"logo social social"
@@ -883,7 +883,7 @@ body {
 	}
 	
 	@include responsive(desktop) {
-		grid-template-columns: 300px 1fr 370px;
+		grid-template-columns: 360px 1fr 360px;
 		grid-template-areas: "subscribe subscribe subscribe"
 												"logo menu menu"
 												"logo social development"
@@ -1025,7 +1025,7 @@ body {
 			}
 
 			@include responsive(desktop) {
-				margin-left: 30px;
+				margin-left: 24px;
 				font-size: 18px;
 			}
 
@@ -1603,12 +1603,10 @@ main {
 		
 		h4 {
 			width: 100%;
-			margin-bottom: 0;
 
 			@include responsive(landscapedesktop) {
 					padding-left: 4px;
 			}
-
 		}
 	}
 
@@ -4178,37 +4176,14 @@ main {
 		}
 		.year {
 			line-height: 1.25;
-
-			@include responsive(device) {
-				font-size: 1.5rem;
-				margin-bottom: 0;
-			}
-			
-			@include responsive(tablet) {
-				font-size: 1.5rem;
-				margin-bottom: 0;
-			}
-
-			@include responsive(dekstop) {
-				font-size: 2.5rem;
-			}
+			margin-bottom: 0;
+			font-size: 1.5rem;
 		}
 		
 		.title {
 			line-height: 1.25;
 			margin-bottom: 0;
-
-			@include responsive(device) {
-				font-size: 1.5rem;
-			}
-
-			@include responsive(tablet) {
-				font-size: 1.5rem;
-			}
-
-			@include responsive(desktop) {
-				font-size: 2rem;
-			}
+			font-size: 1.5rem;
 		}
 	}
 }
