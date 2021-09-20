@@ -4212,7 +4212,7 @@ main {
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .about__photo {
       /* 768 - 1024 */
-      width: 65%; } }
+      width: 35%; } }
   .about__photo-section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4235,24 +4235,38 @@ main {
       -webkit-box-align: end;
       -ms-flex-align: end;
       align-items: flex-end; }
-  @media only screen and (min-width: 768px) {
-    .about__photo-item {
-      /* > 768 */
-      padding: 0 10px; } }
-  @media only screen and (max-width: 767px) {
-    .about__photo-item:nth-child(even) {
-      /* < 767 */
-      margin-top: 32px; } }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .about__photo-item:nth-child(even) {
-      /* 768 - 1024 */
-      margin-top: 48px; } }
-  @media only screen and (min-width: 1024px) {
-    .about__photo-item:nth-child(even) {
-      /* > 1024 */
-      padding-top: 104px; } }
-  .about__photo-item img {
-    max-width: 100%; }
+  .about__photo-item {
+    width: 100%;
+    max-width: 280px; }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .about__photo-item {
+        /* 768 - 1024 */
+        padding: 0 10px;
+        max-width: 280px;
+        width: 100%; } }
+    @media only screen and (min-width: 1024px) {
+      .about__photo-item {
+        /* > 1024 */
+        padding: 0 10px;
+        max-width: 280px;
+        width: 50%; } }
+    @media only screen and (max-width: 767px) {
+      .about__photo-item:nth-child(even) {
+        /* < 767 */
+        margin-top: 32px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .about__photo-item:nth-child(even) {
+        /* 768 - 1024 */
+        margin-top: 48px; } }
+    @media only screen and (min-width: 1024px) {
+      .about__photo-item:nth-child(even) {
+        /* > 1024 */
+        padding-top: 104px; } }
+    .about__photo-item img {
+      max-width: 100%;
+      width: auto; }
+    .about__photo-item .item {
+      width: 100%; }
 
 .info-page {
   width: 100%;

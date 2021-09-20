@@ -3883,7 +3883,7 @@ main {
 		}
 		
 		@include responsive(smtablet) {
-			width: 65%;
+			width: 35%;
 		}
 		
 	}
@@ -3910,9 +3910,19 @@ main {
 	}
 	
 	&__photo-item {
+		width: 100%;
+		max-width: 280px;
 		
-		@include responsive(tabletdesktop) {
+		@include responsive(smtablet) {
 			padding: 0 10px;
+			max-width: 280px;
+			width: 100%;
+		}
+		
+		@include responsive(landscapedesktop) {
+			padding: 0 10px;
+			max-width: 280px;
+			width: 50%;
 		}
 
 		&:nth-child(even) {
@@ -3931,6 +3941,11 @@ main {
 		
 		img {
 			max-width: 100%;
+			width: auto;
+		}
+		
+		.item {
+			width: 100%;
 		}
 	}
 }
