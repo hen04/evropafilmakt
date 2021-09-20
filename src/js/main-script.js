@@ -144,4 +144,22 @@ $(function (){
 		});
 	}
 
+	var about = $(".js-about-img");
+	var nav = about.data('nav');
+	var dots = about.data('dots');
+	var time = about.data('time');
+	about.owlCarousel({
+		nav: nav,
+		dots: dots,
+		slideBy: 1,
+		items: 1,
+		loop: true,
+		autoplay: true,
+		autoplayTimeout: time,
+		autoplayHoverPause: true,
+		smartSpeed: 500,
+		autoplaySpeed: 600,
+		animateOut: 'fadeOut'
+	});
+
 });
