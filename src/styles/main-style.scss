@@ -141,31 +141,32 @@ body {
 	&__close {
 		position: absolute;
 		cursor: pointer;
+		width: 24px;
+		height: 24px;
+		right: 40px;
+		top: 32px;
 		
 		@include responsive(device) {
 			right: 20px;
-			top: 29px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		
-		@include responsive(tablet) {
-			right: 36px;
 			top: 30px;
 		}
 		
-		@include responsive(desktop) {
-			right: 42px;
+		@include responsive(smtablet) {
+			right: 40px;
+			top: 21px;
+		}
+		
+		@include responsive(notebook) {
+			right: 40px;
 			top: 32px;
 		}
 		
+		@include responsive(desktop) {
+			right: 44px;
+		}
+		
 		.iconify {
-			font-size: 32px;
-			
-			@include responsive(mobile) {
-				font-size: 24px;
-			}
+			font-size: 24px;
 		}
 	}
 	
@@ -479,14 +480,6 @@ body {
 					font-size: 22px;
 				}
 			}
-
-			.active {
-				color: $active;
-				
-				+ svg {
-					color: $active;
-				}
-			}
 		}
 	}
 
@@ -618,7 +611,17 @@ body {
 	}
 	
 	.has-submenu-arrow {
-		padding-right: 12px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@include responsive(mobile) {
+			padding-right: 12px;
+		}
+
+		@include responsive(tabletnotebook) {
+			padding-right: 12px;
+		}
 	}
 	
 	.third-level-menu {
@@ -794,6 +797,15 @@ body {
 			height: 1px;
 			background-color: $gray-400;
 		}
+		
+		
+		&.active {
+			a,
+			svg {
+				color: $active;
+			}
+		}
+		
 	}
 
 	svg {
