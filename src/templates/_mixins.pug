@@ -34,8 +34,8 @@ mixin menu(currentTitle, currentSubtitle, currentThirdTitle)
 				else
 					li.has-submenu
 						if item.url === currentTitle
-							.has-submenu__inner
-								a(href= item.url class="active")= item.title
+							.has-submenu__inner.active
+								a(href= item.url)= item.title
 								.has-submenu-arrow
 									span(class="iconify" data-icon="entypo:chevron-small-down" data-inline="false")
 							ul.sub-menu
@@ -69,4 +69,17 @@ mixin menu(currentTitle, currentSubtitle, currentThirdTitle)
 								each subitem in item.submenu
 									li.has-third-menu
 										.has-third-menu__inner
-											a(href= subitem.url)= subitem.title
+											if subitem.url !== false
+												a(href= subitem.url)= subitem.title
+											else
+												span= subitem.title
+										ul.third-level-menu
+											each subsubitem in subitem.subsubmenu
+												li
+													if subsubitem.url !== false
+														if subsubitem.url === currentThirdTitle
+															a(href= subsubitem.url class="active")= subsubitem.title
+														else
+															a(href= subsubitem.url)= subsubitem.title
+													else
+														span= subsubitem.title
