@@ -28,53 +28,27 @@ block content
 			.about__photo
 				.about__photo-section
 					.about__photo-item
-						.owl-carousel.js-about-img(data-nav="false" data-dots="false" data-time="5000")
-							.item
-								img(src="images/content/about-1.jpg" alt="")
-							.item
-								img(src="images/content/about-8.jpg" alt="")
-							.item
-								img(src="images/content/about-9.jpg" alt="")
+						img(src="images/content/about-1.jpg" alt="")
 					.about__photo-item
-						.owl-carousel.js-about-img(data-nav="false" data-dots="false" data-time="5000")
-							.item
-								img(src="images/content/about-2.jpg" alt="")
-							.item
-								img(src="images/content/about-12.jpg" alt="")
+						img(src="images/content/about-2.jpg" alt="")
 
 				.about__photo-section
 					.about__photo-item
-						.owl-carousel.js-about-img(data-nav="false" data-dots="false" data-time="5000")
-							.item
-								img(src="images/content/about-3.jpg" alt="")
-							.item
-								img(src="images/content/about-10.jpg" alt="")
-							.item
-								img(src="images/content/about-11.jpg" alt="")
-							.item
-								img(src="images/content/about-15.jpg" alt="")
-							.item
-								img(src="images/content/about-17.jpg" alt="")
+						img(src="images/content/about-3.jpg" alt="")
 					.about__photo-item
-						.owl-carousel.js-about-img(data-nav="false" data-dots="false" data-time="5000")
-							.item
-								img(src="images/content/about-14.jpg" alt="")
-							.item
-								img(src="images/content/about-16.jpg" alt="")
+						img(src="images/content/about-16.jpg" alt="")
 
 				.about__photo-section.about__photo-section--bottom
 					.about__photo-item
-						.owl-carousel.js-about-img(data-nav="false" data-dots="false" data-time="5000")
-							.item
-								img(src="images/content/about-4.jpg" alt="")
-							.item
-								img(src="images/content/about-18.jpg" alt="")
+						img(src="images/content/about-4.jpg" alt="")
 					.about__photo-item
-						.owl-carousel.js-about-img(data-nav="false" data-dots="false" data-time="2000")
-							.item
-								img(src="images/content/about-6.jpg" alt="")
-							.item
-								img(src="images/content/about-7.jpg" alt="")
-							.item
-								img(src="images/content/about-19.jpg" alt="")
+						img(src="images/content/about-6.jpg" alt="")
 
+		.gallery.gallery--slider
+			h2 Galeries
+			.gallery__slider.owl-carousel.js-video-carousel(data-nav="true" data-dots="false")
+				each item in gallery
+					.item
+						a(href="gallery-item.html")
+							img(src= item.img alt="")
+							p= item.text
