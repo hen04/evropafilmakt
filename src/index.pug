@@ -118,7 +118,7 @@ block content
 	.gallery
 		h2 Galeries
 		.gallery__list
-			each item in gallery
+			each item in gallery.slice(0,3)
 				.gallery__item
 					a(href="gallery-item.html")
 						img(src= item.img alt="")

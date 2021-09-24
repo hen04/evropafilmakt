@@ -909,7 +909,7 @@ body {
 												"copyright copyright"
 												"development development";
 
-	@include responsive(tablet) {
+	@include responsive(landscapedesktop) {
 		grid-template-columns: 360px 1fr 360px;
 		grid-template-areas: "subscribe subscribe subscribe"
 												"menu menu menu"
@@ -1024,11 +1024,11 @@ body {
 		padding: 40px 40px 0 0;
 		
 		@include responsive(device) {
-			padding: 24px 20px 0 0;
+			padding: 0 20px 0;
 		}
 		
-		@include responsive(mobile) {
-			padding: 0 20px 0;
+		@include responsive(smtablet) {
+			padding-left: 40px;
 		}
 		
 		ul {
@@ -1038,7 +1038,7 @@ body {
 			display: flex;
 			justify-content: flex-start;
 			
-			@include responsive(mobile) {
+			@include responsive(device) {
 				flex-flow: wrap;
 				margin-bottom: 1rem;
 			}
@@ -1049,17 +1049,17 @@ body {
 		}
 		
 		li {
-			margin-left: 40px;
-
+			/*margin-left: 40px;*/
+			
 			@include responsive(device) {
-				margin-left: 15px;
+				margin: 0 2rem .5rem 0;
 			}
 
 			@include responsive(mobile) {
 				margin: 0 1rem .5rem 0;
 			}
-
-			@include responsive(desktop) {
+			
+			@include responsive(landscapedesktop) {
 				margin-left: 24px;
 				font-size: 18px;
 			}
@@ -1087,14 +1087,18 @@ body {
 		color: $gray-400;
 		display: flex;
 		
-		@include responsive(mobile) {
+		@include responsive(device) {
 			padding-left: 20px;
 			align-items: flex-start;
 			margin-bottom: .25rem;
 			font-size: 16px;
 		}
 		
-		@include responsive(tabletdesktop) {
+		@include responsive(smtablet) {
+			padding-left: 40px;
+		}
+		
+		@include responsive(landscapedesktop) {
 			align-items: flex-end;
 			font-size: 17px;
 			padding-left: 40px;
@@ -1106,14 +1110,19 @@ body {
 		display: flex;
 		flex-flow: column;
 
-		@include responsive(tablet) {
+		@include responsive(landscapedesktop) {
 			align-items: flex-end;
 			padding-right: 40px;
 			justify-content: center;
 		}
 
-		@include responsive(mobile) {
+		@include responsive(device) {
 			margin: auto 0;
+		}
+		
+		@include responsive(smtablet) {
+			margin-left: auto;
+			margin-right: 34px;
 		}
 
 		@include responsive(desktop) {
@@ -1127,7 +1136,11 @@ body {
 				margin: 0 0 .5rem 6px;
 			}
 			
-			@include responsive(tabletdesktop) {
+			@include responsive(smtablet) {
+				margin: 0 6px .5rem auto;
+			}
+			
+			@include responsive(landscapedesktop) {
 				margin: 0 0 1rem;
 			}
 		}
@@ -1137,22 +1150,23 @@ body {
 		grid-area: development;
 		color: $gray-400;
 		display: flex;
-		
-		@include responsive(tablet) {
-			margin-left: auto;
-		}
-		
-		@include responsive(mobile) {
+
+		@include responsive(device) {
 			padding-left: 20px;
 			align-items: flex-start;
 			font-size: 16px;
 		}
 		
-		@include responsive(tabletdesktop) {
+		@include responsive(smtablet) {
+			padding-left: 40px;
+		}
+		
+		@include responsive(landscapedesktop) {
 			font-size: 17px;
 			text-align: right;
 			align-items: flex-end;
 			padding-right: 40px;
+			margin-left: auto;
 		}
 
 		a {
@@ -1169,7 +1183,7 @@ body {
 .social {
 	display: flex;
 	
-	@include responsive(tabletdesktop) {
+	@include responsive(landscapedesktop) {
 		justify-content: space-between;
 	}
 
@@ -2384,6 +2398,14 @@ main {
 		}
 	}
 	
+	&__slider {
+		margin-bottom: 40px;
+		
+		@include responsive(largedesktop) {
+			margin-bottom: 56px;
+		}
+	}
+
 	&__item {
 		box-sizing: border-box;
 
@@ -2426,6 +2448,15 @@ main {
 
 		@include responsive(largedesktop) {
 			font-size: 24px;
+		}
+	}
+	
+	&--slider {
+		@include responsive(mobile) {
+			margin-top: 40px;
+		}
+		.owl-nav {
+			top: -64px;
 		}
 	}
 }
@@ -3951,9 +3982,16 @@ main {
 			}
 		}
 		
+		&:nth-child(odd) {
+			@include responsive(mobile) {
+				margin-right: 20px;
+			}
+		}
+		
 		img {
 			max-width: 100%;
 			width: auto;
+			display: block;
 		}
 		
 		.item {
