@@ -21,9 +21,9 @@ block content
 					else
 						li
 							a(href="#")= item.title
-			.gallery-page__content
+			.gallery-page__content.js-photo-gallery
 				each item in galleryList.slice(0,1)
 					each subitem in item.photo
-						div(class="js-photo-gallery gallery-page__img gallery-page__img--" + subitem.class + " gallery-page__img--" + subitem.position)
+						div(class="gallery-page__img gallery-page__img--" + subitem.class + " gallery-page__img--" + subitem.position)
 							a(href= subitem.img)
 								img(src=subitem.img alt="")

@@ -3268,7 +3268,6 @@ main {
     @media only screen and (min-width: 1280px) {
       .gallery-page__list li {
         /* > 1280 */
-        font-size: 28px;
         margin-bottom: 32px;
         padding-right: 40px; } }
     .gallery-page__list li:hover, .gallery-page__list li.active {
@@ -3436,7 +3435,7 @@ main {
 
 .sl-wrapper .sl-close {
   font-size: 0 !important;
-  background: url(../images/icon-close.svg) 0 0/contain no-repeat; }
+  background: url(../images/icon-close.svg) 0 0/32px no-repeat; }
 
 .sl-navigation button {
   font-size: 0 !important; }
