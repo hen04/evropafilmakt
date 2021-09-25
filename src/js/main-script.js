@@ -106,7 +106,6 @@ $(function (){
 
 	$('.js-photo-gallery a').simpleLightbox();
 
-
 	if ($('.js-select').length) {
 		$('.js-select').select2();
 

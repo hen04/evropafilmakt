@@ -45,10 +45,8 @@ block content
 						img(src="images/content/about-6.jpg" alt="")
 
 		.gallery.gallery--slider
-			h2 Galeries
+			h2 Le Festival et ses auteurs
 			.gallery__slider.owl-carousel.js-video-carousel(data-nav="true" data-dots="false")
 				each item in gallery
 					.item
-						a(href="gallery-item.html")
-							img(src= item.img alt="")
-							p= item.text
+						img(src= item.img alt="")
