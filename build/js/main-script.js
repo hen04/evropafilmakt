@@ -21,10 +21,14 @@ $(function (){
 	var video = $(".js-video-carousel");
 	var nav = video.data('nav');
 	var dots = video.data('dots');
+	var auto = video.data('auto');
+	var loop = video.data('loop');
 	video.owlCarousel({
 		responsiveClass: true,
 		nav: nav,
 		dots: dots,
+		autoplay: auto,
+		loop: loop,
 		autoHeight: false,
 		responsive: {
 			0: {
