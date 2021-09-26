@@ -15,7 +15,7 @@ block content
 				p Pour toutes les clips vidéo du Festival, !{" "}
 					a(href="") merci de consulter notre chaine Youtube.
 			.video
-				.video__slider.owl-carousel.js-video-carousel(data-nav="false" data-dot="true")
+				.video__slider.owl-carousel.js-carousel(data-nav="false" data-dot="true")
 					each item in video.slice(0,3)
 						.item
 							a(href="#")
@@ -26,7 +26,7 @@ block content
 		.video-page__section
 			h2 Vidéothèque
 			.video
-				.video__slider.owl-carousel.js-video-carousel(data-nav="false" data-dot="true")
+				.video__slider.owl-carousel.js-carousel(data-nav="false" data-dot="true")
 					each item in videotheque.slice(0,3)
 						.item
 							a(href="#")

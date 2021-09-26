@@ -18,13 +18,17 @@ $(function (){
 		}
 	});
 
-	var video = $(".js-video-carousel");
-	var nav = video.data('nav');
-	var dots = video.data('dots');
-	video.owlCarousel({
+	var carousel = $(".js-carousel");
+	var nav = carousel.data('nav');
+	var dots = carousel.data('dots');
+	var auto = carousel.data('auto');
+	var loop = carousel.data('loop');
+	carousel.owlCarousel({
 		responsiveClass: true,
 		nav: nav,
 		dots: dots,
+		autoplay: auto,
+		loop: loop,
 		autoHeight: false,
 		responsive: {
 			0: {
