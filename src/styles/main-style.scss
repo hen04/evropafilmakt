@@ -3217,6 +3217,12 @@ main {
 	&__text {
 		margin-bottom: 64px;
 	}
+	
+	&__info {
+		@include responsive(landscapedesktop) {
+			width: calc(50% - 20px);
+		}
+	}
 }
 
 .news-sm {
