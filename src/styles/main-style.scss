@@ -2497,6 +2497,15 @@ main {
 			}
 		}
 		
+		a {
+			transition: all .3s ease-in-out;
+
+			&:hover {
+				color: $white !important;
+				background-color: $active;
+			}
+		}
+		
 		&.active {
 			a,
 			span {

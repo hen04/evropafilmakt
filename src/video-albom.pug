@@ -21,7 +21,7 @@ block content
 			.video__list
 				each item in video
 					.video__item
-						a(href="#" class="js-video-modal")
+						a(href= item.href class="js-video-modal")
 							img(src= item.img alt="")
 							p= item.text
 

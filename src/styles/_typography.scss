@@ -47,7 +47,7 @@ p {
 
 a {
 	color: $gray-700;
-	transition: color .3s ease-in-out;
+	transition: all .3s ease-in-out;
 	
 	&.btn {
 		&:hover {
@@ -58,6 +58,8 @@ a {
 	&.btn-accent {
 		&:hover {
 			color: $white;
+			background-color: $black;
+			border-color: $black;
 		}
 	}
 }

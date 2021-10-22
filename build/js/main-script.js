@@ -95,6 +95,9 @@ $(function (){
 
 	$('.js-video-modal').on('click', function(event){
 		event.preventDefault();
+		var linkhref = $(this).attr('href');
+		var video = $('#videoModal iframe');
+		$(video).attr('src', linkhref);
 		$('#videoModal').arcticmodal();
 	});
 
