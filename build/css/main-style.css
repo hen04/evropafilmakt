@@ -455,11 +455,13 @@ p {
 
 a {
   color: #292929;
-  transition: color .3s ease-in-out; }
+  transition: all .3s ease-in-out; }
   a.btn:hover {
     color: #292929; }
   a.btn-accent:hover {
-    color: #fff; }
+    color: #fff;
+    background-color: #000;
+    border-color: #000; }
 
 .breadcrumbs {
   list-style: none;
@@ -528,7 +530,7 @@ a {
 .btn-accent {
   background-color: #FF5E00;
   border-color: #FF5E00;
-  color: #fff;
+  color: #fff !important;
   padding: 1rem 2rem;
   font-size: 20px; }
   @media only screen and (min-width: 1366px) {
@@ -2844,6 +2846,12 @@ main {
       .program-links__item span {
         /* > 1600 */
         font-size: 32px; } }
+  .program-links__item a {
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+    .program-links__item a:hover {
+      color: #fff !important;
+      background-color: #FF5E00; }
   .program-links__item.active a,
   .program-links__item.active span {
     background-color: #FF5E00; }

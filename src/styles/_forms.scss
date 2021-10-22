@@ -10,6 +10,6 @@
 .btn-accent {
 	background-color: $active;
 	border-color: $active;
-	color: $white;
+	color: $white !important;
 	@include btn();
 }

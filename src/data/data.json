@@ -1073,38 +1073,47 @@
 	],
 	"video": [
 		{
+			"href": "https://www.youtube.com/embed/QNZ2diDS8P8",
 			"img": "images/content/video-4.jpg",
 			"text": "L'Europe autour de l'Europe : Ouverture du Festival 2017"
 		},
 		{
+			"href": "https://www.youtube.com/embed/Y5HgSpOcqZg",
 			"img": "images/content/video-5.jpg",
 			"text": "L'Europe autour de l'Europe 2020. PRIX SAUVAGE CORTO"
 		},
 		{
+			"href": "https://www.youtube.com/embed/iFMC92Nm8wo",
 			"img": "images/content/video-6.jpg",
 			"text": "L'Europe autour de l'Europe 2020. PRIX SAUVAGE"
 		},
 		{
+			"href": "#",
 			"img": "images/content/video-5.jpg",
 			"text": "L'Europe autour de l'Europe 2020. PRIX SAUVAGE CORTO"
 		},
 		{
+			"href": "#",
 			"img": "images/content/video-6.jpg",
 			"text": "L'Europe autour de l'Europe 2020. PRIX SAUVAGE"
 		},
 		{
+			"href": "#",
 			"img": "images/content/video-4.jpg",
 			"text": "L'Europe autour de l'Europe : Ouverture du Festival 2017"
 		},
 		{
+			"href": "#",
 			"img": "images/content/video-4.jpg",
 			"text": "L'Europe autour de l'Europe : Ouverture du Festival 2017"
 		},
 		{
+			"href": "#",
 			"img": "images/content/video-5.jpg",
 			"text": "L'Europe autour de l'Europe 2020. PRIX SAUVAGE CORTO"
 		},
 		{
+			"href": "#",
 			"img": "images/content/video-6.jpg",
 			"text": "L'Europe autour de l'Europe 2020. PRIX SAUVAGE"
 		}
