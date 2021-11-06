@@ -18,6 +18,7 @@ block content
 			a(href="gallery-albom.html").gallery-page__section
 				.gallery-page__title
 					h4= item.title
+					p.date= item.date
 				.gallery-page__preview
 					each subitem in item.photo.slice(0,2)
 						.gallery-page__item

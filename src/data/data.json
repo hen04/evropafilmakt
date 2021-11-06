@@ -955,7 +955,8 @@
 	],
 	"galleryList": [
 		{
-			"title": "Soirée de clôture, 17 avril",
+			"title": "Soirée de clôture",
+			"date": "17 avril",
 			"active": true,
 			"photo": [
 				{
@@ -1001,7 +1002,8 @@
 			]
 		},
 		{
-			"title": "Compétition Prix Sauvage, 16 avril",
+			"title": "Compétition Prix Sauvage",
+			"date": "16 avril",
 			"photo": [
 				{
 					"img": "images/content/gallery-6.jpg"
@@ -1015,7 +1017,8 @@
 			]
 		},
 		{
-			"title": "Compétition Prix Sauvage, 15 avril",
+			"title": "Compétition Prix Sauvage",
+			"date": "15 avril",
 			"photo": [
 				{
 					"img": "images/content/gallery-8.jpg"
@@ -1029,7 +1032,8 @@
 			]
 		},
 		{
-			"title": "Soirée de clôture, 17 avril",
+			"title": "Soirée de clôture",
+			"date": "17 avril",
 			"photo": [
 				{
 					"img": "images/content/gallery-4.jpg"
@@ -1043,7 +1047,8 @@
 			]
 		},
 		{
-			"title": "Compétition Prix Sauvage, 16 avril",
+			"title": "Compétition Prix Sauvage",
+			"date": "16 avril",
 			"photo": [
 				{
 					"img": "images/content/gallery-6.jpg"
@@ -1057,7 +1062,8 @@
 			]
 		},
 		{
-			"title": "Compétition Prix Sauvage, 15 avril",
+			"title": "Compétition Prix Sauvage",
+			"date": "15 avril",
 			"photo": [
 				{
 					"img": "images/content/gallery-8.jpg"
