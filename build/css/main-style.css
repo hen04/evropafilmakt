@@ -1592,24 +1592,15 @@ body {
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  @media only screen and (min-width: 1024px) {
-    .social {
-      /* > 1024 */
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; } }
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   @media only screen and (max-width: 1023px) {
     .social {
       /* < 1023 */
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
-  @media only screen and (min-width: 1280px) {
-    .social {
-      /* > 1280 */
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between; } }
   .social .iconify {
     font-size: 36px;
     margin: 0 2px;
@@ -1630,7 +1621,8 @@ body {
   .social__item:hover .iconify {
     color: #FF5E00; }
 
-.inp-text {
+.inp-text,
+.wpcf7-form-control {
   padding: 14px 16px;
   border: 1px solid #7A7A7A;
   width: 100%;
@@ -1640,14 +1632,17 @@ body {
   line-height: 1.2;
   border-radius: 0;
   resize: none; }
-  .inp-text:focus, .inp-text:active {
+  .inp-text:focus, .inp-text:active,
+  .wpcf7-form-control:focus,
+  .wpcf7-form-control:active {
     border: 1px solid #292929;
     outline: none; }
 
 textarea.inp-text {
   min-height: 160px; }
 
-.submit {
+.submit,
+.wpcf7-submit {
   padding: 14px 32px;
   font-size: 24px;
   line-height: 1;
@@ -1657,10 +1652,12 @@ textarea.inp-text {
   cursor: pointer;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out; }
-  .submit:hover {
+  .submit:hover,
+  .wpcf7-submit:hover {
     background-color: #292929;
     color: #F5F5F5; }
-  .submit:active {
+  .submit:active,
+  .wpcf7-submit:active {
     background-color: #525252;
     color: #F5F5F5; }
 
@@ -4449,6 +4446,18 @@ main {
     max-width: 100%;
     display: block;
     margin-bottom: 1rem; }
+  @media only screen and (min-width: 1280px) {
+    .info-page .wpcf7-form p {
+      /* > 1280 */
+      margin-bottom: 2rem; } }
+  .info-page .wpcf7-not-valid {
+    border-color: #E93434 !important; }
+  .info-page .wpcf7 form .wpcf7-response-output {
+    border: initial !important;
+    padding: 0 !important;
+    margin: 0 !important; }
+  .info-page .wpcf7-spinner {
+    display: none; }
 
 .request-links {
   display: -webkit-box;
@@ -4459,26 +4468,53 @@ main {
     max-width: none;
     margin-right: 20px; }
 
-.form-item {
+.form-item,
+.info-page__form .wpcf7-form {
   margin-bottom: 2rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column;
   flex-flow: column; }
-  .form-item label {
-    margin-bottom: .25rem;
-    display: block; }
-    .form-item label.error {
+  .form-item label,
+  .form-item .wpcf7-form-control-wrap,
+  .info-page__form .wpcf7-form label,
+  .info-page__form .wpcf7-form .wpcf7-form-control-wrap {
+    margin-bottom: .25rem; }
+    .form-item label.error,
+    .form-item .wpcf7-form-control-wrap.error,
+    .info-page__form .wpcf7-form label.error,
+    .info-page__form .wpcf7-form .wpcf7-form-control-wrap.error {
       color: #E93434;
       position: absolute;
       font-size: 1rem; }
+    .form-item label .wpcf7-not-valid-tip,
+    .form-item .wpcf7-form-control-wrap .wpcf7-not-valid-tip,
+    .info-page__form .wpcf7-form label .wpcf7-not-valid-tip,
+    .info-page__form .wpcf7-form .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+      color: #E93434;
+      font-size: 1rem; }
+      @media only screen and (min-width: 1280px) {
+        .form-item label .wpcf7-not-valid-tip,
+        .form-item .wpcf7-form-control-wrap .wpcf7-not-valid-tip,
+        .info-page__form .wpcf7-form label .wpcf7-not-valid-tip,
+        .info-page__form .wpcf7-form .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+          /* > 1280 */
+          position: absolute; } }
   .form-item input.error,
-  .form-item textarea.error {
+  .form-item input .wpcf7-not-valid,
+  .form-item textarea.error,
+  .form-item textarea .wpcf7-not-valid,
+  .info-page__form .wpcf7-form input.error,
+  .info-page__form .wpcf7-form input .wpcf7-not-valid,
+  .info-page__form .wpcf7-form textarea.error,
+  .info-page__form .wpcf7-form textarea .wpcf7-not-valid {
     border-color: #E93434; }
-  .form-item .submit {
+  .form-item .submit,
+  .info-page__form .wpcf7-form .submit {
     background-color: #000;
     color: #fff; }
-    .form-item .submit:hover {
+    .form-item .submit:hover,
+    .info-page__form .wpcf7-form .submit:hover {
       background-color: #fff;
       color: #000; }
 
@@ -4614,5 +4650,44 @@ main {
     .search-result__item .title {
       font-weight: 600;
       margin-bottom: 10px; }
+
+.wp-block-contact-form-7-contact-form-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media only screen and (max-width: 767px) {
+    .wp-block-contact-form-7-contact-form-selector .wpcf7 {
+      /* < 767 */
+      width: 100%; } }
+  .wp-block-contact-form-7-contact-form-selector br {
+    display: none; }
+  .wp-block-contact-form-7-contact-form-selector p {
+    margin: 0 !important; }
+  .wp-block-contact-form-7-contact-form-selector form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media only screen and (max-width: 767px) {
+      .wp-block-contact-form-7-contact-form-selector form {
+        /* < 767 */
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        width: 100%; } }
+  .wp-block-contact-form-7-contact-form-selector .wpcf7-form-control {
+    display: inline-block; }
+    @media only screen and (max-width: 767px) {
+      .wp-block-contact-form-7-contact-form-selector .wpcf7-form-control {
+        /* < 767 */
+        margin-bottom: 20px; } }
+    @media only screen and (min-width: 768px) {
+      .wp-block-contact-form-7-contact-form-selector .wpcf7-form-control {
+        /* > 768 */
+        margin-right: 20px;
+        max-width: 290px; } }
 
 /*# sourceMappingURL=maps/main-style.css.map */

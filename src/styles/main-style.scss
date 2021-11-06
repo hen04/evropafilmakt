@@ -1182,17 +1182,10 @@ body {
 
 .social {
 	display: flex;
-	
-	@include responsive(landscapedesktop) {
-		justify-content: space-between;
-	}
+	justify-content: space-between;
 
 	@include responsive(device) {
 		flex-wrap: wrap;
-	}
-
-	@include responsive(desktop) {
-		justify-content: space-between;
 	}
 
 	.iconify {
@@ -1226,7 +1219,8 @@ body {
 	}
 }
 
-.inp-text {
+.inp-text,
+.wpcf7-form-control {
 	padding: 14px 16px;
 	border: 1px solid $gray-200;
 	width: 100%;
@@ -1249,7 +1243,8 @@ textarea {
 	}
 }
 
-.submit {
+.submit,
+.wpcf7-submit {
 	padding: 14px 32px;
 	font-size: 24px;
 	line-height: 1;
@@ -4179,7 +4174,23 @@ main {
 			margin-bottom: 1rem;
 		}
 	}
+	.wpcf7-form p {
+		@include responsive(desktop) {
+			margin-bottom: 2rem;
+		}
+	}
+	.wpcf7-not-valid {
+		border-color: $error !important;
+	}
+	.wpcf7 form .wpcf7-response-output {
+		border: initial !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
 	
+	.wpcf7-spinner {
+		display: none;
+	}
 }
 
 .request-links {
@@ -4192,24 +4203,34 @@ main {
 	}
 }
 
-.form-item {
+.form-item,
+.info-page__form .wpcf7-form {
 	margin-bottom: 2rem;
 	flex-flow: column;
 	
-	label {
+	label,
+	.wpcf7-form-control-wrap {
 		margin-bottom: .25rem;
-		display: block;
 
 		&.error {
 			color: $error;
 			position: absolute;
 			font-size: 1rem;
 		}
+		.wpcf7-not-valid-tip {
+			color: $error;
+			font-size: 1rem;
+
+			@include responsive(desktop) {
+				position: absolute;
+			}
+		}
 	}
 	
 	input,
 	textarea {
-		&.error {
+		&.error,
+		.wpcf7-not-valid {
 			border-color: $error;
 		}
 	}
@@ -4389,3 +4410,43 @@ main {
 	}
 }
 
+.wp-block-contact-form-7-contact-form-selector {
+	display: flex;
+	justify-content: center;
+	
+	.wpcf7 {
+		@include responsive(mobile) {
+			width: 100%;
+		}
+	}
+
+	br {
+		display: none;
+	}
+	
+	p {
+		margin: 0 !important;
+	}
+	
+	form {
+		display: flex;
+
+		@include responsive(mobile) {
+			flex-flow: column;
+			width: 100%;
+		}
+	}
+	
+	.wpcf7-form-control {
+		display: inline-block;
+		
+		@include responsive(mobile) {
+			margin-bottom: 20px;
+		}
+		
+		@include responsive(tabletdesktop) {
+			margin-right: 20px;
+			max-width: 290px;
+		}
+	}
+}
