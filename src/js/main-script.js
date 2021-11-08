@@ -111,7 +111,9 @@ $(function (){
 		$('.search-modal').addClass('hidden');
 	});
 
-	$('.js-photo-gallery a').simpleLightbox();
+	if ( $('.js-photo-gallery').length ) {
+		$('.js-photo-gallery a').simpleLightbox();
+	}
 
 	if ($('.js-select').length) {
 		$('.js-select').select2();
