@@ -1049,7 +1049,6 @@ body {
 		}
 		
 		li {
-			/*margin-left: 40px;*/
 			
 			@include responsive(device) {
 				margin: 0 2rem .5rem 0;
@@ -1060,7 +1059,7 @@ body {
 			}
 			
 			@include responsive(landscapedesktop) {
-				margin-left: 24px;
+				margin-left: 20px;
 				font-size: 18px;
 			}
 
@@ -3759,6 +3758,10 @@ main {
 		@include responsive(largedesktop) {
 			margin-top: 200px;
 			width: 50% !important;
+		}
+		
+		img {
+			max-width: 290px;
 		}
 	}
 
