@@ -1766,6 +1766,19 @@ main {
 	&__img {
 		grid-area: img;
 		margin-bottom: 10px;
+		position: relative;
+
+		span {
+			position: absolute;
+			left: 1rem;
+			top: 1rem;
+			display: flex;
+			background-color: $active;
+			color: $white;
+			font-size: 20px;
+			font-weight: 400;
+			padding: 0 .5rem .25rem;
+		}
 
 		@include responsive(mobile) {
 			order: 0;
@@ -1855,9 +1868,11 @@ main {
 			}
 			
 			&.director {
-				color: $gray-700;
-				font-weight: 700;
+				color: $white;
 				font-size: 1rem;
+				background-color: $gray-200;
+				display: inline-block;
+				padding: 4px 8px;
 				
 				@include responsive(notebookdesktop) {
 					font-size: 18px;

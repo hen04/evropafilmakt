@@ -1326,27 +1326,17 @@ body {
   margin-top: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "subscribe subscribe"
- "logo social"
- "menu menu"
- "copyright copyright"
- "development development"; }
+  grid-template-areas: "subscribe subscribe" "logo social" "menu menu" "copyright copyright" "development development"; }
   @media only screen and (min-width: 1024px) {
     .footer {
       /* > 1024 */
       grid-template-columns: 360px 1fr 360px;
-      grid-template-areas: "subscribe subscribe subscribe"
- "menu menu menu"
- "logo social social"
- "copyright development development"; } }
+      grid-template-areas: "subscribe subscribe subscribe" "menu menu menu" "logo social social" "copyright development development"; } }
   @media only screen and (min-width: 1280px) {
     .footer {
       /* > 1280 */
       grid-template-columns: 360px 1fr 360px;
-      grid-template-areas: "subscribe subscribe subscribe"
- "logo menu menu"
- "logo social development"
- "copyright social development"; } }
+      grid-template-areas: "subscribe subscribe subscribe" "logo menu menu" "logo social development" "copyright social development"; } }
   @media only screen and (min-width: 1600px) {
     .footer {
       /* > 1600 */
@@ -2135,8 +2125,7 @@ main {
   .program-info__item {
     /* > 768 */
     display: grid;
-    grid-template-areas: "day"
- "films"; } }
+    grid-template-areas: "day" "films"; } }
 
 @media only screen and (min-width: 1600px) {
   .program-info__item {
@@ -2198,7 +2187,20 @@ main {
 
 .program-info__img {
   grid-area: img;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  position: relative; }
+  .program-info__img span {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #FF5E00;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 .5rem .25rem; }
   @media only screen and (max-width: 767px) {
     .program-info__img {
       /* < 767 */
@@ -2279,6 +2281,20 @@ main {
         .program-info__content-name p.title {
           /* > 1600 */
           font-size: 22px; } }
+    .program-info__content-name p.director {
+      color: #fff;
+      font-size: 1rem;
+      background-color: #7A7A7A;
+      display: inline-block;
+      padding: 4px 8px; }
+      @media only screen and (min-width: 1366px) {
+        .program-info__content-name p.director {
+          /* > 1366 */
+          font-size: 18px; } }
+      @media only screen and (min-width: 1600px) {
+        .program-info__content-name p.director {
+          /* > 1600 */
+          font-size: 20px; } }
   .program-info__content-name .actors {
     display: block;
     margin-top: 4px; }
@@ -2332,16 +2348,13 @@ main {
       /* 768 - 1024 */
       grid-template-rows: 1fr 50px auto;
       grid-template-columns: 50% 50%;
-      grid-template-areas: "img img"
- "time name"
- "cinema name"; } }
+      grid-template-areas: "img img" "time name" "cinema name"; } }
   @media only screen and (min-width: 1024px) {
     .program-info__film-item {
       /* > 1024 */
       grid-template-rows: auto 1fr;
       grid-template-columns: 200px 1fr 1fr;
-      grid-template-areas: "time img name"
- "time img cinema"; } }
+      grid-template-areas: "time img name" "time img cinema"; } }
   @media only screen and (min-width: 1366px) {
     .program-info__film-item {
       /* > 1366 */
@@ -2437,23 +2450,18 @@ main {
     .program-info__cinema-item .program-info__film-item {
       /* < 767 */
       margin-bottom: 40px;
-      grid-template-areas: "img"
- "name"
- "time"; } }
+      grid-template-areas: "img" "name" "time"; } }
   @media only screen and (min-width: 768px) and (max-width: 1279px) {
     .program-info__cinema-item .program-info__film-item {
       /* 768 - 1279 */
       margin-bottom: 40px;
       grid-template-columns: 50% 50%;
-      grid-template-areas: "img img"
- "cinema name"
- "cinema name"; } }
+      grid-template-areas: "img img" "cinema name" "cinema name"; } }
   @media only screen and (min-width: 1280px) {
     .program-info__cinema-item .program-info__film-item {
       /* > 1280 */
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "time img name"
- "cinema img name"; } }
+      grid-template-areas: "time img name" "cinema img name"; } }
   .program-info__cinema-item .program-info__film-item:last-child {
     margin-bottom: 0; }
   .program-info__cinema-item .program-info__film-item .program-info__img {
@@ -2820,8 +2828,55 @@ main {
   .gallery--slider .owl-nav {
     top: -64px; }
 
+.program-page__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media only screen and (max-width: 767px) {
+    .program-page__header {
+      /* < 767 */
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+      flex-flow: column; } }
+
 .program-page__text {
   max-width: 720px; }
+
+.program-page__download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: -webkit-box-shadow .3s ease-in-out;
+  transition: -webkit-box-shadow .3s ease-in-out;
+  transition: box-shadow .3s ease-in-out;
+  transition: box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out; }
+  @media only screen and (max-width: 767px) {
+    .program-page__download {
+      /* < 767 */
+      margin-top: 20px; } }
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .program-page__download {
+      /* 768 - 1024 */
+      margin-left: 40px; } }
+  @media only screen and (min-width: 1024px) {
+    .program-page__download {
+      /* > 1024 */
+      margin: 0 auto; } }
+  .program-page__download .download-img {
+    margin-bottom: 1rem; }
+    .program-page__download .download-img:hover {
+      -webkit-box-shadow: 0 0 0 2px #292929;
+      box-shadow: 0 0 0 2px #292929; }
+    .program-page__download .download-img img {
+      display: block; }
 
 .program-page__content {
   padding-top: 40px; }
