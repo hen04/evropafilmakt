@@ -8,11 +8,16 @@ block nav
 block content
 	.program-page
 		h1 Programme 2021
-		.program-page__text
-			p Chers amis du festival,<br>
-				| Après une troisième reprogramation, nous sommes heureux de vous présenter le programme de cette 15ème édition, exclusivement EN LIGNE. Ce programme “essentiel” est fidèle à la vocation du festival dès ses débuts – la joie de retrouver les chefs d’oeuvres du passé, les maîtres du cinéma européens, et la joie de découvrir, d’identifier, d’affirmer les nouveaux talents du cinéma de notre continent. En attendant de vous retrouver dans nos merveilleuses salles parisiennes nous vous souhaitons de belles projections et rencontres virtuels.
-			p
-				strong Irena Bilic et l’équipe du festival L’Europe autour de l’Europe
+		.program-page__header
+			.program-page__text
+				p Chers amis du festival,<br>
+					| Après une troisième reprogramation, nous sommes heureux de vous présenter le programme de cette 15ème édition, exclusivement EN LIGNE. Ce programme “essentiel” est fidèle à la vocation du festival dès ses débuts – la joie de retrouver les chefs d’oeuvres du passé, les maîtres du cinéma européens, et la joie de découvrir, d’identifier, d’affirmer les nouveaux talents du cinéma de notre continent. En attendant de vous retrouver dans nos merveilleuses salles parisiennes nous vous souhaitons de belles projections et rencontres virtuels.
+				p
+					strong Irena Bilic et l’équipe du festival L’Europe autour de l’Europe
+			.program-page__download
+				a(href="https://www.evropafilmakt.com/wp-content/uploads/FEAE-2021-Program-web.pdf" class="download-img")
+					img(src="../images/content/program-sm.png")
+				a(href="https://www.evropafilmakt.com/wp-content/uploads/FEAE-2021-Program-web.pdf" download) Download
 
 
 		.program-page__content
@@ -57,6 +62,8 @@ block content
 										p.title= subitem.director
 										p= subitem.genre
 											span.actors= subitem.actors
+										p.director devant le directeur
+
 									.program-info__content-cinema
 										p.title= subitem.cinema
 										p.link-cinema

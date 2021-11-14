@@ -1852,7 +1852,20 @@ main {
 				@include responsive(largedesktop) {
 					font-size: 22px;
 				}
+			}
+			
+			&.director {
+				color: $gray-700;
+				font-weight: 700;
+				font-size: 1rem;
 				
+				@include responsive(notebookdesktop) {
+					font-size: 18px;
+				}
+				
+				@include responsive(largedesktop) {
+					font-size: 20px;
+				}
 			}
 		}
 		
@@ -2458,8 +2471,48 @@ main {
 
 .program-page {
 	
+	&__header {
+		display: flex;
+		
+		@include responsive(mobile) {
+			flex-flow: column;
+		}
+	}
+	
 	&__text {
 		max-width: 720px;
+	}
+	
+	&__download {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		transition: box-shadow .3s ease-in-out;
+		
+		@include responsive(mobile) {
+			margin-top: 20px;
+		}
+		
+		@include responsive(smtablet) {
+			margin-left: 40px;
+		}
+		
+		@include responsive(landscapedesktop) {
+			margin: 0 auto;
+		}
+
+
+		.download-img {
+			margin-bottom: 1rem;
+
+			&:hover {
+				box-shadow: 0 0 0 2px $gray-700;
+			}
+
+			img {
+				display: block;
+			}
+		}
 	}
 	
 	&__content {
