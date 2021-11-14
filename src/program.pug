@@ -55,6 +55,8 @@ block content
 									.program-info__time
 										h4= subitem.time
 									a(href="film-detail.html").program-info__img
+										if subitem.label !== ""
+											span film d'ouverture
 										img(src= subitem.img alt= subitem.title)
 									.program-info__content-name
 										h4
@@ -62,7 +64,8 @@ block content
 										p.title= subitem.director
 										p= subitem.genre
 											span.actors= subitem.actors
-										p.director devant le directeur
+										if subitem.guest !== ""
+											p.director devant le directeur
 
 									.program-info__content-cinema
 										p.title= subitem.cinema
