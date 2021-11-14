@@ -1326,17 +1326,27 @@ body {
   margin-top: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "subscribe subscribe" "logo social" "menu menu" "copyright copyright" "development development"; }
+  grid-template-areas: "subscribe subscribe"
+ "logo social"
+ "menu menu"
+ "copyright copyright"
+ "development development"; }
   @media only screen and (min-width: 1024px) {
     .footer {
       /* > 1024 */
       grid-template-columns: 360px 1fr 360px;
-      grid-template-areas: "subscribe subscribe subscribe" "menu menu menu" "logo social social" "copyright development development"; } }
+      grid-template-areas: "subscribe subscribe subscribe"
+ "menu menu menu"
+ "logo social social"
+ "copyright development development"; } }
   @media only screen and (min-width: 1280px) {
     .footer {
       /* > 1280 */
       grid-template-columns: 360px 1fr 360px;
-      grid-template-areas: "subscribe subscribe subscribe" "logo menu menu" "logo social development" "copyright social development"; } }
+      grid-template-areas: "subscribe subscribe subscribe"
+ "logo menu menu"
+ "logo social development"
+ "copyright social development"; } }
   @media only screen and (min-width: 1600px) {
     .footer {
       /* > 1600 */
@@ -2125,7 +2135,8 @@ main {
   .program-info__item {
     /* > 768 */
     display: grid;
-    grid-template-areas: "day" "films"; } }
+    grid-template-areas: "day"
+ "films"; } }
 
 @media only screen and (min-width: 1600px) {
   .program-info__item {
@@ -2321,13 +2332,16 @@ main {
       /* 768 - 1024 */
       grid-template-rows: 1fr 50px auto;
       grid-template-columns: 50% 50%;
-      grid-template-areas: "img img" "time name" "cinema name"; } }
+      grid-template-areas: "img img"
+ "time name"
+ "cinema name"; } }
   @media only screen and (min-width: 1024px) {
     .program-info__film-item {
       /* > 1024 */
       grid-template-rows: auto 1fr;
       grid-template-columns: 200px 1fr 1fr;
-      grid-template-areas: "time img name" "time img cinema"; } }
+      grid-template-areas: "time img name"
+ "time img cinema"; } }
   @media only screen and (min-width: 1366px) {
     .program-info__film-item {
       /* > 1366 */
@@ -2423,18 +2437,23 @@ main {
     .program-info__cinema-item .program-info__film-item {
       /* < 767 */
       margin-bottom: 40px;
-      grid-template-areas: "img" "name" "time"; } }
+      grid-template-areas: "img"
+ "name"
+ "time"; } }
   @media only screen and (min-width: 768px) and (max-width: 1279px) {
     .program-info__cinema-item .program-info__film-item {
       /* 768 - 1279 */
       margin-bottom: 40px;
       grid-template-columns: 50% 50%;
-      grid-template-areas: "img img" "cinema name" "cinema name"; } }
+      grid-template-areas: "img img"
+ "cinema name"
+ "cinema name"; } }
   @media only screen and (min-width: 1280px) {
     .program-info__cinema-item .program-info__film-item {
       /* > 1280 */
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "time img name" "cinema img name"; } }
+      grid-template-areas: "time img name"
+ "cinema img name"; } }
   .program-info__cinema-item .program-info__film-item:last-child {
     margin-bottom: 0; }
   .program-info__cinema-item .program-info__film-item .program-info__img {
