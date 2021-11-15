@@ -4168,6 +4168,9 @@ main {
     /* > 768 */
     padding-left: 20px; } }
 
+.film-page__author-info img {
+  max-width: 290px; }
+
 @media only screen and (max-width: 767px) {
   .film-page__slider {
     /* < 767 */

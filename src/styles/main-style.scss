@@ -3846,6 +3846,10 @@ main {
 		@include responsive(tabletdesktop) {
 			padding-left: 20px;
 		}
+		
+		img {
+			max-width: 290px;
+		}
 	}
 	
 	&__slider {
