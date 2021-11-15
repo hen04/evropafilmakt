@@ -4259,10 +4259,12 @@ main {
       -webkit-box-direction: normal;
       -ms-flex-flow: column;
       flex-flow: column; } }
-  @media only screen and (min-width: 768px) and (max-width: 1279px) {
-    .festival-visitors-page__author-info img {
-      /* 768 - 1279 */
-      width: 33%; } }
+  .festival-visitors-page__author-info img {
+    max-width: 290px; }
+    @media only screen and (min-width: 768px) and (max-width: 1279px) {
+      .festival-visitors-page__author-info img {
+        /* 768 - 1279 */
+        width: 33%; } }
 
 .festival-visitors-page__descr {
   width: 67%;
