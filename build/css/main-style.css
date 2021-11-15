@@ -1523,6 +1523,10 @@ body {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; } }
+    @media only screen and (max-width: 767px) {
+      .footer__social {
+        /* < 767 */
+        padding-right: 20px; } }
     @media only screen and (max-width: 1023px) {
       .footer__social {
         /* < 1023 */
@@ -4247,7 +4251,7 @@ main {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  margin-top: 1.25rem; }
+  margin: 1.25rem 0; }
   @media only screen and (max-width: 767px) {
     .festival-visitors-page__author-info {
       /* < 767 */
@@ -4278,7 +4282,7 @@ main {
   .festival-visitors-page__film {
     /* > 1024 */
     margin-left: auto;
-    margin-top: 80px; } }
+    margin-top: 60px; } }
 
 @media only screen and (min-width: 1280px) {
   .festival-visitors-page__film {
@@ -4298,7 +4302,7 @@ main {
 
 .festival-visitors-page__film img {
   max-width: 100%;
-  margin-top: 1.25rem; }
+  width: 100%; }
 
 .festival-visitors-page__film span {
   display: block; }

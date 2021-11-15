@@ -1114,6 +1114,10 @@ body {
 			padding-right: 40px;
 			justify-content: center;
 		}
+		
+		@include responsive(mobile) {
+			padding-right: 20px;
+		}
 
 		@include responsive(device) {
 			margin: auto 0;
@@ -3919,8 +3923,8 @@ main {
 	&__author-info {
 		display: flex;
 		align-items: flex-start;
-		margin-top: 1.25rem;
-		
+		margin: 1.25rem 0;
+
 		@include responsive(mobile) {
 			flex-flow: column;
 		}
@@ -3951,7 +3955,7 @@ main {
 	&__film {
 		@include responsive(landscapedesktop) {
 			margin-left: auto;
-			margin-top: 80px;
+			margin-top: 60px;
 		}
 
 		@include responsive(desktop) {
@@ -3970,7 +3974,7 @@ main {
 		
 		img {
 			max-width: 100%;
-			margin-top: 1.25rem;
+			width: 100%;
 		}
 
 		span {
