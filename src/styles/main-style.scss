@@ -1824,6 +1824,16 @@ main {
 			padding-left: 16px;
 		}
 		
+		.film-section {
+			margin-bottom: 1rem;
+			
+			a {
+				&:hover {
+					color: $active;
+				}
+			}
+		}
+		
 		h4 {
 			@include responsive(mobile) {
 				margin-bottom: 1rem;
