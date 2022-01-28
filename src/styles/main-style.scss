@@ -4244,6 +4244,13 @@ main {
 		@include responsive(device) {
 			flex-flow: wrap;
 		}
+
+		iframe {
+			@include responsive(mobile) {
+				height: 280px;
+				width: 100%;
+			}
+		}
 	}
 	
 	&__banner-item {
