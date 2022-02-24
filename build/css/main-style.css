@@ -671,7 +671,6 @@ html.desktop .main-menu li.has-submenu:hover svg {
 }
 html.desktop a:hover {
   color: #FF5E00;
-  fill: #FF5E00;
 }
 html.desktop a.news-sm:hover {
   color: #525252;
