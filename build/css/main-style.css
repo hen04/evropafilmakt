@@ -876,7 +876,7 @@ body.search-opened .footer {
   }
 }
 .header__right {
-  width: 160px;
+  width: 250px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -957,6 +957,8 @@ body.search-opened .footer {
 }
 .header__social .social {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 767px) {
   .header__social .social {
@@ -973,6 +975,10 @@ body.search-opened .footer {
 }
 .header__social .social .iconify:first-child {
   margin-left: 0;
+}
+.header__social .social .iconify.tiktok, .header__social .social .iconify.letterboxd {
+  font-size: 28px;
+  padding-top: 4px;
 }
 .header__menu {
   display: none;
@@ -1814,6 +1820,18 @@ body.search-opened .footer {
     margin: 0 0 1rem;
   }
 }
+.footer__social .tiktok,
+.footer__social .letterboxd {
+  padding-top: 6px;
+  font-size: 26px !important;
+}
+@media only screen and (min-width: 768px) {
+  .footer__social .tiktok,
+.footer__social .letterboxd {
+    /* > 768 */
+    font-size: 28px !important;
+  }
+}
 .footer__development {
   grid-area: development;
   color: #525252;
@@ -1853,7 +1871,6 @@ body.search-opened .footer {
 
 .social {
   display: flex;
-  justify-content: space-between;
 }
 @media only screen and (max-width: 1023px) {
   .social {
@@ -1875,9 +1892,9 @@ body.search-opened .footer {
   }
 }
 @media only screen and (max-width: 767px) {
-  .social__item {
+  .social__item:not(:last-child) {
     /* < 767 */
-    margin-bottom: 0.5rem;
+    margin-right: 4px;
   }
 }
 .social__item:last-child .iconify {
@@ -5220,6 +5237,11 @@ main {
   margin-top: 0.5rem;
   margin-left: -6px;
   max-width: none;
+}
+.info-page__name-item .social .tiktok,
+.info-page__name-item .social .letterboxd {
+  padding-top: 4px;
+  font-size: 32px;
 }
 .info-page__name-item .request-links {
   margin-top: 0.5rem;

@@ -258,7 +258,7 @@ body {
 	}
 
 	&__right {
-		width: 160px;
+		width: 250px;
 		display: flex;
 		flex-wrap: wrap;
 		
@@ -335,6 +335,8 @@ body {
 		
 		.social {
 			width: 100%;
+			display: flex;
+			justify-content: space-between;
 
 			@include responsive(mobile) {
 				width: 75%;
@@ -351,6 +353,12 @@ body {
 			
 			&:first-child {
 				margin-left: 0;
+			}
+			
+			&.tiktok,
+			&.letterboxd {
+				font-size: 28px;
+				padding-top: 4px;
 			}
 		}
 	}
@@ -1147,6 +1155,15 @@ body {
 				margin: 0 0 1rem;
 			}
 		}
+		.tiktok,
+		.letterboxd {
+			padding-top: 6px;
+			font-size: 26px !important;
+			
+			@include responsive(tabletdesktop) {
+				font-size: 28px !important;
+			}
+		}
 	}
 	
 	&__development {
@@ -1185,7 +1202,6 @@ body {
 
 .social {
 	display: flex;
-	justify-content: space-between;
 
 	@include responsive(device) {
 		flex-wrap: wrap;
@@ -1204,8 +1220,10 @@ body {
 	}
 	
 	&__item {
-		@include responsive(mobile) {
-			margin-bottom: .5rem;
+		&:not(:last-child) {
+			@include responsive(mobile) {
+				margin-right: 4px;
+			}
 		}
 
 		&:last-child {
@@ -4212,6 +4230,12 @@ main {
 			margin-top: .5rem;
 			margin-left: -6px;
 			max-width: none;
+			
+			.tiktok,
+			.letterboxd {
+				padding-top: 4px;
+				font-size: 32px;
+			}
 		}
 		
 		.request-links {
